@@ -4,7 +4,7 @@ const Prueba = () => {
     return(
 
 <div>
-<h1>Probando 22</h1>
+<h1>Probando por segunda vez</h1>
 </div>
 
     );
