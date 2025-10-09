@@ -1,0 +1,268 @@
+---
+import mujerLaptop from "../assets/mujer-laptop.png";
+import banner from "../assets/banner.mp4";
+import perfil1 from "../assets/perfil1.jpg";
+import perfil2 from "../assets/perfil2.jpg";
+import perfil3 from "../assets/perfil3.jpg";
+import videoPrincipal from "../assets/Video-principal.mp4";
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h2>
+        Contrata diferente.<br />
+        <span class="highlight">Crece sin límites.</span>
+      </h2>
+      <p>
+        Accede a profesionales que trabajen en remoto para tu empresa, y 
+        <span class="highlight">ahorra hasta un 70%</span> en comparación con la contratación tradicional.
+      </p>
+
+<!--<a href="#" class="btn-primary">AGENDA UNA LLAMADA GRATIS</a>
+       -->
+      
+       <button class="btn-primary">AGENDA UNA LLAMADA GRATIS</button>
+
+    </div>
+
+
+    <div class="hero-image">
+    <img src={mujerLaptop.src} alt="" />
+    </div>
+
+<div class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src={banner} type="video/mp4" />
+    
+  </video>
+</div>
+
+  </div>
+</section>
+
+<section class="profiles-section">
+  <div class="profiles-container">
+    <div class="profile-card">
+      <img src={perfil3.src} alt="" class="profile-img" />
+      <img src={perfil2.src} alt="" class="profile-img" />
+      <img src={perfil1.src} alt="" class="profile-img" />
+      <p>+5000 empresas confían en nosotros</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+
+</section>
+
+ <div class="video-container">
+    <video controls playsinline>
+      <source src={videoPrincipal} type="video/mp4" />
+      Tu navegador no soporta video.
+    </video>
+  </div>
+
+<section class="que-hacemos-section">
+  <h2>¿Qué hacemos?</h2>
+  <p>
+    Conectamos empresas con talento profesional de alto nivel en Sudamérica, ofreciendo soluciones que benefician ambas partes.
+  </p>
+</section>
+
+
+<style>
+.hero {
+  background: linear-gradient(to bottom, #fff 0%, #fff 80%, #f8f8f8 100%);
+  padding-top: 25px;
+}
+
+.hero-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  margin-bottom: 2rem;
+  
+}
+
+.hero-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero-text p {
+    font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+ .hero-content {
+      max-width: 100%;
+    }
+
+.hero-image {
+  flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 12px;
+  
+  }
+
+.hero-image img {
+  width: 150%; 
+    max-width: none; /* eliminamos el límite */
+    height: auto;
+    margin-top: -3rem;
+    display: block;
+    transform: translateX(-15%); /* la desplazamos un poco hacia la izquierda */
+}
+
+.highlight{
+  color: #FF65C3;
+}
+
+.btn-primary {
+    font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding: 10px;
+  background-color: #E860B9;
+  color: #FFFFFF;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+
+  text-align: center;
+  
+
+}
+
+.profiles-section {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.profiles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0; /* quitamos espacio normal */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  margin-left: -20px; 
+}
+
+.profile-img:first-child {
+  margin-left: 0; 
+}
+
+.profile-card p {
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
+
+.stars {
+  margin-top: 0.2rem;
+  color: #FABF27;
+  font-size: 1.1rem;
+}
+
+
+.profiles-section {
+  text-align: center;
+  margin: 0;
+  padding: 1.5rem 1rem;
+}
+
+.video-container {
+  margin-top: 0.8rem; /* pequeño margen desde las estrellas */
+  display: flex;
+  justify-content: center;
+}
+
+.video-container video {
+  width: 90%;          /* ocupa casi todo el ancho del móvil */
+  max-width: 320px;    /* no pasa de este tamaño */
+  border-radius: 12px; /* bordes redondeados */
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.que-hacemos-section {
+ background-color: #FF65C2; /* rosa más oscuro */
+  margin-top: 2rem;          /* margen respecto al video */
+  padding: 2rem 1.5rem;      /* espacio interno */
+  text-align: center;
+ 
+  color: white; 
+}
+
+.que-hacemos-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.que-hacemos-section p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      padding-top: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+
+    .hero-video{
+      margin: 0;
+  padding: 0;
+  width: 100vw; /* ancho total de la ventana */
+  overflow: hidden;
+    }
+
+    .hero-video video {
+width: 100vw; /* ancho total */
+  height: auto;
+  display: block;
+}
+  
+
+}
+</style>

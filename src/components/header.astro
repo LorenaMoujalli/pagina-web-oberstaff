@@ -1,0 +1,95 @@
+---
+import logo from "../assets/logo.png";
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <a href="/" class="logo">
+        <img src={logo.src} alt="Logo" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="">Opción 1</a>
+        <a href="">Opción 2</a>
+        <a href="">Opción 3</a>
+      </nav>
+<!-- 
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      -->
+    </div>
+
+    <!-- Menú para móvil -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="">Opción 1</a>
+      <a href="">Opción 2</a>
+      <a href="">Opción 3</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+.header {
+  background: #F4F4F4;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-btn {
+  display: none; /* Oculto en desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Menú móvil oculto inicialmente */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Oculta menú normal */
+  }
+  .menu-btn {
+    display: block; /* Muestra botón hamburguesa */
+  }
+  .mobile-menu.show {
+    display: flex; /* Muestra menú móvil */
+  }
+}
+</style>
+
+
