@@ -64,8 +64,76 @@ import videoPrincipal from "../assets/Video-principal.mp4";
 <section class="que-hacemos-section">
   <h2>¿Qué hacemos?</h2>
   <p>
-    Conectamos empresas con talento profesional de alto nivel en Sudamérica, ofreciendo soluciones que benefician ambas partes.
+    Conectamos empresas con talento profesional   <span class="alto-nivel">de alto nivel</span> en Sudamérica, ofreciendo soluciones que benefician ambas partes.
   </p>
+
+
+<div class="info-cards">
+    <div class="info-card1">
+      <h3>Búsqueda y Selección</h3>
+      <p>Simplificamos todo el proceso de encontrar el talento ideal para tu empresa, ahorrándote tiempo y recursos.</p>
+    
+       <div class="mini-card">
+      icono
+    </div>
+    
+    </div>
+
+     <div class="info-card2">
+      <h3>Profesionales Comprometidos</h3>
+      <p>Contratamos expertos motivados y dedicados a impulsar tu negocio con sus habilidades y conocimientos.</p>
+   
+    <div class="mini-card2">
+      icono
+    </div>
+    </div>
+
+     <div class="info-card1">
+      <h3>Ahorro Significativo</h3>
+      <p>Ahorra hasta un 70% en costos de personal mientras ofreces salarios competitivos a profesionales talentosos.</p>
+    
+      <div class="mini-card3">
+      icono
+    </div>
+    
+    </div>
+
+
+  </div>
+
+
+<div class="cards">
+  <div class="card1">
+    <div class="icon-container"></div>
+    <h3 class="card-title">Talento Profesional</h3>
+    <p class="cards-text">
+      Con Oberstaff, puedes acceder a <span class="cards-talento">talento profesional altamente calificado</span> en América Latina que trabaja 100% de forma remota para ti, a una fracción des coste de tener empleados de plantilla local.
+    </p>
+    <div class="dashed-line"></div>
+    <p class="card-text1">
+     Gracias a nuestro servicio de outsourcing simplificamos todo el proceso: desde la búsqueda y selección, hasta la contratación de profesionales comprometidos y motivados.
+    </p>
+  </div>
+
+  <div class="card1">
+    <div class="icon-container"></div>
+    <h3 class="card-title">Beneficio Mutuo</h3>
+    <p class="cards-text">
+    Estos expertos no solo están <span class="cards-talento">dedicados a impulsar tu negocio,</span> si no que también tienen la oportunidad de mejorar su calidad de vida, ganando salarios más competitivos que los disponibles en sus países.
+    </p>
+    <div class="dashed-line"></div>
+    <p class="card-text1">
+      Todo esto mientras tú ahorras hasta un 70% en costos de personal comparado con la contratación local.
+    </p>
+  </div>
+</div>
+
+
+ <button class="btn-primary2">¿ESTÁS INTERESADO?</button>
+
+
+  
+
 </section>
 
 
@@ -212,30 +280,230 @@ import videoPrincipal from "../assets/Video-principal.mp4";
 
 
 .que-hacemos-section {
- background-color: #FF65C2; /* rosa más oscuro */
+ background-color: #FFD5EE; 
   margin-top: 2rem;          /* margen respecto al video */
   padding: 2rem 1.5rem;      /* espacio interno */
   text-align: center;
- 
-  color: white; 
+  color: black;
+  border-radius: 70px;
 }
 
 .que-hacemos-section h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
+  color: #FF65C3;
+  font-weight: 800;
 }
 
 .que-hacemos-section p {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
+    line-height: 1.1;
+}
+
+.alto-nivel{
+  color: #FF65C3; 
+
+}
+
+
+.info-cards {
+  margin-top: 1.8rem; /* espacio debajo del párrafo principal */
+  display: flex;
+  flex-direction: column; /* uno debajo del otro */
+  gap: 1rem; /* separación entre cards */
+  align-items: center;
+  
 }
 
 
 
+.info-card1 {
+   position: relative; 
+  background: #25262B;
+  padding: 1.6rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  transform: rotate(-4deg);
+}
+
+.info-card1 h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #FFFFFF;
+}
+
+.info-card1 p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+    line-height: 1.1;
+}
+
+.mini-card {
+  position: absolute;
+  top: -10px; /* sobresale hacia arriba */
+  right: -10px; /* sobresale hacia la derecha */
+  background: #FFFFFF; /* color distintivo */
+  color: black;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+ 
+  
+}
+
+
+.mini-card2 {
+  position: absolute;
+  bottom: -10px; /* sobresale hacia arriba */
+  left: -10px; /* sobresale hacia la derecha */
+  background: #FFFFFF; /* color distintivo */
+  color: black;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem; 
+}
+
+.mini-card3 {
+  position: absolute;
+  bottom: -10px; /* sobresale hacia arriba */
+  right: -10px; /* sobresale hacia la derecha */
+  background: #FFFFFF; /* color distintivo */
+  color: black;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem; 
+}
+
+.info-card2 {
+   position: relative; 
+  background: #FF65C3;
+  padding: 1.6rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  backdrop-filter: blur(4px);
+    transform: rotate(4deg);
+}
+
+.info-card2 h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #FFFFFF;
+}
+
+.info-card2 p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+    line-height: 1.1;
+}
+
+
+
+.cards {
+ margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;         /* habilita scroll horizontal */
+  scroll-snap-type: x mandatory; /* hace que cada card se “pegue” al centro */
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+  
+}
+
+.card1 {
+   flex: 0 0 85%; /* cada card ocupa 85% del ancho de la pantalla */
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 1.6rem;
+  text-align: left;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+}
+
+.card-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #25262B;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cards-text {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.1;
+  color: #25262B; 
+}
+
+
+
+.cards-talento{
+  color: #FF65C3;
+}
+
+
+
+.dashed-line {
+  border-top: 2px dashed #ccc; /* línea punteada */
+  margin: 1rem auto;
+  width: 80%; /* ancho de la línea */
+}
+
+
+.card1 .card-text1{
+  text-align: center; /*justify*/
+  font-size: 0.7rem; 
+  font-family: 'Inter', sans-serif;
+  color: #25262B;
+
+}
+
+
+.btn-primary2 {
+    font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding: 10px;
+  background-color: #E860B9;
+  color: #FFFFFF;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+
+  text-align: center;
+  margin-top: 50px;
+
+}
 
 @media (max-width: 768px) {
     .hero {
