@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+
+/*document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
@@ -6,3 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileMenu.classList.toggle("show");
   });
 });
+*/
