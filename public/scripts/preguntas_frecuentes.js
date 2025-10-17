@@ -13,4 +13,4 @@ var faqItems = document.querySelectorAll(".faq-item");
     });
   }
 
-  
+    
