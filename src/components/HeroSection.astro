@@ -12,12 +12,19 @@ import iconoMoney from "../assets/icono-money.png";
 //import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 //import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core";
+import logo from "../assets/logo.png";  
+import logoOnePlanet from "../assets/logo-one-planet.png";   
+import logoComercio from "../assets/logo-camara-comercio.png";  
+import logoTop from "../assets/worlds-top.png"; 
+import testimonio1 from "../assets/testimonio1.png"; 
+import testimonio2 from "../assets/testimonio2.png"; 
+import testimonio3 from "../assets/testimonio3.png"; 
 ---
+   
 
-
-                          <!--TITULO PRINCIPAL --> 
-
-<section class="hero">
+                          <!--TITULO PRINCIPAL--> 
+ 
+<section class="hero"> 
   <div class="container hero-grid">
     <div class="hero-text">
       <h2>
@@ -146,9 +153,9 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
 
 
   </div>
-
-                                        <!--CARRUSEL 1 -->
-
+  
+                                         <!--CARRUSEL 1-->
+ 
 <div class="cards">
   <div class="card1">
     <div class="icon-container">
@@ -503,7 +510,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
 
 
 
-<!--CASOS DE EXITO -->
+                                                <!--CASOS DE EXITO -->
 
 <section class="cta-section">
   <h2>Casos de <span class="highlight">éxito</span></h2>
@@ -511,16 +518,16 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
     En Oberstaff, creemos que nuestros resultados <span class="highlight">hablan mucho más</span> que las palabras
   </p>
  
-  <p class="cta-highlight2">
+  <p class="cta-highlight3">
     Unete a quienes confían en nosotros
   </p>
 </section>
 
-
-
+                                              <!--CARRUSEL --> 
+  
 <div class="testimonial-section">
   <div class="testimonial-card">
-    <img src={perfil3.src} alt="" class="testimonial-video" />
+    <img src={testimonio1.src} alt="" class="testimonial-video" />
 
     <div class="testimonial-profile">
       <div class="testimonial-avatar"></div>
@@ -528,20 +535,20 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
         <h4 class="testimonial-name">Shadai Iborra</h4>
         <p class="testimonial-role">CEO de @amediastory</p>
         <div class="testimonial-stars">
-          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          <span>★★★★★</span>
         </div>
       </div>
-    </div>
+    </div> 
 
     <p class="testimonial-text">
       Con Oberstaff pude dar trabajo a dos personas a tiempo completo, ahorrando costes de contratación, espacios de oficina y salario que tendría al hacerlo en España. Lo mejor de todo es que todo está incluido en una misma factura. Con Oberstaff, encontré la solución perfecta para mis necesidades de contratación remota y optimización de costes.
     </p>
-
-    <button class="testimonial-btn">Ver Testimonio</button>
+  </br>
+    <button class="testimonial-btn">VER TESTIMONIO</button>
   </div>
 
   <div class="testimonial-card">
-     <img src={perfil3.src} alt="" class="testimonial-video" />
+     <img src={testimonio3.src} alt="" class="testimonial-video" />  
 
     <div class="testimonial-profile">
       <div class="testimonial-avatar"></div>
@@ -549,7 +556,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
         <h4 class="testimonial-name">Fernando Calderon</h4>
         <p class="testimonial-role">CEO de www.bybeautypro.com</p>
         <div class="testimonial-stars">
-          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          <span>★★★★★</span>
         </div>
       </div>
     </div>
@@ -558,13 +565,13 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
       Estaba en busca de un editor de video para mi empresa y despúes de varias búsquedas sin éxito, encontré a Oberstaff en Instagram. Desde nuestra primera llamada, su profesionalismo y calidad de trabajo me dejaron impresionado. Ahora, gracias a su excelente servicio, he expandido mi contrato con ellos para incluir más personal.
     </p>
 
-    <button class="testimonial-btn">Ver Testimonio</button>
+    <button class="testimonial-btn">VER TESTIMONIO</button>
   </div>
 
 
 
   <div class="testimonial-card">
-     <img src={perfil3.src} alt="" class="testimonial-video" />
+    <img src={testimonio2.src} alt="" class="testimonial-video" /> 
 
     <div class="testimonial-profile">
       <div class="testimonial-avatar"></div>
@@ -572,7 +579,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
         <h4 class="testimonial-name">Kate McCaferty</h4>
         <p class="testimonial-role">KM Real Estate</p>
         <div class="testimonial-stars">
-          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        <span>★★★★★</span>
         </div>
       </div>
     </div>
@@ -580,8 +587,8 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
     <p class="testimonial-text">
       "I've been working with Oberstaff now for about 2 years. Me and my company has a great experience", from teh moment you sign up you immediately have the best team looking up for you into 20000 profiles. It is actually unbelievable the money you can save.
     </p>
-
-    <button class="testimonial-btn">Ver Testimonio</button>
+</br></br>
+    <button class="testimonial-btn">VER TESTIMONIO</button>
   </div>
 
 
@@ -590,9 +597,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
 
 <div class="highlight-box">
   <div class="highlight-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path fill="#FFFFFF" d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm0 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80zm64 272H192v-32h32v-96h-32v-32h96v128h32v32z"/>
-    </svg>
+    icono
   </div>
   <p class="highlight-text">
     Agenda tu llamada y avancemos juntos en el camino hacia tus metas
@@ -602,7 +607,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
 <!--pREGUNTAS FRECUENTES -->
 
 <section class="faq-section">
-  <h2 class="faq-title">Preguntas Frecuentes</h2>
+  <h2 class="faq-title">Preguntas <span class="highlight">Frecuentes</span></h2>
 
   <div class="faq-container">
     <div class="faq-item">
@@ -612,7 +617,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
       </div>
     </div>
 
-    <div class="faq-item">
+    <div class="faq-item"> 
       <button class="faq-question">¿Puedo prescindir de la persona cuando quiera?</button>
       <div class="faq-answer">
         <p>Sí. Solamente requerimos un preaviso de 30 días.</p>
@@ -677,7 +682,7 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
   </div>
 
 
-  <button class="btn-primary4">icono ¿TIENES MAS PREGUNTAS?</button>
+  <button class="btn-primary5">icono ¿TIENES MAS PREGUNTAS?</button>
 </section>
 
 
@@ -724,7 +729,9 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
 
 <footer class="footer-section">
   <!-- Logo -->
-  <img src="ruta-del-logo.png" alt="Logo Oberstaff" class="footer-logo">
+   
+        <img src={logo.src} class="footer-logo" alt=""/> 
+      
 
   <!-- Copyright -->
   <p class="footer-copy">© Oberstaff 2025</p>
@@ -745,9 +752,9 @@ import { icon } from "@fortawesome/fontawesome-svg-core";
 
   <!-- Patrocinadores -->
   <div class="footer-sponsors">
-    <img src="" alt="Sponsor 1">
-    <img src="" alt="Sponsor 2">
-    <img src="" alt="Sponsor 3">
+    <img src={logoOnePlanet.src}  alt=""/>  
+     <img src={logoComercio.src}  alt=""/> 
+     <img src={logoTop.src}  alt=""/> 
   </div>
 
   <!-- Texto final -->
@@ -820,10 +827,12 @@ background: linear-gradient(to bottom, #ffffff 0%, rgb(243, 163, 212) 50%, #ffff
     height: auto;
     margin-top: -3rem;
     display: block;
-    transform: translateX(-15%); /* la desplazamos un poco hacia la izquierda */
+    transform: translateX(15%); 
+    transform: scaleX(-1);
 }
 
-.highlight{
+
+.highlight{ 
   color: #FF65C3;
 }
 
@@ -1723,6 +1732,9 @@ font-size: 15px;
 
 
 
+
+
+
 .subrayado-section {
   background-color: #ffffff;
   text-align: center;
@@ -1732,15 +1744,20 @@ font-size: 15px;
 }
 
 .subrayado-texto {
-  font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  font-size: 0.95rem;
+   font-style: italic;  
+  font-size: 20px;
   line-height: 1.5;
-  color: black;
+  color: #25262B;
   margin-bottom: 1rem;
 }
 
 .subrayado-texto span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+   font-style: italic;
+     font-size: 20px;
   text-decoration: underline;
   text-decoration-color: #FF65C3;
   text-decoration-thickness: 2px;
@@ -1749,36 +1766,40 @@ font-size: 15px;
 
 .subrayado-titulo {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
+  font-weight: 500;
+  font-size: 26px;
 padding: 2rem 1.5rem;
-  color: black;
+  color: #25262B;
   margin-bottom: 1.5rem;
 }
 
 .subrayado-card {
   background-color: #25262B;
   color: #FFFFFF;
-  border-radius: 20px;
-  padding: 2rem 1rem;
-  max-width: 320px;
+  border-radius: 60px;
+  padding: 3rem 2rem;
+ 
   margin: 0 auto;
   text-align: center;
 }
 
 .subrayado-card h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 20px;
   margin-bottom: 1.2rem;
   color: #FFFFFF;
 }
 
 .btn-rosado {
-  background-color: #FF65C3;
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  background-color: #FF6ACD;
+  color: #FFFFFF;
   border: none;
   border-radius: 10px;
   padding: 0.7rem 1.2rem;
-  font-size: 0.9rem;
+  font-size: 15px;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
@@ -1802,8 +1823,29 @@ padding: 2rem 1.5rem;
 }
 
 
+.cta-highlight3 {
+
+  color: #FF65C3;
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  border-radius: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.1;
+  max-width: 300px;
+  margin-top: 45px;
+}
+
+
+
+                                         /*CARRUSEL - CASOS DE EXITO*/ 
+
+
+
 .testimonial-section {
-  
+  background: linear-gradient(to bottom, #ffffff 0%, #f3bddb 50%, #ffffff 100%);
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -1849,42 +1891,48 @@ padding: 2rem 1.5rem;
 
 .testimonial-name {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #25262B;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF65C3;
   margin-bottom: 0.2rem;
 }
 
 .testimonial-role {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
-  color: #666;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+  font-size: 14px;
+  color: #25262B;
   margin-bottom: 0.3rem;
 }
 
 .testimonial-stars span {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #FFD700;
 }
 
 .testimonial-text {
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-style: italic;
+  font-weight:300;
+  font-size: 12px;
+  text-align: justify;
   line-height: 1.4;
   color: #25262B;
   margin-bottom: 1rem;
 }
 
 .testimonial-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    font-style:italic;
   display: block;
   margin: 0 auto;
   background: #FF65C3;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0.6rem 1.2rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -1902,6 +1950,8 @@ padding: 2rem 1.5rem;
   max-width: 600px;
   margin: 2rem auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-left: 15px;
+          margin-right: 15px;
 }
 
 .highlight-icon {
@@ -1918,23 +1968,32 @@ padding: 2rem 1.5rem;
 
 .highlight-text {
   font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
+  font-weight:400;
+  font-style:italic;
+  font-size: 15px;
   line-height: 1.4;
 }
 
+
+                                         /*PREGUNTAS FRECUENTES*/ 
+
 .faq-section {
-  background: #FFE5F3;
-  border-radius: 30px;
+  background: #fdd5ee;
+  border-radius: 50px;
   padding: 2rem 1rem;
-  margin: 2rem 1rem;
+  margin-top: 60px;
 }
 
 .faq-title {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ 
   color: #25262B;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  font-size: 25px;
+ 
+  margin-bottom: 3.5rem;
+    margin-top: 1rem;
 }
 
 .faq-container {
@@ -1944,10 +2003,19 @@ padding: 2rem 1.5rem;
 }
 
 .faq-item {
-  background: #FF65C3;
+  background: #F562BD;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  
+}
+
+.faq-item2 {
+  background: #25262B;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  
 }
 
 .faq-question {
@@ -1955,9 +2023,25 @@ padding: 2rem 1.5rem;
   background: transparent;
   border: none;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 500;
+font-size: 15px;
+  text-align: left;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question2 {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+font-size: 15px;
   text-align: left;
   padding: 1rem;
   cursor: pointer;
@@ -1994,6 +2078,26 @@ padding: 2rem 1.5rem;
 }
  
 
+
+.btn-primary5 {
+    font-family: 'Poppins', sans-serif;
+     font-weight: bold;
+  display: inline-block;
+  padding: 10px;
+  background-color: #E860B9;
+  color: #FFFFFF;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  text-align: center;
+ margin-top: 50px;
+ font-size:14px;
+ margin-left: 35px;
+
+}
+
+
+                                            /*CONTACTO*/ 
 .contact-section {
   background-color: white;
   padding: 2rem 1.5rem;
@@ -2004,21 +2108,22 @@ padding: 2rem 1.5rem;
 
 .contact-section h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.6rem;
+  font-size: 32px;
   color: #FF65C3;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .contact-section p {
   font-family: 'Inter', sans-serif;
+
   font-size: 0.9rem;
   color: #25262B;
   margin-bottom: 1.5rem;
 }
 
 .contact-form {
-  background-color: #FF65C3;
+  background-color: #FFA8DD;
   border-radius: 20px;
   padding: 1.5rem;
   display: flex;
@@ -2031,7 +2136,7 @@ padding: 2rem 1.5rem;
 .contact-form textarea {
   width: 90%;
   border: none;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 0.8rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
@@ -2061,17 +2166,26 @@ padding: 2rem 1.5rem;
 
 .checkbox-group {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alinea el inicio del texto con el checkbox */
   gap: 0.5rem;
   width: 90%;
   text-align: left;
 }
 
+.checkbox-group input[type="checkbox"] {
+  margin-top: 1px; /* Ajuste fino para centrar el checkbox con la primera línea */
+}
+
+
 .checkbox-group label {
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
   font-size: 0.8rem;
   color: #25262B;
+  line-height: 1.4;
 }
+
+
 
 .verification {
   width: 90%;
@@ -2079,15 +2193,17 @@ padding: 2rem 1.5rem;
 }
 
 .contact-form button {
-  background-color: #25262B;
+  background-color: #25262B;  
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 0.8rem 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
   transition: background 0.3s;
+  margin-top: 25px;
 }
 
 .contact-form button:hover {
@@ -2095,6 +2211,9 @@ padding: 2rem 1.5rem;
 }
   
 
+
+
+                                            /*FOOTER*/ 
 .footer-section {
   background-color: white;
   padding: 2rem 1.5rem;
@@ -2104,13 +2223,14 @@ padding: 2rem 1.5rem;
 }
 
 .footer-logo {
-  width: 120px;
+  width: 170px;
   margin-bottom: 1rem;
 }
 
 .footer-copy {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
   color: #25262B;
   margin-bottom: 0.3rem;
 }
@@ -2118,20 +2238,22 @@ padding: 2rem 1.5rem;
 .footer-highlight {
   color: #FF65C3;
   font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
+  font-weight: 400;
+  font-size: 15px;
   text-decoration: underline;
   margin-bottom: 1.5rem;
+  margin-top:25px;
 }
-
-.footer-icons {
-  background-color: #FF65C3;
+ 
+.footer-icons { 
+  background-color: #FF65C3;    
   border-radius: 25px;
   padding: 0.8rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin: 0 auto 1.5rem;
-  width: fit-content;
+  
 }
 
 .footer-icon {
@@ -2140,8 +2262,9 @@ padding: 2rem 1.5rem;
 }
 
 .footer-message {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
   color: #25262B;
   margin-bottom: 1rem;
 }
@@ -2162,8 +2285,9 @@ padding: 2rem 1.5rem;
 
 .footer-small {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  color: #25262B;
+  font-weight: 400;
+  font-size: 12px;
+  color: #AFAFB2;
   opacity: 0.8;
 }
 
