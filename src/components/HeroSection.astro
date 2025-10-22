@@ -19,6 +19,14 @@ import logoTop from "../assets/worlds-top.png";
 import testimonio1 from "../assets/testimonio1.png"; 
 import testimonio2 from "../assets/testimonio2.png"; 
 import testimonio3 from "../assets/testimonio3.png"; 
+import iconoLi from "../assets/icono-linkdein.png";  
+import iconoFb from "../assets/icono-facebook.png"; 
+import iconoIg from "../assets/icono-instagram.png"; 
+import iconoTik from "../assets/icono-tiktok.png"; 
+import iconoTel from "../assets/icono-telefono2.png"; 
+import iconoPlay from "../assets/icono-play.png";
+import iconoUser from "../assets/icono-user.png";
+import iconoCalen from "../assets/icono-calendario.png";
 ---
    
 
@@ -80,6 +88,8 @@ import testimonio3 from "../assets/testimonio3.png";
 
 </section>
 
+
+<!-- 
  <div class="video-container">
     <video id="video-principal" controls playsinline>
       <source src={videoPrincipal} type="video/mp4" />
@@ -89,6 +99,25 @@ import testimonio3 from "../assets/testimonio3.png";
 
     </video>
   </div>  
+-->
+
+<div class="video-container">
+  <div class="video-wrapper">
+    <video id="video-principal" playsinline controls>
+      <source src={videoPrincipal} type="video/mp4" />
+      
+    </video>
+
+    <div class="video-overlay">
+      <div class="video-play-btn" id="videoPlayBtn">▶</div>
+      <div class="video-caption" id="videoCaption">Descubre cómo contratar talento top <span class="highlight">sin gastar de más</span></div>
+    </div>
+  </div>
+</div>
+ 
+<script src="./scripts/video-principal.js" type="module"></script> 
+
+ 
 
 
 
@@ -242,7 +271,7 @@ import testimonio3 from "../assets/testimonio3.png";
 
   <div class="testimonio-card">
     <div class="testimonio-header">
-      <div class="foto-profesional"></div>
+      <img class="testimonial-avatar" src={testimonio3.src} alt="Foto de perfil" />
       <div class="info-profesional">
         <h3 class="nombre-profesional">Fernando Calderon</h3>
         <p class="profesion-profesional">CEO de www.bybeautypro.com</p>
@@ -257,6 +286,8 @@ import testimonio3 from "../assets/testimonio3.png";
       ★★★★★
     </div>
   </div>
+
+ 
 </section>
 
 
@@ -264,117 +295,145 @@ import testimonio3 from "../assets/testimonio3.png";
 <!--carrusel 1 -->
 
 
-<!-- 
+
+<h2 class="beneficiosh2">¿Qué beneficios <span class="highlight">te ofrece Oberstaff?</span> </h2>
+  <p class="beneficiosp" >Obtendrás acceso a profesionales altamente capacitados, flexibilidad operativa y soluciones personalizadas que <span class="highlight">transformarán tu equipo.</span> </p>
+
+
 <section class="carrusel-section">
-  <h2>¿Qué beneficios <span class="highlight">te ofrece Oberstaff?</span> </h2>
-  <p>Obtendrás acceso a profesionales altamente capacitados, flexibilidad operativa y soluciones personalizadas que <span class="highlight">transformarán tu equipo.</span> </p>
+    
+  <div class="carrusel-wrapper">
+    <div class="carrusel-container">
 
-  <div class="carrusel-container">
-
-    <div class="card active">
-      <div class="icono">icono1</div>
-      <h3>Ahorro del 70% en costos</h3>
-      <p>
+      <div class="card">
+        <div class="card-content">
+        <div class="icon">
+      <img src={iconoGrupo.src} alt="" class="icono-users" /> 
+    </div>
+          <h3>Ahorro del 70% en costos</h3>
+        <p>
       Al contratar talento remoto con Oberstaff, puedes <span class="highlight">reducir hasta un 70% en costos de personal,</span> evitando gastos adicionales como seguridad social u otros beneficios laborales.
       </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
     </div>
- 
-    <div class="card">
-      <div class="icono">icono</div>
-      <h3>Selección simplificada</h3>
+           <h3>Selección simplificada</h3>
       <p>
         Nos encargamos de <span class="highlight">todo el proceso de búsqueda,</span> selección y contratación, ahorrándote tiempo y esfuerzo para que te enfoques en lo que realmente importa: tu negocio
       </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
     </div>
-
-
-     <div class="card">
-      <div class="icono">icono</div>
-      <h3>Talento altamente calificado</h3>
+         <h3>Talento altamente calificado</h3>
       <p>
         Todos los candidatos son rigurosamente evaluados a través de pruebas psicométricas y seleccionados cuidadosamente <span class="highlight"> para cumplir con tus requerimientos específicos.</span>
       </p>
-    </div>
+        </div>
+      </div>
 
-      <div class="card">
-      <div class="icono">icono</div>
-      <h3>Integración total</h3>
+     <div class="card">
+        <div class="card-content">
+          <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
+    </div>
+          <h3>Integración total</h3>
       <p>
         Los profesionales que contratas trabajarán en tu misma zona horaria y se <span class="highlight">integrarán perfectamente a tu equipo,</span> interactuando como un compañero más.
       </p>
-    </div>
+        </div>
+      </div>
 
-    <div class="card">
-      <div class="icono">icono</div>
-      <h3>Flexibilidad total</h3>
+        <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
+    </div>
+          <h3>Flexibilidad total</h3>
       <p>
        No exigimos compromisos de permanencia. Puedes ajustar o solicitar la cancelación del servicio cuando lo necesites, <span class="highlight">sin penalizaciones ni complicaciones.</span> 
       </p>
+        </div>
+      </div>
+
+
+        <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
     </div>
-
-
-     <div class="card">
-      <div class="icono">icono</div>
-      <h3>Escalabilidad inmediata</h3>
+           <h3>Escalabilidad inmediata</h3>
       <p>
       Amplía o reduce tu equipo fácilmente <span class="highlight">según las necesidades de tu negocio</span> y la evolución de tus proyectos, sin trámites complicados ni largos procesos.
       </p>
+        </div>
+      </div>
+
+
+        <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
     </div>
-
-
-     <div class="card">
-      <div class="icono">icono</div>
-      <h3>Protección total</h3>
+           <h3>Protección total</h3>
       <p>
       Al no ser tú quien contrata directamente al profesional, quedas protegido de cualquier reclamación laboral o contractual, <span class="highlight">ofreciéndote tranquilidad y seguridad.</span> 
       </p>
-    </div>
+        </div>
+      </div>
 
-      <div class="card">
-      <div class="icono">icono</div>
-      <h3>Soporte continuo</h3>
+      
+        <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
+    </div>
+            <h3>Soporte continuo</h3>
       <p>
      Nuestro equipo está disponible para ofrecerte asistencia y garantizar una integración fluida y exitosa de tu talento remoto en <span  class="highlight">cualquier momento que lo necesites.</span> 
       </p>
+        </div>
+      </div>
+
+
+       <div class="card">
+        <div class="card-content">
+         <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"/></svg>
     </div>
-
-
-      <div class="card">
-      <div class="icono">icono</div>
-      <h3>Mejora de la competitividad</h3>
+           <h3>Mejora de la competitividad</h3>
       <p>
      Al reducir costos operativos y aumentar la eficiencia de tu equipo, <span class="highlight">tu empresa se vuelve más competitiva</span>  en el mercado global actual.
       </p>
-    </div>
-   
+        </div>
+      </div>
 
-    <div class="controls">
-      <button class="arrow left">&#8592;</button>
-      <div class="dot"></div>
-      <button class="arrow right">&#8594;</button>
+
     </div>
   </div>
 
-  <button class="btn-primary3">icono PROGRAMA UNA CONSULTA GRATUITA</button>
-
-</section>
-
-<script src="./scripts/carrusel.js" type="module"></script>
-
---> 
-
-<section class="carrusel-section"> 
-  <button class="arrow left">&#10094;</button>
-  <div class="carrusel-wrapper">
-    <div class="carrusel-container">
-      <div class="card">Card 1</div>
-      <div class="card">Card 2</div>
-      <div class="card">Card 3</div>
-      <div class="card">Card 4</div>
+  <div class="controls">
+    <button class="arrow left">&#x279C;</button>
+    <div class="indicator-bar">
+      <div class="indicator-dot"></div>
     </div>
+    <button class="arrow right">&#x279C;</button>
   </div>
-  <button class="arrow right">&#10095;</button>
 </section>
+
+  <button class="btn-primary3">  
+  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>
+  <span class="btn-text">PROGRAMA UNA CONSULTA GRATIS</span>
+</button> 
 
 <script src="./scripts/carrusel2.js" type="module"></script>
 
@@ -388,7 +447,10 @@ import testimonio3 from "../assets/testimonio3.png";
   <p class="cta-subtext">
     Nuestros profesionales están listos para ofrecerte estrategias innovadoras y personalizadas que te llevarán a <span class="highlight">alcanzar y superar tus objetivos de negocio.</span>
   </p>
-  <button class="btn-primary4">icono AGENDA UNA CONSULTA GRATIS</button>
+   <button class="btn-primary4">
+  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>
+  <span class="btn-text">AGENDA UNA CONSULTA GRATIS</span>
+</button>
   <p class="cta-highlight">
     Ofrecemos una amplia variedad de perfiles para satisfacer tus necesidades.
   </p>
@@ -525,7 +587,10 @@ import testimonio3 from "../assets/testimonio3.png";
 
   <div class="subrayado-card">
     <h3>Impulsa tu negocio con el <span class="highlight"> mejor talento de Sudamérica</span></h3>
-    <button class="btn-rosado">icono COMIENZA HOY</button>
+    <button class="btn-rosado">
+  <span class="btn-icon"><img src={iconoUser.src} alt="" /></span>
+  <span class="btn-text">COMIENZA HOY</span>
+</button>
   </div>
 </section>
 
@@ -551,7 +616,7 @@ import testimonio3 from "../assets/testimonio3.png";
     <img src={testimonio1.src} alt="" class="testimonial-video" />
 
     <div class="testimonial-profile">
-      <div class="testimonial-avatar"></div>
+      <img class="testimonial-avatar" src={testimonio1.src} alt="Foto de perfil" />
       <div class="testimonial-info">
         <h4 class="testimonial-name">Shadai Iborra</h4>
         <p class="testimonial-role">CEO de @amediastory</p>
@@ -565,14 +630,17 @@ import testimonio3 from "../assets/testimonio3.png";
       Con Oberstaff pude dar trabajo a dos personas a tiempo completo, ahorrando costes de contratación, espacios de oficina y salario que tendría al hacerlo en España. Lo mejor de todo es que todo está incluido en una misma factura. Con Oberstaff, encontré la solución perfecta para mis necesidades de contratación remota y optimización de costes.
     </p>
   </br>
-    <button class="testimonial-btn">VER TESTIMONIO</button>
+     <button class="testimonial-btn">
+  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>
+  <span class="btn-text">VER TESTIMONIO</span>
+</button>
   </div>
 
   <div class="testimonial-card">
      <img src={testimonio3.src} alt="" class="testimonial-video" />  
 
     <div class="testimonial-profile">
-      <div class="testimonial-avatar"></div>
+      <img class="testimonial-avatar" src={testimonio3.src} alt="Foto de perfil" />
       <div class="testimonial-info">
         <h4 class="testimonial-name">Fernando Calderon</h4>
         <p class="testimonial-role">CEO de www.bybeautypro.com</p>
@@ -586,7 +654,10 @@ import testimonio3 from "../assets/testimonio3.png";
       Estaba en busca de un editor de video para mi empresa y despúes de varias búsquedas sin éxito, encontré a Oberstaff en Instagram. Desde nuestra primera llamada, su profesionalismo y calidad de trabajo me dejaron impresionado. Ahora, gracias a su excelente servicio, he expandido mi contrato con ellos para incluir más personal.
     </p>
 
-    <button class="testimonial-btn">VER TESTIMONIO</button>
+     <button class="testimonial-btn">
+  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>
+  <span class="btn-text">VER TESTIMONIO</span>
+</button>
   </div>
 
 
@@ -595,7 +666,7 @@ import testimonio3 from "../assets/testimonio3.png";
     <img src={testimonio2.src} alt="" class="testimonial-video" /> 
 
     <div class="testimonial-profile">
-      <div class="testimonial-avatar"></div>
+      <img class="testimonial-avatar" src={testimonio2.src} alt="Foto de perfil" />
       <div class="testimonial-info">
         <h4 class="testimonial-name">Kate McCaferty</h4>
         <p class="testimonial-role">KM Real Estate</p>
@@ -609,7 +680,10 @@ import testimonio3 from "../assets/testimonio3.png";
       "I've been working with Oberstaff now for about 2 years. Me and my company has a great experience", from teh moment you sign up you immediately have the best team looking up for you into 20000 profiles. It is actually unbelievable the money you can save.
     </p>
 </br></br>
-    <button class="testimonial-btn">VER TESTIMONIO</button>
+   <button class="testimonial-btn">
+  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>
+  <span class="btn-text">VER TESTIMONIO</span>
+</button>
   </div>
 
 
@@ -618,7 +692,7 @@ import testimonio3 from "../assets/testimonio3.png";
 
 <div class="highlight-box">
   <div class="highlight-icon">
-    icono
+    <img src={iconoTel.src} alt="" />
   </div>
   <p class="highlight-text">
     Agenda tu llamada y avancemos juntos en el camino hacia tus metas
@@ -762,10 +836,10 @@ import testimonio3 from "../assets/testimonio3.png";
 
   <!-- Íconos sociales -->
   <div class="footer-icons">
-    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.28 4.28 0 0 0 1.88-2.37c-.84.5-1.78.85-2.77 1.05a4.26 4.26 0 0 0-7.26 3.88A12.09 12.09 0 0 1 3.15 4.9a4.26 4.26 0 0 0 1.32 5.68 4.21 4.21 0 0 1-1.93-.53v.05a4.27 4.27 0 0 0 3.42 4.18 4.23 4.23 0 0 1-1.92.07 4.27 4.27 0 0 0 3.98 2.96A8.53 8.53 0 0 1 2 19.54 12.05 12.05 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.35-.01-.53A8.3 8.3 0 0 0 22.46 6z"/></svg>
-    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.4 3.6 8.1 8.1 9.64v-6.82H7.89v-2.82h2.25V9.84c0-2.24 1.34-3.48 3.39-3.48.98 0 2 .18 2 .18v2.18h-1.12c-1.1 0-1.44.68-1.44 1.38v1.65h2.45l-.39 2.82h-2.06v6.82c4.5-1.54 8.1-5.24 8.1-9.64 0-5.5-4.46-9.96-9.96-9.96z"/></svg>
-    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4v19.2C0 22.92 1.08 24 2.4 24h19.2c1.32 0 2.4-1.08 2.4-2.4V2.4C24 1.08 22.92 0 21.6 0zM8 20H4V9h4v11zM6 7.5C4.9 7.5 4 6.6 4 5.5S4.9 3.5 6 3.5 8 4.4 8 5.5 7.1 7.5 6 7.5zM20 20h-4v-5.5c0-1.32-.02-3-1.82-3-1.82 0-2.1 1.42-2.1 2.9V20h-4V9h3.84v1.5h.05c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2V20z"/></svg>
-    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M21 6h-3V4c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v2H9c-.55 0-1 .45-1 1v13c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1zm-5 13c-2.76 0-5-2.24-5-5 0-.52.08-1.03.22-1.5H9v7h12v-7h-2.22c.14.47.22.98.22 1.5 0 2.76-2.24 5-5 5zM9 9V7h2v2H9zm8 9c-1.66 0-3-1.34-3-3 0-.52.13-1.02.36-1.45.58-.29 1.21-.45 1.89-.45s1.31.16 1.89.45c.23.43.36.93.36 1.45 0 1.66-1.34 3-3 3z"/></svg>
+    <img src={iconoLi.src} class="footer-icon" alt=""/> 
+   <img src={iconoFb.src} class="footer-icon" alt=""/> 
+   <img src={iconoIg.src} class="footer-icon" alt=""/> 
+   <img src={iconoTik.src} class="footer-icon" alt=""/> 
   </div>
 
   <!-- Frase debajo -->
@@ -774,8 +848,9 @@ import testimonio3 from "../assets/testimonio3.png";
   <!-- Patrocinadores -->
   <div class="footer-sponsors">
     <img src={logoOnePlanet.src}  alt=""/>  
+    <img src={logoTop.src}  alt=""/> 
      <img src={logoComercio.src}  alt=""/> 
-     <img src={logoTop.src}  alt=""/> 
+     
   </div>
 
   <!-- Texto final -->
@@ -931,6 +1006,8 @@ cursor: pointer;
   padding: 1.5rem 1rem;
 }
 
+
+/*
 .video-container {
   margin-top: 0.8rem; 
   display: flex;
@@ -944,6 +1021,64 @@ cursor: pointer;
   object-fit: cover;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
+
+*/
+ 
+.video-container {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 320px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Capa de elementos encima del video */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* permite que el clic pase al video */
+}
+
+.video-play-btn {
+  font-size: 40px;
+  color: white;
+ 
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto; /* este sí puede recibir clic */
+}
+
+.video-caption { 
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
+  font-size: 14px;
+  transition: opacity 0.3s ease;
+  width: 160px; 
+} 
 
 
                                           /*QUE HACEMOS*/ 
@@ -1293,19 +1428,23 @@ font-size: 15px;
       margin-bottom: -20px;
   background: #25262B;
   transform: rotate(6deg);
+  padding-top: 25px;
 }
 
 .info-card2-como-hacemos {
   background: #FF65C3;
   transform: rotate(-6deg);
       margin-bottom: -20px;
+      padding-top: 25px;
 }
 
 /* Contenedor interno blanco */
 .inner-card {
   background: #FFFFFF;
   border-radius: 20px;
-  padding: 1.6rem 1.2rem;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
   text-align: left;
   width: 100%;
   height: 90%;
@@ -1442,6 +1581,7 @@ font-size: 15px;
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+      gap: 10px;
 }
 
 .foto-profesional {
@@ -1494,214 +1634,188 @@ font-size: 15px;
 
                                                    /*CARRUSEL */ 
 
-                                                   /*
-.carrusel-section {
-  
-  text-align: center;
-  
-}
+      
 
-.carrusel-section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-  color: #1e1e1e;
-}
-
-.carrusel-section p {
-  font-family: "Inter", sans-serif; 
-    font-style: normal;                
-    font-weight: 500;   
-  font-size: 15px;
-  line-height: 1.6;
-  color: black;
-  margin-bottom: 1.5rem;
-  margin-top: 1.6rem;
-   line-height: 1.1;
-}
-
-.carrusel-container {
-  position: relative;
-  background: #FFA8DD;
-  border-radius: 50px;
-  width: 100%;
-  height: 380px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  position: absolute;
-  width: 65%;
-  height: 70%;
-  background: #FFEFF9;
-  border-radius: 40px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  transition: all 0.4s ease;
-}
-
-.card.active {
-  z-index: 2;
-  transform: translateY(0) scale(1);
-}
-
-.card.behind {
-  width: 70%;
-  height: 70%;
-  opacity: 0.5;
-  background: #ffcce5;
-  z-index: 1;
-}
-
-.card.behind.left {
-  transform: rotate(-8deg) translateX(-40%) translateY(20%);
-}
-
-.card.behind.right {
-  transform: rotate(8deg) translateX(40%) translateY(20%);
-}
-
-.icono {
-  background: white;
-  border-radius: 20px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #ff4fa6;
-  margin: 0 auto 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.controls {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.arrow {
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  cursor: pointer;
-  color: #000;
-}
-
-.dot {
-  width: 30%;
-  height: 8px;
-  background: white;
-  border-radius: 4px;
-}
-
-.card h3{
+.beneficiosh2{
    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-  font-size: 17px;
-  color: #404146;
-  margin-bottom: 17px;
+   font-weight: bold;
+   font-size: 36px;
+  color: #25262B;
+  padding: 1rem 1rem; 
+     text-align:center; 
 }
 
+.beneficiosp{
 
-.card p{
-    font-family: "Inter", sans-serif; 
-    font-style: normal;                
-    font-weight: 500;  
-   
-  font-size: 14px;
-  color: #25202B;
-  
+   font-family: 'Inter', sans-serif;
+       font-style: normal;                
+    font-weight: 500;                  
+    font-size: 15px; 
+  color: #25262B;
+   text-align:center; 
+   padding-bottom: 25px;
 }
-
-
-.btn-primary3 {
-    font-family: 'Poppins', sans-serif;
-     font-weight: bold;
-  display: inline-block;
-  padding: 10px;
-  background-color: #25262B;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 999px;
-
-
-  text-align: center;
-  margin-top: 50px;
-  font-size: 13px;
-
-}
-
-*/
 
 .carrusel-section {
   position: relative;
-  background-color: #FFB6C1; /* Fondo rosado */
-  padding: 2rem 0;
+ background-color: #FFA8DD;
+  padding: 2rem 0 4rem 0;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-radius: 50px;
+  padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .carrusel-wrapper {
-  width: 80%;
-  overflow: hidden;
+  width: 90%;
+  
 }
 
 .carrusel-container {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
   align-items: center;
 }
 
 .card {
-  min-width: 300px;
-  height: 200px;
+  position: relative;
+  overflow: hidden;
+  min-width: 280px;
+  height: 340px; /* más alta */
   margin: 0 10px;
-  background-color: #ccc; /* Cards gris */
+  background-color: #FFEFF9;
+  border-radius: 40px;
+  flex-shrink: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  border-radius: 12px;
-  flex-shrink: 0;
+  text-align: center;
+  opacity: 0.7;
+ 
 }
 
 .card.active {
   background-color: white;
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(0deg);
+  opacity: 1;
+  z-index: 2;
+  
+}
+
+.card.prev {
+  transform: scale(0.9) rotate(-8deg);
+  opacity: 0.8;
+}
+
+.card.next {
+  transform: scale(0.9) rotate(8deg);
+  opacity: 0.8;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 240px;
+  padding: 15px; 
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #ffffff 0%, #f5a5d6 70%, #f59dd4 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 30%; 
+  margin: 0 auto 1rem auto; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+h3 {
+      font-family: 'Poppins', sans-serif;
+     font-weight: bold;
+  margin: 0;
+  font-size: 17px; 
+  font-weight: bold;
+  color: #404146;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+     font-weight: 500;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #25202B;
+}
+
+/* 🔹 Controles debajo */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1.5rem;
 }
 
 .arrow {
   background-color: transparent;
+  color: black;
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #555;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.arrow.left {
-  left: 10px;
+  font-weight: 900;
+  transform: rotate(180deg); /* para la izquierda */
 }
 
 .arrow.right {
-  right: 10px;
+  transform: rotate(0deg);
+}
+
+/* 🔹 Indicador */
+.indicator-bar {
+  position: relative;
+  width: 100px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.indicator-dot {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: black;
+  border-radius: 50%;
+  transition: left 0.4s ease;
+}
+
+.btn-primary3 {
+    display: inline-flex;          /* permite alinear icono y texto */
+  align-items: center;           /* centra verticalmente */
+  justify-content: center;       /* centra horizontalmente */
+  gap: 0.5rem; 
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+  background: #25262B; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 25px; 
+  margin-left: 38px;
+
 }
 
                                       /*TRANSFORMA TU EMPRESA*/ 
@@ -1753,19 +1867,20 @@ font-size: 15px;
 
 
 .btn-primary4 {
+    display: inline-flex;          /* permite alinear icono y texto */
+  align-items: center;           /* centra verticalmente */
+  justify-content: center;       /* centra horizontalmente */
+  gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
-     font-weight: bold;
-  display: inline-block;
-  padding: 10px;
-  background-color: #E860B9;
-  color: #FFFFFF;
-  padding: 0.8rem 1.5rem;
+    font-weight:500;
+  background: #FF65C3;
+  color: white;
   border: none;
-  border-radius: 999px;
-  text-align: center;
- margin-top: 50px;
- font-size:13px;
-
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 25px; 
 }
 
 
@@ -1810,6 +1925,7 @@ font-size: 15px;
 /* Cambiar color de las viñetas */
 .lista li::marker {
   color: #FF65C3;           /* Rosado para las viñetas */
+  font-size: 20px;
 }
 
 
@@ -1874,18 +1990,20 @@ padding: 2rem 1.5rem;
 }
 
 .btn-rosado {
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  background-color: #FF6ACD;
-  color: #FFFFFF;
+ display: inline-flex;          /* permite alinear icono y texto */
+  align-items: center;           /* centra verticalmente */
+  justify-content: center;       /* centra horizontalmente */
+  gap: 0.5rem; 
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+ 
+  background: #FF65C3;
+  color: white;
   border: none;
-  border-radius: 10px;
-  padding: 0.7rem 1.2rem;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  font-size: 13px;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
 
@@ -1917,7 +2035,7 @@ padding: 2rem 1.5rem;
   font-size: 18px;
   line-height: 1.1;
   max-width: 300px;
-  margin-top: 45px;
+  margin-top: 10px;
 }
 
 
@@ -1960,10 +2078,10 @@ padding: 2rem 1.5rem;
 }
 
 .testimonial-avatar {
-  width: 50px;
-  height: 50px;
-  background: #ddd;
-  border-radius: 50%;
+ width: 40px;
+  height: 40px; 
+  border-radius: 50%;        /* hace que sea circular */
+  object-fit: cover;         /* asegura que la imagen llene el círculo sin deformarse */
   flex-shrink: 0;
 }
 
@@ -1976,7 +2094,7 @@ padding: 2rem 1.5rem;
   font-size: 18px;
   font-weight: bold;
   color: #FF65C3;
-  margin-bottom: 0.2rem;
+ 
 }
 
 .testimonial-role {
@@ -1984,7 +2102,8 @@ font-family: 'Poppins', sans-serif;
 font-weight: 400;
   font-size: 14px;
   color: #25262B;
-  margin-bottom: 0.3rem;
+  margin-top: -1px;
+ 
 }
 
 .testimonial-stars span {
@@ -2004,11 +2123,14 @@ font-weight: 400;
 }
 
 .testimonial-btn {
+    display: inline-flex;          /* permite alinear icono y texto */
+  align-items: center;           /* centra verticalmente */
+  justify-content: center;       /* centra horizontalmente */
+  gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
     font-weight:500;
-    font-style:italic;
-  display: block;
-  margin: 0 auto;
+
+  margin-left: 36px;
   background: #FF65C3;
   color: white;
   border: none;
@@ -2054,6 +2176,8 @@ font-weight: 400;
   font-style:italic;
   font-size: 15px;
   line-height: 1.4;
+  color: white;
+  margin-top: -5px;
 }
 
 
@@ -2301,7 +2425,7 @@ font-size: 15px;
   padding: 2rem 1.5rem;
   text-align: center;
   border-radius: 40px 40px 0 0;
-  margin-top: 2rem;
+  
 }
 
 .footer-logo {
@@ -2328,19 +2452,28 @@ font-size: 15px;
 }
  
 .footer-icons { 
-  background-color: #FF65C3;    
-  border-radius: 25px;
+  background-color: #FFEAF7;     
+  border-radius: 10px;
   padding: 0.8rem;
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: 0 auto 1.5rem;
+  gap: 3.5rem;
+
   
+  width: 100vw;             /* ocupa todo el ancho visible de la ventana */
+  position: relative;       /* asegura que se mantenga dentro del flujo normal */
+  left: 50%;                /* corrige márgenes del contenedor padre */
+  right: 50%;
+  margin-left: -50vw;       /* truco para alinear completamente al borde */
+  margin-right: -50vw;
+
+  box-sizing: border-box;
+  margin-bottom: 20px; 
 }
 
 .footer-icon {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
 .footer-message {
@@ -2348,21 +2481,21 @@ font-size: 15px;
   font-weight: 500;
   font-size: 15px;
   color: #25262B;
-  margin-bottom: 1rem;
+ 
 }
 
 .footer-sponsors {
-  display: flex;
+    display: flex;
+  flex-direction: column; /* ← los coloca en columna */
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 10px;
+ 
 }
 
 .footer-sponsors img {
-  width: 60px;
+ width: 110px; /* ← ajusta el tamaño a gusto */
   height: auto;
-  object-fit: contain;
 }
 
 .footer-small {
@@ -2404,7 +2537,33 @@ width: 100vw; /* ancho total */
 }
 
 
-  
+.carrusel-wrapper {
+    width: 95%;
+  }
 
+  .card {
+    min-width: 220px;
+    height: 260px;
+  }
+  .icon {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .controls {
+    gap: 1rem;
+  }
+  .arrow {
+    font-size: 1.4rem;
+  }
+
+  
 }
+
+
+
 </style>
