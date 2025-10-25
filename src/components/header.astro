@@ -12,15 +12,15 @@ import iconoConv from "../assets/icono-contacto.png";
       </a>
 
       <nav class="nav-links">
-        <a href="#">¿Qué hacemos?</a>
-        <a href="#">¿Cómo funciona?</a>
-        <a href="#">Testimonios</a>
-        <a href="#">Preguntas frecuentes</a>
-        <a href="#">Contacto</a>
+        <a href="#que-hacemos">¿Qué hacemos?</a>
+        <a href="#como-funciona">¿Cómo funciona?</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
+        <a href="#contacto">Contacto</a>
         <a href="#">Blog</a>
         <a href="#">¿Buscas trabajo?</a>
       </nav>
-
+ 
       <!-- Botón contacto -->
       <button id="openContactBtn" class="menu-btn contact-btn" aria-label="Abrir contacto">
         <img src={iconoConv.src} alt="Contacto" />
@@ -44,11 +44,11 @@ import iconoConv from "../assets/icono-contacto.png";
     </div>
 
     <nav class="modal-links">
-      <a href="#">¿Qué hacemos?</a>
-      <a href="#">¿Cómo funciona?</a>
-      <a href="#">Testimonios</a>
-      <a href="#">Preguntas frecuentes</a>
-      <a href="#">Contacto</a>
+      <a href="#que-hacemos">¿Qué hacemos?</a>
+      <a href="#como-funciona">¿Cómo funciona?</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
+      <a href="#contacto">Contacto</a>
       <a href="#">Blog</a>
       <a href="#">¿Buscas trabajo?</a>
     </nav>
@@ -94,6 +94,11 @@ import iconoConv from "../assets/icono-contacto.png";
   background: #f4f4f4;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed;   
+  top: 0;            
+  left: 0;
+  width: 100%;       
+  z-index: 1000;  
 }
 
 .header-content {
@@ -133,12 +138,8 @@ import iconoConv from "../assets/icono-contacto.png";
   color: #ff65c3;
 }
 
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .ham-btn { display: block; }
-}
 
-/* --- MODAL GENERAL --- */
+
 .menu-modal {
   display: none;
   position: fixed;
@@ -204,10 +205,10 @@ import iconoConv from "../assets/icono-contacto.png";
   font-weight: 500;
 }
 
-/* Alternar colores de las opciones */
+
 .modal-links a {
-  background-color: #fff;  /* fondo blanco */
-  border: 2px solid;       /* borde visible */
+  background-color: #fff;  
+  border: 2px solid;      
   padding: 0.8rem;
   border-radius: 10px;
   margin-bottom: 0.6rem;
@@ -218,12 +219,12 @@ import iconoConv from "../assets/icono-contacto.png";
 }
 
 .modal-links a:nth-child(odd) {
-  border-color: #ff65c3;   /* rosado */
+  border-color: #ff65c3;   
   color: #ff65c3;
 }
 
 .modal-links a:nth-child(even) {
-  border-color: #000;      /* negro */
+  border-color: #000;      
   color: #000;
 }
 
@@ -232,7 +233,7 @@ import iconoConv from "../assets/icono-contacto.png";
   color: #fff;
 }
 
-/* --- CONTACTO --- */
+                                        /* --- CONTACTO --- */
 .contact-content {
   text-align: left;
 }
@@ -302,10 +303,18 @@ import iconoConv from "../assets/icono-contacto.png";
 }
 
 
-/* Bordes rosados en los campos del formulario */
+
 .contact-modal-content input,
 .contact-modal-content textarea {
   border: 2px solid #ff65c3;
 }
+
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .ham-btn { display: block; }
+  
+}
+
 
 </style>

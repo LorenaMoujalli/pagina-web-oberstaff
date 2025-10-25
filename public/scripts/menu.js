@@ -37,4 +37,13 @@ document.addEventListener("keydown", (e) => {
     closeModal(contactModal);
   }
 });
- 
+
+// ---  NUEVO: Cerrar el menú al hacer clic en una opción ---
+const menuLinks = document.querySelectorAll(".modal-links a");
+
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    closeModal(menuModal);
+  });
+});
+

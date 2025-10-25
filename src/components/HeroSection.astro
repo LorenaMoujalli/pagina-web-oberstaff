@@ -10,7 +10,6 @@ import iconoGrupo from "../assets/icono-grupo.png";
 import iconoLupa from "../assets/icono-lupa.png";
 import iconoMoney from "../assets/icono-money.png";
 //import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-//import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { icon } from "@fortawesome/fontawesome-svg-core";
 import logo from "../assets/logo.png";  
 import logoOnePlanet from "../assets/logo-one-planet.png";   
@@ -41,7 +40,9 @@ import iconoFlechas  from "../assets/icono-flechas.png";
 import iconoPunta  from "../assets/icono-punta.png"; 
 import iconoBombillo  from "../assets/icono-bombillo.png"; 
 import iconoUserRosa  from "../assets/icono-user-rosa.png"; 
-
+import iconoPapel  from "../assets/icono-papel.png";  
+import iconoMegafonoRosa  from "../assets/icono-megafono-rosa.png";  
+import iconoPregunta  from "../assets/icono-pregunta.png";   
 ---
    
 
@@ -60,7 +61,8 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
       </p>
 
        <button class="btn-primary">
-        <span class="icono-telefono" set:html={icon(faPhoneVolume).html[0]}></span>
+     <span class="icono-telefono" set:html={icon(faPhoneVolume).html[0]}></span>
+     <!--<img src={iconoTel.src} alt="" /> --> 
         AGENDA UNA LLAMADA GRATIS
       </button>
 
@@ -141,7 +143,7 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
                                   <!--QUE HACEMOS -->
 
 
-<section class="que-hacemos-section">
+<section id="que-hacemos" class="que-hacemos-section">
   <h2>¿Qué hacemos?</h2>
   <p>
     Conectamos empresas con talento profesional   <span class="alto-nivel">de alto nivel</span> en Sudamérica, ofreciendo soluciones que benefician ambas partes.
@@ -154,31 +156,24 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
       <p>Simplificamos todo el proceso de encontrar el talento ideal para tu empresa, ahorrándote tiempo y recursos.</p>
     
        <div class="mini-card">
-        <!-- 
-       <span class="icono-busqueda" set:html={icon(faMagnifyingGlass).html[0]}></span>
-       -->
-
-       <!-- 
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icono-busqueda">
-    <path fill="#FF65C3" d="M505 442.7L405.3 343c28.3-34.9 45.3-79 45.3-127C450.6 97.9 352.7 0 225.3 0S0 97.9 0 216.1 97.9 432.2 225.3 432.2c48 0 92.1-17 127-45.3L442.7 505c4.5 4.5 10.6 7 17 7s12.5-2.5 17-7c9.4-9.4 9.4-24.6 0-34zM225.3 382.2c-91.7 0-166-74.3-166-166S133.6 50.2 225.3 50.2s166 74.3 166 166-74.3 166-166 166z"/>
-  </svg>
-  -->
+      
   <img src={iconoLupa.src} alt="" class="icono-busqueda" />
 
     </div>
     
     </div>
 
+
+                                                    <!-- 3 CARDS  -->
+
      <div class="info-card2">
       <h3>Profesionales Comprometidos</h3>
       <p>Contratamos expertos motivados y dedicados a impulsar tu negocio con sus habilidades y conocimientos.</p>
    
     <div class="mini-card2">
- 
 
     <img src={iconoGrupo.src} alt="" class="icono-users" />
     
-  
   </div>
 
     </div>
@@ -230,16 +225,23 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </div>
 </div>
 
-
+<!-- 
  <button class="btn-primary2">¿ESTÁS INTERESADO?</button>
-</section>
+-->
+
+ <a href="#contacto" style="text-decoration: none;">
+  <button class="btn-primary2">¿ESTÁS INTERESADO?</button>
+</a>
+
+
+</section> 
 
 
 
 
-<!-- COMO FUNCIONA SECTION -->
+                                       <!-- COMO FUNCIONA SECTION -->
 
-<section class="como-funciona-section">
+<section id="como-funciona" class="como-funciona-section"> 
   <h2>¿Cómo funciona?</h2>
   <p>
     Un proceso simple y efectivo para incorporar <span class="alto-nivel">talento de alto nivel</span> a tu empresa.
@@ -276,7 +278,8 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 </section>
 
 
-<!-- perfil-testimonio -->
+                                    <!-- perfil-testimonio -->
+
 
 <section class="testimonio-section">
   <p class="testimonio-intro">
@@ -306,7 +309,7 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 
 
-<!--carrusel 1 -->
+                                       <!--carrusel-flechas  -->
 
 
 
@@ -454,7 +457,7 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 
 
-<!--transforma tu empresa -->
+                                      <!--transforma tu empresa -->
 
 <section class="cta-section">
   <h2>Transforma tu <span class="highlight">empresa</span></h2>
@@ -473,13 +476,13 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 
 
-<!--CARDS VARIEDAD -->
+                               <!--CARDS -->
 
 <section class="cards-variedad-section">
 
 <div class="cards-variedad">
   <div class="card1">
-    <div class="icon2">
+    <div class="icon3">
       <img src={iconoIg.src} alt="" class="icono-trofeo" /> 
     </div> 
     <h3 class="card-title">Gestión de Redes</h3>
@@ -494,10 +497,9 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </div>
 
   <div class="card1">
-    <div class="icon-container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
-
-    </div>
+     <div class="icon3">
+      <img src={iconoPapel.src} alt="" class="icono-trofeo" /> 
+    </div> 
     <h3 class="card-title">Redacción Profesional</h3>
     <p class="cards-text">
   Contenido persuasivo que convierte visitantes en clientes
@@ -512,10 +514,9 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 
 <div class="card1">
-    <div class="icon-container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
-
-    </div>
+    <div class="icon3">
+      <img src={iconoMegafonoRosa.src} alt="" class="icono-trofeo" /> 
+    </div> 
     <h3 class="card-title">Marketing Digital</h3>
     <p class="cards-text">
   Campañas efectivas con enfoque en ROI
@@ -530,10 +531,9 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 
   <div class="card1">
-    <div class="icon-container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
-
-    </div>
+    <div class="icon3">
+      <img src={iconoUserRosa.src} alt="" class="icono-trofeo" /> 
+    </div> 
     <h3 class="card-title">Soporte Ejecutivo</h3>
     <p class="cards-text">
   Asistencia especializada para gestión empresarial
@@ -547,10 +547,9 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </div>
 
    <div class="card1">
-    <div class="icon-container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
-
-    </div>
+    <div class="icon3">
+      <img src={iconoBombillo.src} alt="" class="icono-trofeo" /> 
+    </div> 
     <h3 class="card-title">Estrategia Comercial</h3>
     <p class="cards-text">
   Optimización de procesos comerciales y aumento de ventas
@@ -564,10 +563,9 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </div>
 
    <div class="card1">
-    <div class="icon-container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icono-maletin"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#000000" d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
-
-    </div>
+    <div class="icon3">
+      <img src={iconoPunta.src} alt="" class="icono-trofeo" /> 
+    </div> 
     <h3 class="card-title">Diseño Gráfico</h3>
     <p class="cards-text">
  Soluciones visuales profesionales para tu marca
@@ -603,11 +601,15 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
     <h3>Impulsa tu negocio con el <span class="highlight"> mejor talento de Sudamérica</span></h3>
     <button class="btn-rosado">
   <span class="btn-icon"><img src={iconoUser.src} alt="" /></span>
-  <span class="btn-text">COMIENZA HOY</span>
+
+   <a href="#contacto" style="text-decoration: none; color: white;">
+ <span class="btn-text">COMIENZA HOY</span> 
+</a>
+  
 </button>
   </div>
 </section>
-
+    
 
 
                                                 <!--CASOS DE EXITO -->
@@ -625,7 +627,7 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
                                               <!--CARRUSEL --> 
   
-<div class="testimonial-section">
+<div id="testimonios" class="testimonial-section">
   <div class="testimonial-card">
     <img src={testimonio1.src} alt="" class="testimonial-video" />
 
@@ -713,10 +715,14 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </p>
 </div>
 
-<!--pREGUNTAS FRECUENTES -->
+                            <!--PREGUNTAS FRECUENTES -->
 
-<section class="faq-section">
+<section id="preguntas-frecuentes" class="faq-section"> 
   <h2 class="faq-title">Preguntas <span class="highlight">Frecuentes</span></h2>
+ <p class="faq-p">
+   Consulta las dudas <span class="highlight"> más recurrentes</span> acerca de nuestros servicios.
+  </p>
+
 
   <div class="faq-container">
     <div class="faq-item">
@@ -791,7 +797,14 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </div>
 
 
-  <button class="btn-primary5">icono ¿TIENES MAS PREGUNTAS?</button>
+   <button class="faq-btn">
+     <a href="#contacto" style="text-decoration: none; color: white;">
+  <span class="btn-icon"><img src={iconoPregunta.src} alt="" /></span>
+  <span class="btn-text">¿TIENES MAS PREGUNTAS?</span>
+</a>
+  
+</button>
+
 </section>
 
 
@@ -799,9 +812,9 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 
 
-<!--CONTACTO -->
+                                         <!--CONTACTO -->
  
-<section class="contact-section">
+<section id="contacto" class="contact-section">
   <h2>Contáctanos</h2>
   <p>Déjanos saber tus requerimientos y nos pondremos en contacto contigo <span class="highlight">lo más pronto posible.</span></p>
 
@@ -845,19 +858,17 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
   </video>
 </div>
 
-<footer class="footer-section">
-  <!-- Logo -->
-   
-        <img src={logo.src} class="footer-logo" alt=""/> 
-      
 
-  <!-- Copyright -->
+                                                        <!--FOOTER -->
+<footer class="footer-section">
+        <img src={logo.src} class="footer-logo" alt=""/> 
+     
   <p class="footer-copy">© Oberstaff 2025</p>
 
-  <!-- Frase subrayada -->
+
   <p class="footer-highlight">Políticas de Privacidad y Uso de Cookies</p>
 
-  <!-- Íconos sociales -->
+ 
   <div class="footer-icons">
     <img src={iconoLi.src} class="footer-icon" alt=""/> 
    <img src={iconoFb.src} class="footer-icon" alt=""/> 
@@ -865,10 +876,10 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
    <img src={iconoTik.src} class="footer-icon" alt=""/> 
   </div>
 
-  <!-- Frase debajo -->
+  
   <p class="footer-message">PATROCINADORES OFICIALES</p>
 
-  <!-- Patrocinadores -->
+
   <div class="footer-sponsors">
     <img src={logoOnePlanet.src}  alt=""/>  
     <img src={logoTop.src}  alt=""/> 
@@ -876,14 +887,29 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
      
   </div>
 
-  <!-- Texto final -->
+ 
   <p class="footer-small">Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.</p>
 </footer>
 
 
 
-                                             <!--ESTILO --> 
+                                             <!--ESTILO -->
+                                             
+                                             
+
+
+
 <style> 
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; 
+}
 
                               /*SECCION PRINCIPAL */ 
 
@@ -917,7 +943,7 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 
 .hero-text p {
     font-family: 'Inter', sans-serif;
-  font-weight: 500; /* peso medio (mixed/intermedio) */
+  font-weight: 500; 
   font-size: 16px;
   max-width: 400px;
   margin: 0 auto 1.5rem;
@@ -942,7 +968,7 @@ import iconoUserRosa  from "../assets/icono-user-rosa.png";
 .hero-image img {
 background: linear-gradient(to bottom, #ffffff 0%, rgb(243, 163, 212) 50%, #ffffff 100%);
   width: 160%; 
-    max-width: none; /* eliminamos el límite */
+    max-width: none; 
     height: auto;
     margin-top: -3rem;
     display: block;
@@ -991,7 +1017,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0; /* quitamos espacio normal */
+  gap: 0; 
 }
 
 .profile-img {
@@ -1009,7 +1035,7 @@ cursor: pointer;
 
 .profile-card p {
  font-family: 'Inter', sans-serif;
-  font-weight: 500; /* Medium */
+  font-weight: 500; 
   font-size: 14px;
   color: #000000;
   margin-top: 0.3rem;
@@ -1066,7 +1092,7 @@ cursor: pointer;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Capa de elementos encima del video */
+
 .video-overlay {
   position: absolute;
   inset: 0;
@@ -1074,7 +1100,7 @@ cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  pointer-events: none; /* permite que el clic pase al video */
+  pointer-events: none; 
 }
 
 .video-play-btn {
@@ -1088,7 +1114,7 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  pointer-events: auto; /* este sí puede recibir clic */
+  pointer-events: auto;
 }
 
 .video-caption { 
@@ -1141,7 +1167,7 @@ cursor: pointer;
 }
 
 
-                                        /*CARDS 1*/ 
+                                        /* 3 CARDS */ 
 
 .info-cards {
   margin-top: 2.5rem; 
@@ -1166,8 +1192,8 @@ cursor: pointer;
   transform: rotate(-4deg);
       margin-bottom: -15px;
 
-       border: 1px solid rgba(0, 0, 0, 0.1); /* un poco más oscuro */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+       border: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
 }
 
 .info-card1 h3 {
@@ -1202,8 +1228,8 @@ cursor: pointer;
   border-radius: 8px;
   font-size: 0.75rem;
  transform: rotate(15deg);
-   border: 1px solid rgba(0, 0, 0, 0.1); /* un poco más oscuro */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+   border: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
   
 }
 
@@ -1221,8 +1247,8 @@ cursor: pointer;
   border-radius: 8px;
   font-size: 0.75rem;
  transform: rotate(15deg);
-    border: 1px solid rgba(0, 0, 0, 0.1); /* un poco más oscuro */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
 }
 
 img.icono-users{
@@ -1242,8 +1268,8 @@ img.icono-users{
   border-radius: 8px;
   font-size: 0.75rem;
  transform: rotate(15deg);
-   border: 1px solid rgba(0, 0, 0, 0.1); /* un poco más oscuro */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+   border: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
   
 } 
 
@@ -1258,8 +1284,8 @@ img.icono-users{
  
   transform: rotate(4deg);
       margin-bottom: -15px;
-        border: 1px solid rgba(0, 0, 0, 0.1); /* un poco más oscuro */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+        border: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
 }
 
 .info-card2 h3 {
@@ -1289,8 +1315,8 @@ img.icono-users{
  margin-top: 4rem;
   display: flex;
   gap: 1rem;
-  overflow-x: auto;         /* habilita scroll horizontal */
-  scroll-snap-type: x mandatory; /* hace que cada card se “pegue” al centro */
+  overflow-x: auto;         
+  scroll-snap-type: x mandatory; 
   padding: 1rem;
   -webkit-overflow-scrolling: touch;
   
@@ -1354,14 +1380,14 @@ img.icono-users{
 
 
 .dashed-line {
-  border-top: 2px dashed #ccc; /* línea punteada */
+  border-top: 2px dashed #ccc; 
   margin: 1rem auto;
   width: 100%; 
 }
 
 
 .card1 .card-text1{
-  text-align: justify; /*justify*/
+  text-align: justify; 
    text-justify: inter-word;
    font-family: 'Inter', sans-serif; 
     font-style: italic; 
@@ -1448,7 +1474,7 @@ font-size: 15px;
   align-items: center;
 }
 
-/* Card base (fondo externo) */
+
 .info-card1-como-hacemos,
 .info-card2-como-hacemos {
   position: relative;
@@ -1476,7 +1502,7 @@ font-size: 15px;
       padding-top: 25px;
 }
 
-/* Contenedor interno blanco */
+
 .inner-card {
   background: #FFFFFF;
   border-radius: 20px;
@@ -1490,7 +1516,7 @@ font-size: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Número circular */
+
 .card-number {
   position: absolute;
   top: -23px;
@@ -1576,9 +1602,9 @@ font-size: 15px;
   color: #25262B;
     margin-top: 10px;
 }
+ 
 
-
-                                   /*TESTIMONIO*/ 
+                                      /*TESTIMONIO*/ 
 
 .testimonio-section {
  background: linear-gradient(
@@ -1626,7 +1652,7 @@ font-size: 15px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: white; /* aquí luego irá la foto */
+  background-color: white; 
   margin-right: 1rem;
 }
 
@@ -1639,8 +1665,8 @@ font-size: 15px;
 }
 
 .info-profesional p {
- font-family: "Poppins", sans-serif; /* Tipografía */
-    font-style: normal;                  /* No cursiva */
+ font-family: "Poppins", sans-serif; 
+    font-style: normal;                  
     font-weight: 400; 
   margin-top: 2px;
   font-size: 14px;
@@ -1649,8 +1675,8 @@ font-size: 15px;
 }
 
 .testimonio-texto {
-  font-family: "Inter", sans-serif; /* Tipografía */
-    font-style: italic;                /* Cursiva */
+  font-family: "Inter", sans-serif; 
+    font-style: italic;                
     font-weight: 300; 
   font-size: 13px;
   line-height: 1.1;
@@ -1723,7 +1749,7 @@ font-size: 15px;
   position: relative;
   overflow: hidden;
   min-width: 280px;
-  height: 340px; /* más alta */
+  height: 340px; 
   margin: 0 10px;
   background-color: #FFEFF9;
   border-radius: 40px;
@@ -1734,7 +1760,7 @@ font-size: 15px;
   justify-content: center;
   text-align: center;
   opacity: 0.7;
-   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
  
 }
 
@@ -1743,7 +1769,7 @@ font-size: 15px;
   transform: scale(1.1) rotate(0deg);
   opacity: 1;
   z-index: 2;
-   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* leve relieve */
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
 }
 
 .card.prev {
@@ -1790,6 +1816,24 @@ font-size: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+
+
+.icon3 {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff; 
+  width: 50px;
+  height: 50px;
+  border-radius: 30%; 
+  margin: 0 auto 1rem auto; 
+  border: 2px solid #f38bcb; 
+  box-shadow:
+    0 0 12px 4px rgba(248, 152, 211, 0.6), 
+    0 2px 6px rgba(0, 0, 0, 0.15); 
+}
+ 
+
 h3 {
       font-family: 'Poppins', sans-serif;
      font-weight: bold;
@@ -1807,7 +1851,7 @@ p {
   color: #25202B;
 }
 
-/*  Controles debajo */
+
 .controls {
   display: flex;
   align-items: center;
@@ -1823,14 +1867,14 @@ p {
   font-size: 2rem;
   cursor: pointer;
   font-weight: 900;
-  transform: rotate(180deg); /* para la izquierda */
+  transform: rotate(180deg); 
 }
 
 .arrow.right {
   transform: rotate(0deg);
 }
 
-/* Indicador */
+
 .indicator-bar {
   position: relative;
   width: 100px;
@@ -1852,9 +1896,9 @@ p {
 }
 
 .btn-primary3 {
-    display: inline-flex;          /* permite alinear icono y texto */
-  align-items: center;           /* centra verticalmente */
-  justify-content: center;       /* centra horizontalmente */
+    display: inline-flex;          
+  align-items: center;           
+  justify-content: center;      
   gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
     font-weight:500;
@@ -1892,7 +1936,7 @@ p {
 
 .cta-section .cta-subtext {
   font-family: 'Inter', sans-serif;
-   font-style: normal;                /* No cursiva */
+   font-style: normal;              
     font-weight: 500;
   font-size: 17px;
   color: #25262B;
@@ -1901,8 +1945,8 @@ p {
 }
 
 .cta-section .cta-highlight {
-  font-family: "Inter", sans-serif; /* Tipografía */
-    font-style: italic;                /* Cursiva */
+  font-family: "Inter", sans-serif; 
+    font-style: italic;                
     font-weight: 500;
   background-color: #25262B;
   color: #FFFFFF;
@@ -1919,9 +1963,9 @@ p {
 
 
 .btn-primary4 {
-    display: inline-flex;          /* permite alinear icono y texto */
-  align-items: center;           /* centra verticalmente */
-  justify-content: center;       /* centra horizontalmente */
+    display: inline-flex;          
+  align-items: center;          
+  justify-content: center;       
   gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
     font-weight:500;
@@ -1940,8 +1984,8 @@ p {
 
 .cards-variedad-section {
  background-color: #FFD5EE;  
-  margin-top: 2rem;          /* margen respecto al video */
-  padding: 2rem 1.5rem;      /* espacio interno */
+  margin-top: 2rem;        
+  padding: 2rem 1.5rem;      
   text-align: center;
   color: black;
   border-radius: 70px;
@@ -1952,8 +1996,8 @@ p {
 
   display: flex;
   gap: 1rem;
-  overflow-x: auto;         /* habilita scroll horizontal */
-  scroll-snap-type: x mandatory; /* hace que cada card se “pegue” al centro */
+  overflow-x: auto;         
+  scroll-snap-type: x mandatory; 
   padding: 1rem;
   -webkit-overflow-scrolling: touch;
   
@@ -1961,23 +2005,23 @@ p {
 
 
 .lista {
-  margin-top: 20px;         /* Espacio arriba de la lista */
-  padding-left: 20px;       /* Espacio para las viñetas */
+  margin-top: 20px;         
+  padding-left: 20px;       
   list-style-position: outside;
 }
 
 .lista li {
   font-family: "Inter", sans-serif;
-  font-weight: 500;          /* Medium */
+  font-weight: 500;          
   font-size: 14px;
   color: #25262B;
   margin-bottom: 10px; 
 }
 
-/* Cambiar color de las viñetas */
+
 .lista li::marker {
-  color: #FF65C3;           /* Rosado para las viñetas */
-  font-size: 20px;
+  color: #FF65C3;           
+  font-size: 25px;
 }
 
 
@@ -1988,7 +2032,6 @@ p {
 .subrayado-section {
   background-color: #ffffff;
   text-align: center;
- /* padding: 2rem 1.5rem;*/
   margin-top: 2rem;
   border-radius: 50px;
 }
@@ -2042,9 +2085,9 @@ padding: 2rem 1.5rem;
 }
 
 .btn-rosado {
- display: inline-flex;          /* permite alinear icono y texto */
-  align-items: center;           /* centra verticalmente */
-  justify-content: center;       /* centra horizontalmente */
+ display: inline-flex;          
+  align-items: center;         
+  justify-content: center;       
   gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
     font-weight:bold;
@@ -2132,8 +2175,8 @@ padding: 2rem 1.5rem;
 .testimonial-avatar {
  width: 40px;
   height: 40px; 
-  border-radius: 50%;        /* hace que sea circular */
-  object-fit: cover;         /* asegura que la imagen llene el círculo sin deformarse */
+  border-radius: 50%;       
+  object-fit: cover;         
   flex-shrink: 0;
 }
 
@@ -2175,9 +2218,9 @@ font-weight: 400;
 }
 
 .testimonial-btn {
-    display: inline-flex;          /* permite alinear icono y texto */
-  align-items: center;           /* centra verticalmente */
-  justify-content: center;       /* centra horizontalmente */
+    display: inline-flex;         
+  align-items: center;          
+  justify-content: center;       
   gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
     font-weight:500;
@@ -2195,7 +2238,7 @@ font-weight: 400;
 
 
 .highlight-box {
-  background: #FF65C3;
+  background: #25262B; 
   color: #fff;
   display: flex;
   align-items: center;
@@ -2236,7 +2279,7 @@ font-weight: 400;
                                          /*PREGUNTAS FRECUENTES*/ 
 
 .faq-section {
-  background: #fdd5ee;
+  background: #FFD5EE;  
   border-radius: 50px;
   padding: 2rem 1rem;
   margin-top: 60px;
@@ -2244,14 +2287,27 @@ font-weight: 400;
 
 .faq-title {
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
  
   color: #25262B;
   font-size: 25px;
  
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
     margin-top: 1rem;
+}
+
+
+.faq-p{
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ 
+  color: #25262B;
+  font-size: 17px;
+ 
+  margin-bottom: 2rem;
+    
 }
 
 .faq-container {
@@ -2261,7 +2317,7 @@ font-weight: 400;
 }
 
 .faq-item {
-  background: #F562BD;
+  background: #FEFFFA; 
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -2280,7 +2336,7 @@ font-weight: 400;
   width: 100%;
   background: transparent;
   border: none;
-  color: white;
+  color: #25262B;  
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
@@ -2355,6 +2411,27 @@ font-size: 15px;
 }
 
 
+
+.faq-btn{
+    display: inline-flex;          
+  align-items: center;           
+  justify-content: center;      
+  gap: 0.5rem; 
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+
+  margin-left: 50px;
+  background: #FF65C3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+
                                             /*CONTACTO*/ 
 .contact-section {
   background-color: white;
@@ -2381,7 +2458,7 @@ font-size: 15px;
 }
 
 .contact-form {
-  background-color: #FFA8DD;
+  background-color: #FFD5EE;
   border-radius: 20px;
   padding: 1.5rem;
   display: flex;
@@ -2424,14 +2501,14 @@ font-size: 15px;
 
 .checkbox-group {
   display: flex;
-  align-items: flex-start; /* Alinea el inicio del texto con el checkbox */
+  align-items: flex-start; 
   gap: 0.5rem;
   width: 90%;
   text-align: left;
 }
 
 .checkbox-group input[type="checkbox"] {
-  margin-top: 1px; /* Ajuste fino para centrar el checkbox con la primera línea */
+  margin-top: 1px;
 }
 
 
@@ -2440,7 +2517,7 @@ font-size: 15px;
   font-weight: 400;
   font-size: 0.8rem;
   color: #25262B;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
 
@@ -2512,11 +2589,11 @@ font-size: 15px;
   gap: 3.5rem;
 
   
-  width: 100vw;             /* ocupa todo el ancho visible de la ventana */
-  position: relative;       /* asegura que se mantenga dentro del flujo normal */
-  left: 50%;                /* corrige márgenes del contenedor padre */
+  width: 100vw;             
+  position: relative;       
+  left: 50%;                
   right: 50%;
-  margin-left: -50vw;       /* truco para alinear completamente al borde */
+  margin-left: -50vw;       
   margin-right: -50vw;
 
   box-sizing: border-box;
@@ -2538,7 +2615,7 @@ font-size: 15px;
 
 .footer-sponsors {
     display: flex;
-  flex-direction: column; /* ← los coloca en columna */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -2546,7 +2623,7 @@ font-size: 15px;
 }
 
 .footer-sponsors img {
- width: 110px; /* ← ajusta el tamaño a gusto */
+ width: 110px; 
   height: auto;
 }
 
@@ -2566,6 +2643,7 @@ font-size: 15px;
     .hero {
       flex-direction: column;
       text-align: center;
+      padding-top: 100px; 
     }
 
     .hero-image {
@@ -2578,12 +2656,12 @@ font-size: 15px;
     .hero-video{
       margin: 0;
   padding: 0;
-  width: 100vw; /* ancho total de la ventana */
+  width: 100vw; 
   overflow: hidden;
     }
 
     .hero-video video {
-width: 100vw; /* ancho total */
+width: 100vw; 
   height: auto;
   display: block;
 }
