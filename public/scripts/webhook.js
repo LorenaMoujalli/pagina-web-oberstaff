@@ -1,39 +1,56 @@
-const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto'; 
+const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';  
 
-  document.getElementById('webhookForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
+const form = document.getElementById('webhookForm');
+const statusModal = document.getElementById('statusModal');
+const statusModalText = document.getElementById('statusModalText');
+const closeStatusModal = document.getElementById('closeStatusModal');
 
-    const form = event.target;
-    const statusMessage = document.getElementById('status');
-    statusMessage.textContent = 'Enviando...'; 
+form.addEventListener('submit', async function(event) {
+  event.preventDefault();
 
-    // Combinar código de país + número
-    const telefonoCompleto = form.codigoPais.value + form.telefono.value;
+  statusModalText.textContent = 'Enviando...';
+  statusModal.classList.add('show');
+  document.body.style.overflow = 'hidden';
 
-    const data = {
-      nombres: form.nombre.value,
-      apellidos: form.apellidos.value,
-      email: form.email.value,
-      telefono: telefonoCompleto,
-      mensaje: form.mensaje.value,
-      //codigoVerificacion: form.codigoVerificacion.value
-    };
+  const telefonoCompleto = form.codigoPais.value + form.telefono.value;
 
-    try {
-      const response = await fetch(WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
+  const data = {
+    nombres: form.nombre.value,
+    apellidos: form.apellidos.value,
+    email: form.email.value,
+    telefono: telefonoCompleto,
+    mensaje: form.mensaje.value
+  };
+ 
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-      if (response.ok) {
-        statusMessage.textContent = 'Datos enviados exitosamente al Webhook';
-        form.reset();
-      } else {
-        statusMessage.textContent = 'Error al enviar los datos. Código ' + response.status;
-      }
-    } catch (error) {
-      statusMessage.textContent = 'Error de red o en la URL del Webhook: ' + error.message;
-      console.error('Error:', error);
+    if (response.ok) {
+      statusModalText.textContent = 'Datos enviados exitosamente';
+      form.reset();
+    } else {
+      statusModalText.textContent = 'Error al enviar los datos. Código ' + response.status;
     }
-  });
+  } catch (error) {
+    statusModalText.textContent = 'Error de red o en la URL del Webhook: ' + error.message;
+    console.error('Error:', error);
+  }
+});
+
+// Cerrar modal
+closeStatusModal.addEventListener('click', () => {
+  statusModal.classList.remove('show');
+  document.body.style.overflow = '';
+});
+
+// Cerrar al hacer clic fuera del contenido
+statusModal.addEventListener('click', (e) => {
+  if (e.target === statusModal) {
+    statusModal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+});
