@@ -1582,7 +1582,7 @@ font-size: 15px;
    font-family: 'Poppins', sans-serif;
    font-weight: bold;
    font-size: 36px;
-  color: #FF65C3;
+  color: #FF65C3; 
   
 }
 
@@ -2681,34 +2681,62 @@ font-weight: 400;
 
 
 
-
+                                           /*PANTALLA MOVIL*/ 
 
 @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 100px; 
-    }
 
-    .hero-image {
-      width: 100%;
-      padding-top: 1.5rem;
-      padding-left: 1.5rem;
-    }
+    .hero-grid, 
+  .profiles-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero {
+    padding-top: 100px;
+  }
+
+  .hero-text h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+    max-width: 90%;
+  }
+
+  .btn-primary {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .hero-image img,
+  .hero-video video,
+  .video-wrapper {
+    width: 100vw;
+    height: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  
+  .profile-card p {
+    font-size: 13px;
+  }
+
+  .video-play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+
+  .video-caption {
+    font-size: 13px;
+  }
 
 
-    .hero-video{
-      margin: 0;
-  padding: 0;
-  width: 100vw; 
-  overflow: hidden;
-    }
-
-    .hero-video video {
-width: 100vw; 
-  height: auto;
-  display: block;
-}
+ 
 
 
 .carrusel-wrapper {

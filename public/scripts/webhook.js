@@ -1,4 +1,4 @@
-const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';  
+const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';   
 
 const form = document.getElementById('webhookForm');
 const statusModal = document.getElementById('statusModal');

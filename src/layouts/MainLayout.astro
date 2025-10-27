@@ -11,16 +11,35 @@ import Header from "../components/header.astro"
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
-  <style>
+  <style> 
       :root {
         --chat--color--primary: #FF65C3;   /*boton*/ 
         --chat--color--secondary: #FF65C3;  /*mensajes del chat*/ 
-        --chat--color-dark: #222222;
+       /* --chat--color-dark: #222222; header*/ 
         --chat--color-light: #ffffff; 
         --chat--window--width: 480px;
         --chat--window--height: 600px;
         --chat--border-radius: 0.75rem;
+         --chat--header--background: #f399d0; /*header*/
+
       }
+
+
+#n8n-chat, #n8n-chat *{ 
+  
+font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+
+} 
+ 
+ 
+.n8n-chat .message-bubble:hover {
+  background-color: inherit !important; /* mantiene el color original */
+  filter: none !important;              /* quita cualquier efecto de brillo o sombra */
+  transform: none !important;           /* evita escalado si hay efecto */
+}
+ 
+
+
     </style>  
 
   </head>
@@ -31,18 +50,30 @@ import Header from "../components/header.astro"
     
 
 
-      <div id="n8n-chat"></div>
+      <div id="n8n-chat"></div> 
 
-  <script type="module">
+
+  
+ <script type="module">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
     createChat({
       webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
       target: '#n8n-chat',
       mode: 'window',
+     
       showWelcomeScreen: false,
       initialMessages: ['Hola, soy tu Asistente IA.'],
-      enableStreaming: false
+      enableStreaming: false,
+
+
+    i18n: {  
+      en: {
+        title: 'Asistente IA',           // título del header
+        subtitle: 'Listo para ayudarte en lo que necesites.', // texto debajo del título
+      }
+    }
+
     });
   </script>
 
@@ -50,9 +81,8 @@ import Header from "../components/header.astro"
   </body>
 </html>
 
-
-<!--
-
+ 
+<!--  
 <script type="module">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
@@ -60,7 +90,7 @@ import Header from "../components/header.astro"
       webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
       target: '#n8n-chat',
       mode: 'window',
-      showWelcomeScreen: true,  // 🔹 activar la pantalla de bienvenida
+      showWelcomeScreen: true,  //  activar la pantalla de bienvenida
       initialMessages: ['Hola, soy tu Asistente IA.'],
       i18n: {
         en: {
@@ -71,6 +101,21 @@ import Header from "../components/header.astro"
           inputPlaceholder: 'Escribe tu pregunta...' // placeholder input
         }
       },
+      enableStreaming: false
+    });
+  </script>
+
+
+
+   <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+      webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
+      target: '#n8n-chat',
+      mode: 'window',
+      showWelcomeScreen: false,
+      initialMessages: ['Hola, soy tu Asistente IA.'],
       enableStreaming: false
     });
   </script>
