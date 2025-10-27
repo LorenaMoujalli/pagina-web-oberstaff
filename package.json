@@ -17,7 +17,7 @@
     "@n8n/chat": "^0.62.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
-    "astro": "^5.14.1",
+    "astro": "^5.15.1",
     "astro-navbar": "^2.4.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

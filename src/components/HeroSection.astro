@@ -75,19 +75,19 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
     </div>
 
 
-                                <!--BANNER -->
+                            
+  </div>
+</section>
 
-<div class="hero-video">
+                               <!--BANNER -->
+
+<div class="hero-video"> 
   <video autoplay muted loop playsinline>
-    <source src={banner} type="video/mp4" />
+    <source src={banner} type="video/mp4" />  
     
   </video>
 
 </div>
-
-  </div>
-</section>
-
 
 
                                <!--VIDEO PRINCIPAL --> 
@@ -164,7 +164,7 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
     </div>
 
 
-                                                    <!-- 3 CARDS  -->
+                                                 
 
      <div class="info-card2">
       <h3>Profesionales Comprometidos</h3>
@@ -2767,5 +2767,199 @@ font-weight: 400;
 }
 
 
+                                                  /*PANTALLA DESKTOP*/ 
 
-</style>
+  @media (min-width: 1024px) {
+    .hero {
+    padding-top: 140px; 
+  }
+
+  .hero-grid {
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 6%;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 50%; 
+  }
+
+  .hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 25px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    
+  } 
+ 
+  .hero-image {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 90%;
+    max-width: 550px;
+    margin-top: 0;
+    transform: none;
+  }
+
+ .hero-video {
+  position: relative;
+  width: 100vw; 
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;                
+  margin-right: -50vw;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.hero-video video {
+  width: 100%;                       
+  height: 100px;                     
+  object-fit: cover;                 
+  display: block;
+  border-radius: 0;
+}
+
+
+                              /*VIDEO PRINCIPAL*/ 
+
+.profiles-container{ 
+  margin-left: -650px;
+  margin-top: 50px;
+}
+ 
+.video-container{
+  margin-left: 500px;
+  margin-top: -150px; 
+} 
+
+.profiles-card{
+  margin-top: 50px;
+}
+
+.video-wrapper {
+  max-width: 500px;  
+  width: 100%; 
+}
+
+.video-wrapper video {
+  width: 100%;       
+  height: auto;      
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+ 
+
+                                           /*3 CARDS*/ 
+
+ .info-cards {
+    flex-direction: row;      
+    justify-content: center;  
+    align-items: stretch;     
+    gap: 2rem;                
+    margin-top: 35px;
+  }
+
+  .info-card1,
+  .info-card2 {
+    max-width: 350px;         
+    width: 100%;
+  }
+
+ .info-card2{
+   transform: rotate(-4deg);   
+ }
+
+
+                                                   /*CArrusel 1*/ 
+
+.cards {
+    flex-direction: row;       
+    overflow-x: visible;       
+    justify-content: center;   
+    gap: 2rem;                 
+    padding: 0;                
+  }
+
+  .card1 {
+    flex: 0 0 45%;            
+    max-width: 400px;          
+    scroll-snap-align: none;   
+  }
+
+
+  .btn-primary2{
+    cursor: pointer;
+  }
+
+                                               /*Como funciona*/ 
+
+.info-cards-como-hacemos {
+    flex-direction: row;          
+    justify-content: center;      
+    align-items: flex-start;      
+    gap: 2rem;                    
+  }
+
+  
+  .info-card1-como-hacemos:first-of-type {
+    transform: rotate(6deg);
+    margin-top: -20px;           
+  }
+
+ 
+  .info-card2-como-hacemos {
+    transform: rotate(0deg);
+    margin-top: 0;
+  }
+
+  
+  .info-card1-como-hacemos:last-of-type {
+    transform: rotate(-6deg);
+    margin-top: -20px;            
+  }
+
+ 
+  .info-card1-como-hacemos,
+  .info-card2-como-hacemos {
+    width: 30%;
+    max-width: 300px;
+    height: 270px; 
+  }
+
+  .inner-card {
+    width: 100%;
+    height: 90%;
+  }
+
+                                                /*TESTIMONIO*/ 
+.testimonio-card {
+    max-width: 800px;  
+    padding: 2rem;    
+    margin: 0 auto;    
+  }
+
+  .testimonio-intro {
+    max-width: 700px;  
+    font-size: 22px;   
+  }
+
+  .testimonio-texto {
+    font-size: 14px;   
+  }
+
+
+
+  }
+</style> 
