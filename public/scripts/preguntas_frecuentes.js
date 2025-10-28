@@ -84,3 +84,22 @@
     });
   }
     */
+
+
+  /*faqButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const item = btn.parentElement; // .faq-item
+    item.classList.toggle('active'); // alterna la clase activa para la flecha
+
+    // Esto sigue abriendo el modal como antes
+    const answerDiv = btn.nextElementSibling;
+    if (!answerDiv) return;
+    const answer = answerDiv.getAttribute('data-answer') || answerDiv.textContent || 'No hay respuesta.';
+    modalText.textContent = answer;
+
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    setTimeout(() => { closeBtn.focus(); }, 250);
+  });
+});
+*/
