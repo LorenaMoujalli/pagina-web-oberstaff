@@ -1,0 +1,58 @@
+---
+import Header from '../../components/header.astro';
+import styles from '../../styles/empleos/JobDetail.module.css';
+import { getJobById, getJobPaths } from '../../lib/jobs';
+
+export async function getStaticPaths() {
+  return await getJobPaths();
+}
+
+const { id } = Astro.params;
+
+const job = await getJobById(id);
+---
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{job ? `${job.title} | Detalle` : 'Vacante no encontrada'}</title>
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <Header />
+
+  {job ? (
+    <main class={styles.container}>
+      <h1>{job.title}</h1>
+      <div class={styles.meta}>{job.location} • {job.type}</div>
+      <p class={styles.posted}>Publicado: {job.posted}</p>
+
+      <section class={styles.description}>
+        <h2>Descripción</h2>
+        <p>{job.description}</p>
+      </section>
+
+      <section class={styles.requirements}>
+        <h2>Requisitos</h2>
+        <ul>
+          {job.requirements.map(req => <li>{req}</li>)}
+        </ul>
+      </section>
+
+      {job.invitation_link && (
+        <p>
+          <a href={job.invitation_link} target="_blank" class={styles.back}>Aplicar a la vacante →</a>
+        </p>
+      )}
+
+      <a href="/empleos" class={styles.back}>← Volver a vacantes</a>
+    </main>
+  ) : (
+    <main class={styles.notFound}>
+      <h1>Vacante no encontrada</h1>
+      <p>No existe una vacante con id <strong>{id}</strong>.</p>
+      <a href="/empleos" class={styles.back}>← Volver a vacantes</a>
+    </main>
+  )}
+</body>
+</html>

@@ -1,0 +1,36 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.posted {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.description, .requirements {
+  margin-bottom: 1.5rem;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #FF65C3;
+  font-weight: bold;
+}

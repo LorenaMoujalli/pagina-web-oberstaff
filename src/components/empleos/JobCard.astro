@@ -1,0 +1,37 @@
+---
+export interface Props {
+  id: string;      
+  title: string;
+  location?: string;
+  type?: string;
+}
+
+const { id, title, location = 'Remoto', type = 'Full-time' } = Astro.props;
+import styles from '../../styles/empleos/JobCard.module.css';
+---
+
+<article class={styles.card}>
+  <h3>{title}</h3>
+
+  <div class={styles.meta}>
+    <span class={styles.metaItem}>
+      <span class="iconify" data-icon="lucide:laptop" style="font-size:16px;"></span>
+      {location}
+    </span>
+
+    <span class={styles.metaItem}>
+      <span class="iconify" data-icon="lucide:clock" style="font-size:16px;"></span>
+      {type}
+    </span>
+
+    <span class={styles.metaItem}>
+      <span class="iconify" data-icon="lucide:calendar" style="font-size:15px;"></span>
+      Publicado 2 días
+    </span>
+  </div>
+
+  <div class={styles.footer}>
+    <a href={`/detalle/${id}`} class={styles.link}>Ver detalle</a>
+  </div>
+</article>
+

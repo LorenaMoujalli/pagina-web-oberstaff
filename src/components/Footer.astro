@@ -1,0 +1,52 @@
+---
+import iconoLi from "../assets/icono-linkdein.png";
+import iconoFb from "../assets/icono-facebook.png";
+import iconoIg from "../assets/icono-instagram.png";
+import iconoTik from "../assets/icono-tiktok.png";
+import logoOnePlanet from "../assets/logo-one-planet.png";
+import logoComercio from "../assets/logo-camara-comercio.png";
+import logoTop from "../assets/worlds-top.png";
+import logo from "../assets/logo.png";
+import styles from "../styles/Footer.module.css";
+---
+<footer class={styles.footerSection}>
+  <div class={styles.top}>
+    <img src={logo.src} alt="Oberstaff" class={styles.footerLogo} />
+    <p class={styles.footerCopy}>© Oberstaff 2025</p>
+    <p class={styles.footerHighlight}>Políticas de Privacidad y Uso de Cookies</p>
+  </div>
+
+  <!-- barra de iconos con fondo extendido -->
+  <div class={styles.iconsFullWidth}>
+    <div class={styles.iconsWrapper}>
+      <div class={styles.footerIcons}>
+        <a href="#" aria-label="LinkedIn">
+          <img src={iconoLi.src} class={styles.footerIcon} alt="LinkedIn" />
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src={iconoFb.src} class={styles.footerIcon} alt="Facebook" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src={iconoIg.src} class={styles.footerIcon} alt="Instagram" />
+        </a>
+        <a href="#" aria-label="TikTok">
+          <img src={iconoTik.src} class={styles.footerIcon} alt="TikTok" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class={styles.sponsorsArea}>
+    <p class={styles.footerMessage}>PATROCINADORES OFICIALES</p>
+
+    <div class={styles.footerSponsors}>
+      <img src={logoOnePlanet.src} alt="One Planet" />
+      <img src={logoTop.src} alt="Worlds Top" />
+      <img src={logoComercio.src} alt="Cámara de Comercio" />
+    </div>
+
+    <p class={styles.footerSmall}>
+      Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>

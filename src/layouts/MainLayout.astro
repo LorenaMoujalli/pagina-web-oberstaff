@@ -1,123 +1,78 @@
 ---
-import Header from "../components/header.astro"
-
+import Footer from "../components/Footer.astro";
+import Header from "../components/header.astro";
+import "../styles/global.css";
 ---
 
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oberstaff | Crece sin límites</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
-  <style> 
+
+    <style>
       :root {
-        --chat--color--primary: #FF65C3;   /*boton*/ 
-        --chat--color--secondary: #FF65C3;  /*mensajes del chat*/ 
-       /* --chat--color-dark: #222222; header*/ 
-        --chat--color-light: #ffffff; 
+        --chat--color--primary: #FF65C3;
+        --chat--color--secondary: #FF65C3;
+        --chat--color-light: #ffffff;
         --chat--window--width: 480px;
         --chat--window--height: 600px;
         --chat--border-radius: 0.75rem;
-         --chat--header--background: #f399d0; /*header*/
-
+        --chat--header--background: #f399d0;
       }
 
+      #n8n-chat, #n8n-chat *{
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+      }
 
-#n8n-chat, #n8n-chat *{ 
-  
-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+      .n8n-chat .message-bubble:hover {
+        background-color: inherit !important;
+        filter: none !important;
+        transform: none !important;
+      }
 
-} 
- 
- 
-.n8n-chat .message-bubble:hover {
-  background-color: inherit !important; /* mantiene el color original */
-  filter: none !important;              /* quita cualquier efecto de brillo o sombra */
-  transform: none !important;           /* evita escalado si hay efecto */
-}
- 
-
-
-    </style>  
-
+      @media (max-width: 520px) {
+        :root {
+          --chat--window--width: calc(100vw - 32px);
+          --chat--window--height: 480px;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <Header/>
-     
-    <slot />
-    
+    <Header />
 
+    <main>
+      <slot />
+    </main>
 
-      <div id="n8n-chat"></div> 
+    <div id="n8n-chat"></div>
 
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-  
- <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+      createChat({
+        webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
+        target: '#n8n-chat',
+        mode: 'window',
+        showWelcomeScreen: false,
+        initialMessages: ['Hola, soy tu Asistente IA.'],
+        enableStreaming: false,
+        i18n: {
+          es: {
+            title: 'Asistente IA',
+            subtitle: 'Listo para ayudarte en lo que necesites.',
+            inputPlaceholder: 'Escribe tu pregunta...',
+          }
+        }
+      });
+    </script>
 
-    createChat({
-      webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
-      target: '#n8n-chat',
-      mode: 'window',
-     
-      showWelcomeScreen: false,
-      initialMessages: ['Hola, soy tu Asistente IA.'],
-      enableStreaming: false,
-
-
-    i18n: {  
-      en: {
-        title: 'Asistente IA',           // título del header
-        subtitle: 'Listo para ayudarte en lo que necesites.', // texto debajo del título
-      }
-    }
-
-    });
-  </script>
-
- 
+    <Footer/>
   </body>
 </html>
-
- 
-<!--  
-<script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-    createChat({
-      webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
-      target: '#n8n-chat',
-      mode: 'window',
-      showWelcomeScreen: true,  //  activar la pantalla de bienvenida
-      initialMessages: ['Hola, soy tu Asistente IA.'],
-      i18n: {
-        en: {
-          title: '¡Hola! 👋',                   // título en header
-          subtitle: 'Estoy aquí para ayudarte.', // subtítulo
-          footer: '',                             // footer (opcional)
-          getStarted: 'Nueva conversación',      // texto botón iniciar
-          inputPlaceholder: 'Escribe tu pregunta...' // placeholder input
-        }
-      },
-      enableStreaming: false
-    });
-  </script>
-
-
-
-   <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-    createChat({
-      webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
-      target: '#n8n-chat',
-      mode: 'window',
-      showWelcomeScreen: false,
-      initialMessages: ['Hola, soy tu Asistente IA.'],
-      enableStreaming: false
-    });
-  </script>
-
--->

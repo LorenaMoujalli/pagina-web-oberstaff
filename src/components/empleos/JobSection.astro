@@ -1,0 +1,28 @@
+---
+import JobCard from './JobCard.astro';
+import styles from '../../styles/empleos/JobSection.module.css';
+//import { getJobs } from '../../lib/jobs';
+import { jobs } from '../../lib/jobsMock';
+import SearchBar from './SearchBar.astro';
+
+//const jobs = await getJobs();
+---
+<section id="trabajos" class={styles.jobsSection}>
+  <div class={styles.container}>
+    <div class={styles.header}>
+      <h2>Trabajos <br/><span>disponibles</span></h2>
+      
+      <SearchBar />
+    </div>
+    <div class={styles.grid}>
+      {jobs.map(job => (
+        <JobCard 
+          id={job.id}
+          title={job.title} 
+          location={job.location} 
+          type={job.type} 
+        />
+      ))}
+    </div>
+  </div>
+</section>
