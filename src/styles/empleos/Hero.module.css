@@ -57,13 +57,13 @@ p strong {
 }
 
 .button:hover {
-  background: #ff4fa4; /* Rosa más intenso */
+  background: #ff4fa4; 
   transform: scale(1.03);
 }
 
-/* Ajuste del icono */
+
 .button .iconify {
-  font-size: 16px; /* Más pequeño */
+  font-size: 16px;
   line-height: 1;
   vertical-align: middle;
 }

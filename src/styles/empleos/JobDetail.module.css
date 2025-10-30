@@ -1,36 +1,148 @@
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 850px;
+  margin: 4rem auto;
+  padding: 2rem 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #333;
+  line-height: 1.7;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.backTop {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  text-decoration: none;
+  background: #FF65C3;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.backTop:hover {
+  background: #FF65C3;
 }
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .meta {
-  color: #555;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
 .posted {
+  text-align: center;
   font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 1.5rem;
+  color: #999;
+  margin-bottom: 2rem;
 }
 
-.description, .requirements {
-  margin-bottom: 1.5rem;
+section {
+  margin-bottom: 2.5rem;
 }
 
-.back {
-  display: inline-block;
-  margin-top: 1rem;
-  text-decoration: none;
+.description h2,
+.requirements h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  border-left: 4px solid #FF65C3;
+  padding-left: 0.6rem;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #444;
+  background: #fafafa;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requirements li {
+  background: #f8f8f8;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.requirements li::before {
+  content: "✔";
   color: #FF65C3;
-  font-weight: bold;
+  font-weight: 700;
+  margin-right: 0.75rem;
+}
+
+.requirements li:hover {
+  background: #ffeaf8;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.apply {
+  display: inline-block;
+  background: #FF65C3;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.apply:hover {
+  background: #e055a6;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 2rem 1rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .backTop {
+    top: 0.75rem;
+    left: 1rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .apply {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
 }
