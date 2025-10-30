@@ -46,9 +46,10 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
 import heroAnimacion from "../assets/Hero-Animacion.gif";
 import iconoIgRosa from "../assets/icono-ig-rosa.png"; 
 import iconoGrupoRosa from "../assets/icono-grupo-rosa.png"; 
-
+import mapa from "../assets/Hero-animación-desktop.gif"; 
+ import bannerDesktop from "../assets/banner-desktop.gif"; 
 ---
-   
+  
 
                           <!--TITULO PRINCIPAL--> 
  
@@ -72,11 +73,11 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
 
     </div>
 
-                          <!--IMAGEN DE MUJER CON LAPTOP -->
+                          <!--IMAGEN MAPA -->
 
     <div class="hero-image">
     
-   <img src={heroAnimacion.src} alt="" />
+   <img src={mapa.src} alt="" />
     </div>
 
 
@@ -86,12 +87,9 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
 
                                <!--BANNER -->
 
-<div class="hero-video"> 
-  <video autoplay muted loop playsinline>
-    <source src={banner} type="video/mp4" />  
-    
-  </video>
 
+ <div class="hero-banner">
+  <img src={bannerDesktop.src} alt="Banner animado" />
 </div>
 
 
@@ -109,42 +107,21 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
 
 
 </section>
+ 
 
-
-<!-- 
- <div class="video-container">
-    <video id="video-principal" controls playsinline>
-      <source src={videoPrincipal} type="video/mp4" />
-      Tu navegador no soporta video.
-
-<script src="./scripts/video-principal.js" type="module"></script>
-
-    </video>
-  </div>  
--->
-
-<div class="video-container">
+<div class="video-container"> 
   <div class="video-wrapper">
     <video id="video-principal" playsinline controls>
       <source src={videoPrincipal} type="video/mp4" />
       
     </video>
 
-    <div class="video-overlay">
-      <div class="video-play-btn" id="videoPlayBtn">▶</div>
-      <div class="video-caption" id="videoCaption">Descubre cómo contratar talento top <span class="highlight">sin gastar de más</span></div>
-    </div>
-  </div>
+  </div> 
 </div>
  
 <script src="./scripts/video-principal.js" type="module"></script> 
-
  
-
-
-
-
-
+ 
                                   <!--QUE HACEMOS -->
 
 
@@ -230,18 +207,13 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
   </div>
 </div>
 
-<!-- 
- <button class="btn-primary2">¿ESTÁS INTERESADO?</button>
--->
+
 
  <a href="#contacto" style="text-decoration: none;">
   <button class="btn-primary2">¿ESTÁS INTERESADO?</button>
-</a>
+</a> 
 
-
-</section> 
-
-
+</section>   
 
 
                                        <!-- COMO FUNCIONA SECTION -->
@@ -253,7 +225,7 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
   </p>
 
   <div class="info-cards-como-hacemos">
-    <!-- Card 1 -->
+   
     <div class="info-card1-como-hacemos">
       <div class="inner-card">
         <div class="card-number">1</div>
@@ -262,7 +234,7 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
       </div>
     </div>
 
-    <!-- Card 2 -->
+   
     <div class="info-card2-como-hacemos">
       <div class="inner-card">
         <div class="card-number2">2</div>
@@ -271,7 +243,7 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
       </div>
     </div>
 
-    <!-- Card 3 -->
+    
     <div class="info-card1-como-hacemos">
       <div class="inner-card">
         <div class="card-number">3</div>
@@ -310,14 +282,12 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
   </div>
 
  
-</section>
-
+</section> 
 
 
                                        <!--carrusel-flechas  -->
 
-
-
+ 
 <h2 class="beneficiosh2">¿Qué beneficios <span class="highlight">te ofrece Oberstaff?</span> </h2>
   <p class="beneficiosp" >Obtendrás acceso a profesionales altamente capacitados, flexibilidad operativa y soluciones personalizadas que <span class="highlight">transformarán tu equipo.</span> </p>
 
@@ -479,8 +449,6 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
 </section>
 
 
-
-
                                <!--CARDS -->
 
 <section class="cards-variedad-section">
@@ -497,7 +465,7 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
     <ul class="lista">
     <li>Creación de contenido</li>
         <li>Calendarización</li>
-          <li>Análisi de métricas</li>
+          <li>Análisis de métricas</li>
     </ul>
   </div>
 
@@ -590,15 +558,11 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
 
 
 <section class="subrayado-section">
-  <p class="subrayado-texto">
-   ¿Estas interesado?<span> Ve todos los perfiles disponibles</span> 
-  </p>
+ 
 
-<div class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src={banner} type="video/mp4" />
-    
-  </video>
+<div class="hero-banner">
+  <img src={bannerDesktop.src} alt="Banner animado" />
+</div>
 
   <h2 class="subrayado-titulo">Sé parte de la globalización digital y <span class="highlight">ahorra en costes de personal</span></h2>
 
@@ -847,11 +811,8 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
 
 
 
-<div class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src={banner} type="video/mp4" />
-    
-  </video>
+<div class="hero-banner">
+  <img src={bannerDesktop.src} alt="Banner animado" />
 </div>
 
 
@@ -859,10 +820,9 @@ import iconoGrupoRosa from "../assets/icono-grupo-rosa.png";
                                              <!--ESTILO -->
                                              
                                              
-
-
-
 <style> 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); 
 
 
 
@@ -877,9 +837,9 @@ section {
                               /*SECCION PRINCIPAL */ 
 
 .hero {
-  background: linear-gradient(to bottom, #fff 0%, #fff 80%, #f8f8f8 100%);
+  background: linear-gradient(to bottom, #fff 0%, #fff 0%, #fff 0%); 
   padding-top: 25px;
-}
+} 
 
 .hero-grid {
   display: flex;
@@ -929,7 +889,7 @@ section {
   }
 
 .hero-image img {
-background: linear-gradient(to bottom, #ffffff 0%, rgb(243, 163, 212) 50%, #ffffff 100%);
+background: linear-gradient(to bottom, #ffffff 0%, #ffffff 0%, #ffffff 0%); 
   width: 160%; 
     max-width: none; 
     height: auto;
@@ -942,6 +902,7 @@ background: linear-gradient(to bottom, #ffffff 0%, rgb(243, 163, 212) 50%, #ffff
 
 .highlight{ 
   color: #FF65C3;
+   font-weight: bold; 
 }
 
 .btn-primary {
@@ -963,7 +924,23 @@ cursor: pointer;
  
 }
 
+.btn-primary:hover{
+ background: #f85ac3;
+}
 
+
+.hero-banner {
+  width: 100%;
+  overflow: hidden;  
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 45px;
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto;
+}
 
 
                                  /*VIDEO PRINCIPAL*/ 
@@ -1097,7 +1074,7 @@ cursor: pointer;
 
 
 .que-hacemos-section {
- background-color: #FFD5EE; 
+ background-color: rgb(255, 232, 246);   
   margin-top: 2rem;          
   padding: 2rem 1.5rem;     
   text-align: center;
@@ -1126,6 +1103,7 @@ cursor: pointer;
 
 .alto-nivel{
   color: #FF65C3; 
+   font-weight: bold; 
 
 }
 
@@ -1149,7 +1127,7 @@ cursor: pointer;
   padding: 1.6rem;
   border-radius: 20px;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   text-align: left;
  
   transform: rotate(-4deg);
@@ -1162,7 +1140,7 @@ cursor: pointer;
 .info-card1 h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px; 
   margin-bottom: 0.4rem;
   color: black;
  
@@ -1190,7 +1168,9 @@ cursor: pointer;
     padding-bottom: 0.1rem;
   border-radius: 8px;
   font-size: 0.75rem;
+  /*
  transform: rotate(15deg);
+ */
    border: 1px solid rgba(0, 0, 0, 0.1); 
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
   
@@ -1209,7 +1189,8 @@ cursor: pointer;
     padding-bottom: 0.1rem;
   border-radius: 8px;
   font-size: 0.75rem;
- transform: rotate(15deg);
+  /*
+ transform: rotate(15deg); */ 
     border: 1px solid rgba(0, 0, 0, 0.1); 
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
 }
@@ -1230,19 +1211,20 @@ img.icono-users{
     padding-bottom: 0.1rem;
   border-radius: 8px;
   font-size: 0.75rem;
- transform: rotate(15deg);
+  /*
+ transform: rotate(15deg); */
    border: 1px solid rgba(0, 0, 0, 0.1); 
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); 
   
 } 
-
+ 
 .info-card2 {
    position: relative; 
   background: #FEFFFA;
   padding: 1.6rem;
   border-radius: 20px;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px; 
   text-align: left;
  
   transform: rotate(4deg);
@@ -1255,7 +1237,7 @@ img.icono-users{
       white-space: nowrap;
  font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px; 
   margin-bottom: 0.4rem;
   color: black; 
 }
@@ -1263,13 +1245,17 @@ img.icono-users{
 .info-card2 p {
   
   font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-size: 14px;
   line-height: 1.5;
   color: black; 
     line-height: 1.1;
      text-align: justify;
 }
 
+
+ img[data-astro-cid-nlow4r3u].icono-users {
+    transform: rotate(-5deg);
+  } 
 
 
                                           /*CARRUSEL 1*/ 
@@ -1367,7 +1353,7 @@ img.icono-users{
     font-family: 'Poppins', sans-serif;
   display: inline-block;
   padding: 10px;
-  background-color: #F062BC;
+  background-color: #FF6ACD;
   color: #FFFFFF;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -1377,6 +1363,10 @@ font-size: 15px;
   text-align: center;
   margin-top: 50px;
 
+}
+
+.btn-primary2:hover{
+   background: #f85ac3;
 }
 
 
@@ -1418,12 +1408,15 @@ font-size: 15px;
 
 
 .como-funciona-section {
+   background-color: white; 
+   /*
    background: linear-gradient(
     to bottom,
     #ffffff 0%,         
     rgb(233, 188, 212) 50%,        
     #ffffff 100%       
   );
+  */
   margin-top: 0.3rem;          
   padding: 2rem 1.5rem;      
   text-align: center;
@@ -1527,7 +1520,7 @@ font-size: 15px;
   font-weight: bold;
   font-size: 18px;
   color: #FF65C3;
-  margin-top: 1.2rem;
+  margin-top: 1.4rem;
   margin-bottom: 0.4rem;
   text-align: center;
 }
@@ -1546,6 +1539,7 @@ font-size: 15px;
 
 .alto-nivel {
   color: #FF65C3; 
+  font-weight: bold; 
 }
 
 
@@ -1572,12 +1566,15 @@ font-size: 15px;
                                       /*TESTIMONIO*/ 
 
 .testimonio-section {
+  background-color: white; 
+  /*
  background: linear-gradient(
     to bottom,
     #ffffff 0%,         
     #e59fc5 50%,       
     #ffffff 100%       
-  );
+  ); 
+  */
   text-align: center;
   padding: 2rem 1.5rem;
   border-radius: 70px;
@@ -1687,7 +1684,7 @@ font-size: 15px;
 
 .carrusel-section {
   position: relative;
- background-color: #FFD5EE;  
+background-color: rgb(255, 232, 246); 
   padding: 2rem 0 4rem 0;
   overflow: hidden;
   display: flex;
@@ -1760,7 +1757,7 @@ font-size: 15px;
  display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at center, #ffffff 0%, #f5a5d6 70%, #f59dd4 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #f7cae6 70%, #f7c3e3 100%);
   width: 60px;
   height: 60px;
   border-radius: 30%;
@@ -1773,7 +1770,7 @@ font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at center, #ffffff 10%, #f5a5d6 100%, #f59dd4 100%);
+ background: radial-gradient(circle at center, #ffffff 0%, #f7d3e9 70%, #f7c3e3 100%);
   width: 50px;
   height: 50px;
   border-radius: 30%; 
@@ -1934,7 +1931,7 @@ p {
   gap: 0.5rem; 
     font-family: 'Poppins', sans-serif;
     font-weight:500;
-  background: #FF65C3;
+  background: #FF6ACD;
   color: white;
   border: none;
   border-radius: 20px;
@@ -1944,11 +1941,15 @@ p {
   margin-top: 25px; 
 }
 
+.btn-primary4:hover{
+   background: #f85ac3;
+}
+
 
 
 
 .cards-variedad-section {
- background-color: #FFD5EE;  
+ background-color: rgb(255, 232, 246); 
   margin-top: 2rem;        
   padding: 2rem 1.5rem;      
   text-align: center;
@@ -2057,13 +2058,17 @@ padding: 2rem 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight:bold;
  
-  background: #FF65C3;
+  background: #FF6ACD;
   color: white;
   border: none;
   border-radius: 20px;
   padding: 0.6rem 1.2rem;
   font-size: 13px;
   cursor: pointer;
+}
+
+.btn-rosado:hover{
+   background: #f85ac3;
 }
 
 
@@ -2105,7 +2110,10 @@ padding: 2rem 1.5rem;
 
 
 .testimonial-section {
+  background-color: white; 
+  /*
   background: linear-gradient(to bottom, #ffffff 0%, #f3bddb 50%, #ffffff 100%);
+  */
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -2115,12 +2123,15 @@ padding: 2rem 1.5rem;
 }
 
 .testimonial-card {
-  flex: 0 0 85%;
+ flex: 0 0 85%;
   background: #fff;
   border-radius: 20px;
   padding: 1.2rem;
   scroll-snap-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;                 
+  flex-direction: column;         
+  justify-content: space-between;
 }
 
 .testimonial-video {
@@ -2134,7 +2145,7 @@ padding: 2rem 1.5rem;
 .testimonial-profile {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  
 }
 
 .testimonial-avatar {
@@ -2183,21 +2194,26 @@ font-weight: 400;
 }
 
 .testimonial-btn {
-    display: inline-flex;         
-  align-items: center;          
-  justify-content: center;       
-  gap: 0.5rem; 
-    font-family: 'Poppins', sans-serif;
-    font-weight:500;
-
-  margin-left: 36px;
-  background: #FF65C3;
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: #FF6ACD;
   color: white;
   border: none;
   border-radius: 20px;
   padding: 0.6rem 1.2rem;
   font-size: 13px;
   cursor: pointer;
+  align-self: center; 
+  margin-left: 0;     
+  margin-top: auto; 
+}
+
+.testimonial-btn:hover{
+   background: #f85ac3;
 }
 
 
@@ -2244,7 +2260,7 @@ font-weight: 400;
                                          /*PREGUNTAS FRECUENTES*/ 
 
 .faq-section {
-  background: #FFD5EE;  
+  background-color: rgb(255, 232, 246); 
   border-radius: 50px;
   padding: 2rem 1rem;
   margin-top: 60px;
@@ -2295,19 +2311,28 @@ font-weight: 400;
 }
 
 .faq-question::after {
-  content: '▾';
+  content: '';
   position: absolute;
   right: 1rem;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;  /* ajusta al tamaño del icono */
+  height: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
 }
 
+/* Preguntas impares → icono rosa */
 .faq-item:nth-child(odd) .faq-question::after {
-  color: #FF65C3;
+  background-image: url('../assets/icono-flecha-baja-rosa.png');
 }
+
+/* Preguntas pares → icono negro */
 .faq-item:nth-child(even) .faq-question::after {
-  color: #25262B;
+  background-image: url('../assets/icono-flecha-baja.png');
 }
+
 
 
 .faq-modal {
@@ -2337,7 +2362,7 @@ font-weight: 400;
   height: auto;
   max-height: 300px;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transform: translateX(100%) scale(0.95);
   opacity: 0;
@@ -2370,14 +2395,14 @@ font-weight: 400;
 }
 
 #faq-modal-text {
-  font-size: 0.95rem;
+  font-size: 13.5px;
   line-height: 1.6;
  
 }
 
 
 .faq-btn {
-  background: #FF65C3;
+  background: #FF6ACD;
   border: none;
   border-radius: 20px;
   padding: 0.6rem 1.2rem;
@@ -2387,6 +2412,10 @@ font-weight: 400;
   font-size: 14px;
   margin-top: 30px;
   margin-left: 50px;
+}
+
+.faq-btn:hover{
+  background: #f85ac3; 
 }
 
 .faq-btn a {
@@ -2432,8 +2461,8 @@ font-weight: 400;
 }
 
 .contact-form {
-  background-color: #FFD5EE;
-  border-radius: 20px;
+  background-color: rgb(255, 232, 246); 
+  border-radius: 20px; 
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -2516,9 +2545,9 @@ font-weight: 400;
 }
 
 .contact-form button:hover {
-  background-color: #000;
+  background-color: rgb(27, 27, 27)
 }
-
+ 
 
 .status-modal {
   position: fixed;
@@ -2641,7 +2670,7 @@ font-weight: 400;
     font-size: 17px;
   }
   p {
-    font-size: 13px; 
+    font-size: 12px; 
   }
   .controls {
     gap: 1rem;
@@ -2666,8 +2695,8 @@ font-weight: 400;
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    padding: 0 6%;
-    gap: 2rem;
+    
+    gap: 4rem;
   }
 
   .hero-text {
@@ -2676,13 +2705,13 @@ font-weight: 400;
   }
 
   .hero-text h2 {
-    font-size: 48px;
+    font-size: 45px;
     margin-bottom: 25px;
   }
 
   .hero-text p {
     font-size: 18px;
-    
+    margin-right: 65px;
   } 
  
   .hero-image {
@@ -2718,6 +2747,10 @@ font-weight: 400;
   display: block;
   border-radius: 0;
 }
+
+.hero-banner img {
+    height: 45px; 
+  }
 
 
                               /*VIDEO PRINCIPAL*/ 
@@ -2765,12 +2798,40 @@ font-weight: 400;
   .info-card2 {
     max-width: 350px;         
     width: 100%;
+    transform: none !important; /* elimina la rotación */
+    margin-bottom: 0; 
   }
 
- .info-card2{
-   transform: rotate(-4deg);   
- }
 
+
+
+ 
+  .mini-card,
+  .mini-card2,
+  .mini-card3 {
+    bottom: -20px;       
+    left: 50%;           
+    transform: translateX(-50%) rotate(0deg); 
+    top: auto;           
+    right: auto;      
+  }
+
+
+  /*
+ .mini-card,
+  .mini-card2,
+  .mini-card3 {
+    bottom: -20px;   
+    left: 0.01px;      
+    top: auto;      
+    right: auto;     
+    transform: rotate(0deg); 
+  }
+ */
+  
+
+
+ 
 
                                                    /*CArrusel 1*/ 
 
@@ -2898,7 +2959,7 @@ font-weight: 400;
   .testimonial-btn {
     position: absolute;
     bottom: 1.5rem; 
-    left: 40%;
+    left: 50%;
     transform: translateX(-50%);
     width: 180px; 
     text-align: center;
@@ -2907,11 +2968,11 @@ font-weight: 400;
 
 
   .highlight-box {
-    max-width: 400px; /* menos ancho */
-    margin: 2rem auto; /* centrado horizontal */
-    justify-content: center; /* centra icono + texto */
+    max-width: 400px; 
+    margin: 2rem auto; 
+    justify-content: center; 
     padding: 1rem 1.5rem;
-    text-align: center; /* centra el texto */
+    text-align: center; 
   }
 
   .highlight-icon {
@@ -2942,7 +3003,7 @@ font-weight: 400;
   }
 
   .faq-question {
-  position: relative; /* importante para posicionar el ::after */
+  position: relative; 
 }
 
 .faq-question::after {
@@ -2951,27 +3012,24 @@ font-weight: 400;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px;  /* ajusta al tamaño del icono */
+  width: 16px;  
   height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.3s ease;
 }
 
-/* Preguntas impares → icono rosa */
+
 .faq-item:nth-child(odd) .faq-question::after {
   background-image: url('../assets/icono-flecha-baja-rosa.png');
 }
 
-/* Preguntas pares → icono negro */
+
 .faq-item:nth-child(even) .faq-question::after {
   background-image: url('../assets/icono-flecha-baja.png');
 }
 
-/* Opcional: girar icono al abrir */
-.faq-item.active .faq-question::after {
-  transform: translateY(-50%) rotate(180deg);
-}
+
                                             /*contacto*/ 
 
  .contact-form {
@@ -2983,6 +3041,12 @@ font-weight: 400;
     width: 400px; 
     padding: 0.8rem 2.5rem; 
   }
+
+  .contact-section p {
+
+  font-size: 1rem;
+
+}
 
 
                                           /*footer*/ 

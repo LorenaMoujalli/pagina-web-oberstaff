@@ -7,14 +7,17 @@ video.addEventListener("loadedmetadata", () => {
 */
 
 
-const video = document.getElementById("video-principal");
-const playBtn = document.getElementById("videoPlayBtn");
+const video = document.getElementById("video-principal"); 
+const playBtn = document.getElementById("videoPlayBtn");  
 const caption = document.getElementById("videoCaption");
 
 // Muestra el segundo 20 como preview
 video.addEventListener("loadedmetadata", () => {
   video.currentTime = 19; 
-}); 
+});                                       
+
+
+/*
 
 // Reproduce cuando se hace clic en el botón
 playBtn.addEventListener("click", () => {
@@ -33,3 +36,4 @@ video.addEventListener("pause", () => {
   caption.style.opacity = "1";
 });
 
+*/

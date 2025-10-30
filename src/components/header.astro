@@ -8,8 +8,8 @@ import iconoConv from "../assets/icono-contacto.png";
   <div class="container">
     <div class="header-content">
       <a href="#" class="logo">
-        <img src={logo.src} alt="Logo" />
-      </a>
+        <img src={logo.src} alt="Logo" /> 
+      </a> 
 
       <nav class="nav-links">
         <a href="/#que-hacemos">¿Qué hacemos?</a>
@@ -97,6 +97,27 @@ import iconoConv from "../assets/icono-contacto.png";
 <script src="./scripts/menu.js" type="module"></script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); 
+
+.header {
+  background: #f4f4f4;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed;   
+  top: 0;            
+  left: 0;
+  width: 100%;       
+  z-index: 1000;  
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
   .header {
     background: #f4f4f4;
     padding: 10px;
@@ -127,25 +148,40 @@ import iconoConv from "../assets/icono-contacto.png";
     text-decoration: none;
     color: #333;
   }
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;     
+  font-size: 0.90rem;
+   font-family: 'Poppins', sans-serif; 
+}
 
-  .menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+.nav-links a:hover{
+  color: #141414; 
+  font-size: 0.92rem; 
+}
 
-  .menu-btn img {
-    width: 28px;
-    height: 28px;
-  }
+.menu-btn { 
+  background: none;
+  border: none; 
+  cursor: pointer;
+  flex-shrink: 0; 
+} 
+
+.menu-btn img {
+  width: 25px;
+  height: 25px;
+}
 
   .ham-btn {
     display: none;
   }
 
-  .mensaje {
-    color: #ff65c3;
-  }
+.mensaje{
+  color: #ff65c3;
+}
+
+                              /* MODAL MENÚ  */
 
   .menu-modal {
     display: none;
@@ -202,6 +238,12 @@ import iconoConv from "../assets/icono-contacto.png";
     flex-direction: column;
     margin-top: 1.5rem;
   }
+.modal-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  
+}
 
   .modal-links a {
     text-decoration: none;
@@ -211,55 +253,64 @@ import iconoConv from "../assets/icono-contacto.png";
     margin-bottom: 0.6rem;
     font-weight: 500;
   }
+.modal-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
 
-  .modal-links a {
-    background-color: #fff;
-    border: 2px solid;
-    padding: 0.8rem;
-    border-radius: 10px;
-    margin-bottom: 0.6rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    font-family: "Inter", sans-serif;
-  }
+.modal-links a {
+  background-color: #fff;  
+  border: 2px solid;      
+  padding: 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif; 
+}
 
-  .modal-links a:nth-child(odd) {
-    border-color: #ff65c3;
-    color: #ff65c3;
-  }
+.modal-links a:nth-child(odd) {
+  border-color: #333;   
+   color: #333;
+}
 
-  .modal-links a:nth-child(even) {
-    border-color: #000;
-    color: #000;
-  }
+.modal-links a:nth-child(even) {
+  border-color: #333;      
+   color: #333;
+}
 
   .modal-links a:hover {
     background-color: currentColor;
     color: #fff;
   }
 
-  /* --- CONTACTO --- */
-  .contact-content {
-    text-align: left;
-  }
+                                           /*  CONTACTO  */
 
-  .contact-content h2 {
-    font-size: 1.4rem;
-    margin-top: 1rem;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+.contact-content {
+  text-align: left;
+}
 
-  .contact-content p {
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 1.2rem;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-weight: bold;
-  }
+.contact-content h2 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-content p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
 
   .contact-form {
     display: flex;
@@ -289,6 +340,19 @@ import iconoConv from "../assets/icono-contacto.png";
     width: 75%;
   }
 
+.btn-send {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background: #ff65c3;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 20px; 
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+}
   .btn-send {
     font-family: "Inter", sans-serif;
     font-weight: bold;
@@ -303,6 +367,9 @@ import iconoConv from "../assets/icono-contacto.png";
     transition: background 0.3s ease;
   }
 
+.btn-send:hover {
+  background: #ff48b4;
+}
   .btn-send:hover {
     background: #ff48b4;
   }
@@ -312,12 +379,63 @@ import iconoConv from "../assets/icono-contacto.png";
     border: 2px solid #ff65c3;
   }
 
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
+@media (max-width: 768px) {
+  .nav-links {
+     display: none; 
     }
-    .ham-btn {
-      display: block;
+
+  .ham-btn {
+     display: block; 
     }
+
+ 
+  html, body {
+    overflow-x: hidden;
   }
+
+  .modal-links a{
+    font-size: 0.85rem;  
+  }
+}
+
+
+@media (min-width: 769px) {
+  .header-content {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ .contact-btn {
+    width: auto;           /* ancho automático para texto */
+    height: auto;
+    padding: 10px;
+    background: #FF6ACD;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+  } 
+
+  .contact-btn:hover {
+     background: #f85ac3;
+     
+  } 
+
+  .contact-btn img {
+    display: none;         /* ocultamos el icono en desktop */
+  }
+
+  .contact-btn::after {
+    content: 'Contacto';  /* agregamos el texto dentro del botón */
+  }
+
+
+}
+
 </style>
+ 
