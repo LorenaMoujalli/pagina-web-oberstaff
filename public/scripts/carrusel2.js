@@ -46,3 +46,6 @@ rightArrow.onclick = function() {
 
 window.onresize = updateCarousel;
 updateCarousel();
+
+
+
