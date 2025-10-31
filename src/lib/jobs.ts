@@ -21,8 +21,8 @@ export async function getJobs(): Promise<Job[]> {
     const res = await fetch(`${API_URL}/positions/?page=1&per_page=50&status=Active`, {
       headers: {
         'X-API-Key': API_KEY,
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     });
 
     if (!res.ok) {
@@ -33,24 +33,31 @@ export async function getJobs(): Promise<Job[]> {
     const data = await res.json();
     if (!data?.positions) return [];
 
-    return data.positions.map((pos: any) => ({
-  id: pos.id,
-  title: pos.job_title ?? pos.name ?? 'Sin título',
-  location: 'Remoto', 
-  type: pos.type === 'Assessment' ? 'Evaluación técnica' : pos.type ?? 'Otro',
-  description: pos.status === 'Active' ? 'Vacante activa' : pos.status ?? 'Sin descripción',
-  requirements: pos.tests?.map((t: any) => t.name) ?? [],
-  posted: pos.created_at
-    ? new Date(pos.created_at).toLocaleDateString('es-ES', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      })
-    : 'Sin fecha',
-  invitation_link: pos.invitation_link
-}));
+    const jobsMap = new Map<string, Job>();
 
+    data.positions.forEach((pos: any) => {
+      if (!jobsMap.has(pos.id)) {
+        const job: Job = {
+          id: pos.id,
+          title: pos.job_title ?? pos.name ?? 'Sin título',
+          location: pos.location ?? 'Remoto',
+          type: pos.type === 'Assessment' ? 'Evaluación técnica' : pos.type ?? 'Otro',
+          description: pos.status === 'Active' ? 'Vacante activa' : pos.status ?? 'Sin descripción',
+          requirements: pos.tests?.map((t: any) => t.name) ?? [],
+          posted: pos.created_at
+            ? new Date(pos.created_at).toLocaleDateString('es-ES', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+              })
+            : 'Sin fecha',
+          invitation_link: pos.invitation_link,
+        };
+        jobsMap.set(pos.id, job);
+      }
+    });
 
+    return Array.from(jobsMap.values());
   } catch (error) {
     console.error('Error al obtener empleos:', error);
     return [];
