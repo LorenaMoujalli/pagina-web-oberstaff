@@ -24,6 +24,11 @@ import Header from "../components/header.astro"
 
       }
 
+      :root {
+  --chat--toggle--hover--background: var(--chat--toggle--background) !important;
+  --chat--toggle--active--background: var(--chat--toggle--background) !important;
+}
+
 
 #n8n-chat, #n8n-chat *{ 
   
@@ -31,16 +36,16 @@ font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica N
 
 } 
  
+ /*
+#n8n-chat::part(message-bubble):hover {
+  background-color: #FF65C3 !important;
+  filter: none !important;
+  transform: none !important;
+}*/
  
-.n8n-chat .message-bubble:hover {
-  background-color: inherit !important; /* mantiene el color original */
-  filter: none !important;              /* quita cualquier efecto de brillo o sombra */
-  transform: none !important;           /* evita escalado si hay efecto */
-}
- 
-
 
     </style>  
+
 
   </head>
   <body>
@@ -75,6 +80,9 @@ font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica N
     }
 
     });
+
+
+    
   </script>
 
  
