@@ -24,14 +24,13 @@ export default function JobSection({ jobs }: JobSectionProps) {
   );
 });
 
-
   return (
     <section id="trabajos" className={styles.jobsSection}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2>
-            Trabajos <br />
-            <span>disponibles</span>
+            <strong> Trabajos  </strong> <span>disponibles</span>
+            
           </h2>
           <SearchBar value={search} onChange={setSearch} />
         </div>

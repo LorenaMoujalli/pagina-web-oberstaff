@@ -1,7 +1,7 @@
-import React from 'react';
 import styles from '../../styles/empleos/JobCard.module.css';
 
-export default function JobCard({ id, title, location = 'Remoto', type = 'Full-time', posted = 'Sin fecha' }) {
+
+export default function JobCard({ id = '', title= '', location = 'Remoto', type = 'Full-time', posted = 'Sin fecha' }) {
   return (
     <article className={styles.card}>
       <h3 className={styles.title}>{title}</h3>
