@@ -25,23 +25,29 @@ import "../styles/global.css";
         --chat--header--background: #f399d0;
       }
 
-      #n8n-chat, #n8n-chat *{
-        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
-      }
+      :root {
+  --chat--toggle--hover--background: var(--chat--toggle--background) !important;
+  --chat--toggle--active--background: var(--chat--toggle--background) !important;
+}
 
-      .n8n-chat .message-bubble:hover {
-        background-color: inherit !important;
-        filter: none !important;
-        transform: none !important;
-      }
 
-      @media (max-width: 520px) {
-        :root {
-          --chat--window--width: calc(100vw - 32px);
-          --chat--window--height: 480px;
-        }
-      }
-    </style>
+#n8n-chat, #n8n-chat *{ 
+  
+font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+
+} 
+ 
+ /*
+#n8n-chat::part(message-bubble):hover {
+  background-color: #FF65C3 !important;
+  filter: none !important;
+  transform: none !important;
+}*/
+ 
+
+    </style>  
+
+
   </head>
 
   <body>
@@ -56,22 +62,28 @@ import "../styles/global.css";
     <script type="module">
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-      createChat({
-        webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
-        target: '#n8n-chat',
-        mode: 'window',
-        showWelcomeScreen: false,
-        initialMessages: ['Hola, soy tu Asistente IA.'],
-        enableStreaming: false,
-        i18n: {
-          es: {
-            title: 'Asistente IA',
-            subtitle: 'Listo para ayudarte en lo que necesites.',
-            inputPlaceholder: 'Escribe tu pregunta...',
-          }
-        }
-      });
-    </script>
+    createChat({
+      webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
+      target: '#n8n-chat',
+      mode: 'window',
+     
+      showWelcomeScreen: false,
+      initialMessages: ['Hola, soy tu Asistente IA.'],
+      enableStreaming: false,
+
+
+    i18n: {  
+      en: {
+        title: 'Asistente IA',           // título del header
+        subtitle: 'Listo para ayudarte en lo que necesites.', // texto debajo del título
+      }
+    }
+
+    });
+
+
+    
+  </script>
 
     <Footer/>
   </body>

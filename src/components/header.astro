@@ -73,21 +73,21 @@ import iconoConv from "../assets/icono-contacto.png";
     <h2>Envíanos <span class="mensaje">un mensaje</span></h2>
     <p>Envíanos tus dudas y te responderemos lo más pronto posible.</p>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Nombre y apellido" required />
-      <input type="email" placeholder="Email" required />
+    <form id="webhookFormModal" class="contact-form">
+      <input type="text" name="nombre" placeholder="Nombre y apellido" required />
+      <input type="email" name="email" placeholder="Email" required />
 
       <div class="phone-group">
-        <input type="text" placeholder="+XX" class="country-code" required />
+        <input type="text" name="codigoPais" placeholder="+XX" class="country-code" required />
         <input
-          type="text"
+          type="text" name="telefono"
           placeholder="Teléfono"
           class="phone-number"
           required
         />
       </div>
 
-      <textarea placeholder="Mensaje" rows="4" required></textarea>
+      <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
 
       <button type="submit" class="btn-send">ENVIAR MENSAJE</button>
     </form>
@@ -95,6 +95,9 @@ import iconoConv from "../assets/icono-contacto.png";
 </div>
 
 <script src="./scripts/menu.js" type="module"></script>
+<script src="./scripts/webhookModal.js" type="module"></script>
+
+ 
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -318,14 +321,14 @@ import iconoConv from "../assets/icono-contacto.png";
     gap: 0.8rem;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    border: 2px solid #ff65c3;
-  }
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem;
+  
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 2px solid #5e5f61;
+}
 
   .phone-group {
     display: flex;
@@ -406,7 +409,7 @@ import iconoConv from "../assets/icono-contacto.png";
   }
 
  .contact-btn {
-    width: auto;           /* ancho automático para texto */
+    width: auto;        
     height: auto;
     padding: 10px;
     background: #FF6ACD;
@@ -427,11 +430,11 @@ import iconoConv from "../assets/icono-contacto.png";
   } 
 
   .contact-btn img {
-    display: none;         /* ocultamos el icono en desktop */
+    display: none;         
   }
 
   .contact-btn::after {
-    content: 'Contacto';  /* agregamos el texto dentro del botón */
+    content: 'Contacto';  
   }
 
 
