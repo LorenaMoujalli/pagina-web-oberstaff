@@ -40,8 +40,8 @@ export async function getJobs(): Promise<Job[]> {
         const job: Job = {
           id: pos.id,
           title: pos.job_title ?? pos.name ?? 'Sin título',
-          location: pos.location ?? 'Remoto',
-          type: pos.type === 'Assessment' ? 'Evaluación técnica' : pos.type ?? 'Otro',
+          location: pos.location,
+          type: pos.type ,
           description: pos.status === 'Active' ? 'Vacante activa' : pos.status ?? 'Sin descripción',
           requirements: pos.tests?.map((t: any) => t.name) ?? [],
           posted: pos.created_at
