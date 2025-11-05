@@ -13,14 +13,17 @@
 .logo {
   font-weight: 700;
   font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
 }
 .navLinks {
   display: flex;
   gap: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 .navLinks a {
   text-decoration: none;
   color: #333;
+  font-family: 'Poppins', sans-serif;
 }
 .navLinks a:hover {
   text-decoration: underline;
@@ -34,6 +37,7 @@
   border-radius: 9999px;
   border: 1px solid #ccc;
   font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
 }
 .contact {
   padding: 0.5rem 1rem;
@@ -41,4 +45,5 @@
   background: #ff69b4;
   color: white;
   font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
 }

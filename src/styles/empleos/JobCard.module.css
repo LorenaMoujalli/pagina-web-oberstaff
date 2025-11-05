@@ -17,6 +17,7 @@ h3 {
   font-weight: 600;
   margin-bottom: 1rem;
   color:#ff69b4;
+  font-family: 'Poppins', sans-serif;
 }
 
 .meta {
@@ -26,6 +27,7 @@ h3 {
   margin-bottom: 1.2rem;
   font-size: 0.95rem;
   color: #555;
+  font-family: 'Poppins', sans-serif;
 }
 
 .metaItem {
@@ -41,6 +43,7 @@ h3 {
 .footer {
   display: flex;
   justify-content: flex-end;
+  font-family: 'Poppins', sans-serif;
 }
 
 .link {
@@ -49,6 +52,7 @@ h3 {
   font-weight: 500;
   transition: color 0.2s ease;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .link:hover {
