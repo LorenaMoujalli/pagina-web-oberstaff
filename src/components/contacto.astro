@@ -1,0 +1,52 @@
+---
+import "../styles/contacto.css";    
+---                        
+                              
+                               
+                              
+                              
+                              <!--CONTACTO -->
+ 
+<section id="contacto" class="contact-section">
+  <h2>Contáctanos</h2>
+  <p>Déjanos saber tus requerimientos y nos pondremos en contacto contigo <span class="highlight">lo más pronto posible.</span></p>
+
+  <form id="webhookForm" class="contact-form">
+    <input type="text" name="nombre" placeholder="Nombres" required>
+    <input type="text" name="apellidos" placeholder="Apellidos" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <div class="phone-group">
+      <input type="text" name="codigoPais" class="country-code" placeholder="+1" required>
+      <input type="tel" name="telefono" class="phone-number" placeholder="Teléfono" required>
+    </div>
+
+    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms" required>
+      <label for="terms">
+        Al facilitar su número de télefono, aceptas recibir mensajes SMS relacionados con atención al cliente. La frecuencia de los mensajes puede variar. Pueden aplicarse tarifas estándar de mensajes y datos. Responde STOP para cancelar la suscripción. Responde Help para obtener ayuda.
+      </label>
+    </div>
+<!-- 
+    <input type="text" name="codigoVerificacion" class="verification" placeholder="Código de verificación" required>
+-->
+
+
+    <button type="submit">ENVIAR MENSAJE</button>
+  </form>
+
+ <!--  <p id="status" style="margin-top:10px; font-weight:bold;"></p>
+-->
+
+<div id="statusModal" class="status-modal">
+  <div class="status-modal-content">
+    <button id="closeStatusModal" class="close-status-modal">×</button>
+    <p id="statusModalText"></p>
+  </div>
+</div>
+
+</section>
+
+<script src="./scripts/webhook.js" type="module"></script>

@@ -1,0 +1,218 @@
+
+.footer-desktop { 
+    display: none; 
+}
+
+
+.hero-banner {
+  width: 100%;
+  overflow: hidden;  
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 45px;
+  object-fit: cover; 
+  display: block;
+  margin: 0 auto;
+}
+
+
+.footer-section {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+  
+}
+
+.footer-logo {
+  width: 170px;
+  margin-bottom: 1rem;
+}
+
+.footer-copy {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #25262B;
+  margin-bottom: 0.3rem;
+}
+
+.footer-highlight {
+  color: #FF65C3;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+  margin-top:25px;
+}
+ 
+.footer-icons { 
+  background-color: #FFEAF7;     
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+
+  
+  width: 100vw;             
+  position: relative;       
+  left: 50%;                
+  right: 50%;
+  margin-left: -50vw;       
+  margin-right: -50vw;
+
+  box-sizing: border-box;
+  margin-bottom: 20px; 
+}
+
+.footer-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.footer-message {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #25262B;
+ 
+}
+
+.footer-sponsors {
+    display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+ 
+}
+
+.footer-sponsors img {
+ width: 110px; 
+  height: auto;
+}
+
+.footer-small {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #AFAFB2;
+  opacity: 0.8;
+}
+
+
+                                          /*RESPONSIVE DESKTOP*/
+  @media (min-width: 1024px){
+
+ .footer-section{
+    display:none;
+}
+
+
+    .hero-banner img {
+    height: 45px; 
+  }
+
+.footer-desktop {
+  display: block;
+  background-color: white;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+}
+
+
+.footer-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-desktop {
+  width: 170px;
+}
+
+.footer-message-desktop {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #25262B;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-icons-desktop {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-icon-desktop {
+  width: 20px;
+  height: 20px;
+}
+
+
+.footer-sponsors-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-sponsors-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-sponsors-desktop img {
+  width: 140px;
+  height: auto;
+}
+
+
+.footer-bottom-row {
+  display: flex;
+   justify-content: center;
+   flex-direction: column; 
+   text-align: center; 
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.footer-highlight-desktop {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FF65C3;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.footer-copy-desktop {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #25262B;
+  margin: 0;
+}
+
+
+.footer-small-desktop {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #AFAFB2;
+  opacity: 0.8;
+  text-align: center;
+  margin-top: 0;
+}
+
+}

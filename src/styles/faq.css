@@ -1,0 +1,232 @@
+.faq-section {
+  background-color: rgb(255, 232, 246); 
+  border-radius: 50px;
+  padding: 2rem 1rem;
+  margin-top: 60px;
+}
+
+.faq-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #25262B; 
+  font-size: 25px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.faq-p {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #25262B; 
+  font-size: 17px; 
+  margin-bottom: 2rem; 
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: #FEFFFA; 
+  border-radius: 15px; 
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); 
+  overflow: hidden;
+} 
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #25262B;  
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  padding: 1rem 3rem 1rem 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px; 
+  height: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+/* Preguntas impares → icono rosa */
+.faq-item:nth-child(odd) .faq-question::after {
+  background-image: url('../assets/icono-flecha-baja-rosa.png');
+}
+
+/* Preguntas pares → icono negro */
+.faq-item:nth-child(even) .faq-question::after {
+  background-image: url('../assets/icono-flecha-baja.png');
+}
+
+
+
+.faq-modal {
+   position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.faq-modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+.faq-modal-content {
+ background: white;
+  color: #25262B;
+  width: 400px;
+  max-width: 90%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%) scale(0.95);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.faq-modal.show .faq-modal-content {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #FF65C3;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#faq-modal-text {
+  font-size: 13.5px;
+  line-height: 1.6;
+ 
+}
+
+
+.faq-btn {
+  background: #FF6ACD;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.faq-btn:hover{
+  background: #f85ac3; 
+}
+
+.faq-btn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-icon img {
+  width: 18px; 
+  height: 18px;
+  
+  display: block; 
+} 
+
+
+.highlight{ 
+  color: #FF65C3;
+   font-weight: bold; 
+}
+
+                                               /*RESPONSIVE DESKTOP*/
+
+@media (min-width: 1024px){
+
+
+    .faq-p {
+    font-size: 19px;
+}
+
+
+.faq-container {
+    max-width: 1200px; 
+    margin: 0 auto;   
+  }
+
+   .faq-btn {
+    display: block;   
+    margin: 30px auto 0 auto; 
+  }
+
+  .faq-question {
+  position: relative; 
+}
+
+.faq-question::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;  
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+
+.faq-item:nth-child(odd) .faq-question::after {
+  background-image: url('../assets/icono-flecha-baja-rosa.png');
+}
+
+
+.faq-item:nth-child(even) .faq-question::after {
+  background-image: url('../assets/icono-flecha-baja.png');
+}
+
+
+
+}
+ 
