@@ -1,17 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/empleos/Hero.astro";
-import JobSection from "../components/empleos/JobSection.js"; // 👈 Asegúrate que sea .jsx
+import JobSection from "../components/empleos/JobSection.js"; 
 import ScrollingBanner from "../components/ScrollingBanner.astro";
 import { getJobs } from "../lib/jobs.js";
 
-const jobs = await getJobs(); // ✅ Esto se ejecuta en el servidor (Node)
+const jobs = await getJobs(); 
 ---
 
 <MainLayout>
   <main>
     <Hero />
-    <JobSection client:load jobs={jobs} /> <!-- ✅ Pasamos los empleos como props -->
+    <JobSection client:load jobs={jobs} /> 
     <ScrollingBanner />
   </main>
 </MainLayout>
