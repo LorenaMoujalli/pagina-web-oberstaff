@@ -48,6 +48,7 @@
   gap: 1rem; 
   align-items: center;
   
+
 }
 
 
@@ -358,22 +359,22 @@ font-size: 15px;
     flex-direction: row;      
     justify-content: center;  
     align-items: stretch;     
-    gap: 2rem;                
+    gap: -2rem;                
     margin-top: 35px;
+   
   }
 
   .info-card1,
   .info-card2 {
     max-width: 350px;         
     width: 100%;
-    transform: none !important; /* elimina la rotación */
-    margin-bottom: 0; 
+    /*
+    transform: none !important;  */ /*eliminar rotacion*/
+    margin-bottom: 0;
+    transform: rotate(-5deg); 
   }
 
 
-
-
- 
   .mini-card,
   .mini-card2,
   .mini-card3 {
@@ -384,22 +385,6 @@ font-size: 15px;
     right: auto;      
   }
 
-
-  /*
- .mini-card,
-  .mini-card2,
-  .mini-card3 {
-    bottom: -20px;   
-    left: 0.01px;      
-    top: auto;      
-    right: auto;     
-    transform: rotate(0deg); 
-  }
- */
-  
-
-
- 
 
                                                    /*CArrusel 1*/ 
 
