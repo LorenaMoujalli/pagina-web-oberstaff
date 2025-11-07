@@ -62,17 +62,81 @@
 .overlay p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
-  color:aliceblue;
+  color: aliceblue;
 }
 
 .overlay ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: aliceblue; /* Color para todo el UL */
+  color: aliceblue;
 }
 
 .overlay li {
   font-size: 0.85rem;
-  color: #f472b6; /* Color rosa para cada LI */
+  color: #f472b6;
+}
+
+
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 45%; 
+    height: 350px;
+  }
+
+  .overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .overlay p,
+  .overlay li {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .card {
+    flex: none; 
+    width: 90%; 
+    height: 300px;
+  }
+
+  .overlay {
+    padding: 1rem;
+  }
+
+  .overlay h3 {
+    font-size: 1.1rem;
+  }
+
+  .overlay p,
+  .overlay li {
+    font-size: 0.75rem;
+  }
+
+  .card:hover {
+    flex: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 250px;
+  }
+
+  .overlay h3 {
+    font-size: 1rem;
+  }
+
+  .overlay p,
+  .overlay li {
+    font-size: 0.7rem;
+  }
 }

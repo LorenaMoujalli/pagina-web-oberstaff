@@ -1,87 +1,52 @@
 ---
-import "../styles/footer.css";    
-import bannerDesktop from "../assets/banner-desktop.gif"; 
-import logo from "../assets/logo.png"; 
-import iconoLi from "../assets/icono-linkdein.png";  
-import iconoFb from "../assets/icono-facebook.png"; 
-import iconoIg from "../assets/icono-instagram.png"; 
-import iconoTik from "../assets/icono-tiktok.png"; 
-import logoOnePlanet from "../assets/logo-one-planet.png";   
-import logoComercio from "../assets/logo-camara-comercio.png";  
-import logoTop from "../assets/worlds-top.png"; 
+import iconoLi from "../assets/icono-linkdein.png";
+import iconoFb from "../assets/icono-facebook.png";
+import iconoIg from "../assets/icono-instagram.png";
+import iconoTik from "../assets/icono-tiktok.png";
+import logoOnePlanet from "../assets/logo-one-planet.png";
+import logoComercio from "../assets/logo-camara-comercio.png";
+import logoTop from "../assets/worlds-top.png";
+import logo from "../assets/logo.png";
+import styles from "../styles/Footer.module.css";
 ---
-
-
-<div class="hero-banner">
-</div>
-
-
-                                                        <!--FOOTER MOVIL -->
-<footer class="footer-section">
-        <img src={logo.src} class="footer-logo" alt=""/> 
-     
-  <p class="footer-copy">© Copyright 2025</p> 
-
-
-  <p class="footer-highlight">Políticas de Privacidad y Uso de Cookies</p>
-
- 
-  <div class="footer-icons">
-    <img src={iconoLi.src} class="footer-icon" alt=""/> 
-   <img src={iconoFb.src} class="footer-icon" alt=""/> 
-   <img src={iconoIg.src} class="footer-icon" alt=""/> 
-   <img src={iconoTik.src} class="footer-icon" alt=""/> 
+<footer class={styles.footerSection}>
+  <div class={styles.top}>
+    <img src={logo.src} alt="Oberstaff" class={styles.footerLogo} />
+    <p class={styles.footerCopy}>© Oberstaff 2025</p>
+    <p class={styles.footerHighlight}>Políticas de Privacidad y Uso de Cookies</p>
   </div>
 
-  
-  <p class="footer-message">PATROCINADORES OFICIALES</p>
-
-
-  <div class="footer-sponsors">
-    <img src={logoOnePlanet.src}  alt=""/>  
-    <img src={logoTop.src}  alt=""/> 
-     <img src={logoComercio.src}  alt=""/> 
-     
-  </div>
-
- 
-  <p class="footer-small">Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.</p>
-</footer>
-
-
-
-                                              <!--FOOTER DESKTOP -->
-
-<footer class="footer-desktop">
-  <div class="footer-top-row">
-    <img src={logo.src} class="footer-logo-desktop" alt="Logo Oberstaff">
-    <p class="footer-message-desktop">PATROCINADORES OFICIALES</p>
-    <div class="footer-icons-desktop">
-      <img src={iconoLi.src} class="footer-icon-desktop" alt="LinkedIn">
-      <img src={iconoFb.src} class="footer-icon-desktop" alt="Facebook">
-      <img src={iconoIg.src} class="footer-icon-desktop" alt="Instagram">
-      <img src={iconoTik.src} class="footer-icon-desktop" alt="TikTok">
+  <!-- barra de iconos con fondo extendido -->
+  <div class={styles.iconsFullWidth}>
+    <div class={styles.iconsWrapper}>
+      <div class={styles.footerIcons}>
+        <a href="#" aria-label="LinkedIn">
+          <img src={iconoLi.src} class={styles.footerIcon} alt="LinkedIn" />
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src={iconoFb.src} class={styles.footerIcon} alt="Facebook" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src={iconoIg.src} class={styles.footerIcon} alt="Instagram" />
+        </a>
+        <a href="#" aria-label="TikTok">
+          <img src={iconoTik.src} class={styles.footerIcon} alt="TikTok" />
+        </a>
+      </div>
     </div>
   </div>
 
+  <div class={styles.sponsorsArea}>
+    <p class={styles.footerMessage}>PATROCINADORES OFICIALES</p>
 
-  <div class="footer-sponsors-row">
-    <div class="footer-sponsors-desktop">
-      <img src={logoOnePlanet.src} alt="One Planet">
-      <img src={logoTop.src} alt="Top">
-      <img src={logoComercio.src} alt="Comercio">
+    <div class={styles.footerSponsors}>
+      <img src={logoOnePlanet.src} alt="One Planet" />
+      <img src={logoTop.src} alt="Worlds Top" />
+      <img src={logoComercio.src} alt="Cámara de Comercio" />
     </div>
+
+    <p class={styles.footerSmall}>
+      Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.
+    </p>
   </div>
-
- 
-  <div class="footer-bottom-row">
-    <p class="footer-highlight-desktop">Políticas de Privacidad y Seguridad</p>
-    <p class="footer-copy-desktop">© Copyright 2025</p>
-  </div>
-
-  
-  <p class="footer-small-desktop">
-    Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.
-  </p>
-
 </footer>
