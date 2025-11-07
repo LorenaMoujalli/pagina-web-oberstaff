@@ -1,0 +1,59 @@
+---
+import styles from '../styles/servicios.module.css';
+
+const servicios = [
+  {
+    titulo: 'Diseño Gráfico',
+    descripcion: 'Soluciones visuales profesionales para tu marca',
+    items: ['Identidad visual', 'Edición multimedia', 'Animaciones 2D/3D'],
+    img: '/images/servicios/diseno.jpg',
+  },
+  {
+    titulo: 'Gestión de Redes',
+    descripcion: 'Estrategias de contenido y crecimiento orgánico para redes sociales',
+    items: ['Creación de contenido', 'Calendarización', 'Análisis de métricas'],
+    img: '/images/servicios/redes.jpg',
+  },
+  {
+    titulo: 'Estrategia Comercial',
+    descripcion: 'Diseño de estrategias de crecimiento y ventas para tu negocio',
+    items: ['Análisis de mercado', 'Segmentación', 'Plan de acción'],
+    img: '/images/servicios/estrategia.jpg',
+  },
+  {
+    titulo: 'Soporte Ejecutivo',
+    descripcion: 'Asistencia profesional para la gestión diaria de tareas empresariales',
+    items: ['Gestión de agenda', 'Atención al cliente', 'Organización de documentos'],
+    img: '/images/servicios/soporte.jpg',
+  },
+  {
+    titulo: 'Marketing Digital',
+    descripcion: 'Campañas efectivas para aumentar la visibilidad de tu marca',
+    items: ['SEO/SEM', 'Publicidad online', 'Email marketing'],
+    img: '/images/servicios/marketing.jpg',
+  },
+  {
+    titulo: 'Redacción Profesional',
+    descripcion: 'Contenido claro, persuasivo y adaptado a tu público objetivo',
+    items: ['Artículos y blogs', 'Textos web', 'Guiones y copywriting'],
+    img: '/images/servicios/redaccion.jpg',
+  },
+];
+---
+
+<section class={styles.servicios}>
+  {servicios.map((servicio) => (
+    <div class={styles.card}>
+      <img src={servicio.img} alt={servicio.titulo} />
+      <div class={styles.overlay}>
+        <h3>{servicio.titulo}</h3>
+        <p>{servicio.descripcion}</p>
+        <ul>
+          {servicio.items.map((item) => (
+            <li>• {item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</section>
