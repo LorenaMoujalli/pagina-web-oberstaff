@@ -189,24 +189,25 @@
   font-weight: bold;
 }
 
-.contact-form {
+.contact-form-modal {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form-modal input,
+.contact-form-modal textarea {
   padding: 0.6rem;
-  
+  width: 100%;
   border-radius: 8px;
   font-size: 0.9rem;
   border: 2px solid #5e5f61;
 }
 
-.phone-group {
+.contact-form-modal .phone-group {
   display: flex;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .country-code {
@@ -239,6 +240,8 @@
 .contact-modal-content textarea {
   border: 2px solid #ff65c3;
 }
+
+
 
 
                                            /*RESPONSIVE*/ 
