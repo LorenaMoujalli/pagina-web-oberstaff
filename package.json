@@ -27,6 +27,7 @@
     "node": ">=18.20.8"
   },
   "devDependencies": {
-    "@astrojs/node": "^9.5.0"
+    "@astrojs/node": "^9.5.0",
+    "@astrojs/vercel": "^9.0.0"
   }
 }
