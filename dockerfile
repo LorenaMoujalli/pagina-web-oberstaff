@@ -1,16 +1,14 @@
-# Etapa 1: build
-FROM node:20-alpine AS builder
+# Etapa 1: Build
+FROM node:18 AS build
 WORKDIR /app
+COPY package*.json ./
+RUN npm install
 COPY . .
-RUN npm ci && npm run build
+RUN npm run build
 
-# Etapa 2: servir archivos estáticos con nginx
-FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Reemplaza la configuración por defecto
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Etapa 2: Servir
+FROM node:18 AS serve
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+RUN npm install -g serve
+CMD ["serve", "-s", "dist", "-l", "3000"]
