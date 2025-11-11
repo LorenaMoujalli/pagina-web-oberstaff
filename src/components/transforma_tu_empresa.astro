@@ -1,6 +1,8 @@
 ---
 import "../styles/transforma_tu_empresa.css";  
+/*
 import iconoCalen from "../assets/icono-calendario.png";
+*/
 import iconoPapel  from "../assets/icono-papel.png";  
 import iconoIgRosa from "../assets/icono-ig-rosa.png"; 
 import iconoIgNegro from "../assets/icono-instagram.png"; 
@@ -9,7 +11,7 @@ import iconoMegafonoRosa  from "../assets/icono-megafono-rosa.png";
 import iconoPunta  from "../assets/icono-punta.png"; 
 import iconoBombillo  from "../assets/icono-bombillo.png"; 
 
----
+--- 
  
 <!--transforma tu empresa -->
 
@@ -19,7 +21,9 @@ import iconoBombillo  from "../assets/icono-bombillo.png";
     Nuestros profesionales están listos para ofrecerte estrategias innovadoras y personalizadas que te llevarán a <span class="highlight">alcanzar y superar tus objetivos de negocio.</span>
   </p>
    <button class="btn-primary4">
-  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>
+    <!-- 
+  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>-->
+  <span class="iconify" data-icon="material-symbols:calendar-add-on" style="font-size:23px;"></span>
   <span class="btn-text">AGENDA UNA CONSULTA GRATIS</span>
 </button>
   <p class="cta-highlight">
@@ -248,4 +252,20 @@ import iconoBombillo  from "../assets/icono-bombillo.png";
   </div>
 </section>
 
-<script src="./scripts/mosaico2.js" type="module"></script>
+<script type="module">
+
+const variedadCards = document.querySelectorAll('.variedad-card');
+
+variedadCards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Cerrar las demás
+    variedadCards.forEach(c => {
+      if (c !== card) c.classList.remove('open');
+    });
+
+    // Alternar solo la clickeada
+    card.classList.toggle('open');
+  });
+});
+
+</script>

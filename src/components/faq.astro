@@ -1,6 +1,8 @@
 ---
 import "../styles/faq.css";  
+/*
 import iconoPregunta  from "../assets/icono-pregunta.png";  
+*/
 --- 
 
                         
@@ -61,12 +63,16 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
       <button class="faq-question">¿Cuánto cuesta?</button>
       <div class="faq-answer" data-answer="El costo mensual de nuestro servicio varía en función del nivel educativo, la experiencia profesional y el país de residencia del candidato. En Oberstaff, ofrecemos un único cargo mensual fijo que incluye el salario del empleado y todos nuestros costos administrativos, como el cambio de divisas y las tarifas por transferencias bancarias. De este modo, el precio que te proporcionamos es el costo total, sin cargos ocultos ni sorpresas adicionales."></div>
     </div>
-  </div>
+  </div> 
 
   
   <button class="faq-btn">
     <a href="#contacto" style="text-decoration: none; color: white;">
-      <span class="btn-icon"><img src={iconoPregunta.src} alt="" /></span>
+      <!-- 
+      <span class="btn-icon"><img src={iconoPregunta.src} alt="" /></span>-->
+      <!-- 
+        <span class="iconify" data-icon="material-symbols:question-mark-rounded" style="font-size:26px;"></span> -->
+        <span class="iconify" data-icon="material-symbols:contact-support-outline" style="font-size:25px;"></span>
       <span class="btn-text">¿TIENES MÁS PREGUNTAS?</span>
     </a>
   </button>
@@ -80,4 +86,82 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
   </div>
 </div>
 
-<script src="./scripts/preguntas_frecuentes.js" type="module"></script> 
+
+<!-- 
+<script src="./scripts/preguntas_frecuentes.js" type="module"></script> -->
+
+
+
+<script type="module">
+(function () {
+  // CACHES y comprobaciones
+  const modal = document.getElementById('faq-modal');
+  const modalContent = document.querySelector('.faq-modal-content');
+  const modalText = document.getElementById('faq-modal-text');
+  const closeBtn = document.querySelector('.close-modal');
+  const faqButtons = document.querySelectorAll('.faq-question');
+
+  if (!modal || !modalContent || !modalText || !closeBtn) {
+    console.error('FAQ modal: falta algún elemento requerido (faq-modal, faq-modal-content, faq-modal-text o close-modal).');
+    return;
+  }
+
+  
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const answerDiv = btn.nextElementSibling;
+      if (!answerDiv) {
+        console.warn('FAQ: no se encontró .faq-answer junto al botón', btn);
+        return;
+      }
+      const answer = answerDiv.getAttribute('data-answer') || answerDiv.textContent || 'No hay respuesta.';
+      modalText.textContent = answer;
+
+    
+      modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false');
+
+    
+      setTimeout(() => { closeBtn.focus(); }, 250);
+    });
+  });
+
+  
+  closeBtn.addEventListener('click', closeModal);
+
+ 
+  modal.addEventListener('click', (ev) => {
+    if (ev.target === modal) closeModal();
+  });
+
+  
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape' && modal.classList.contains('show')) {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    
+    setTimeout(() => { modalText.textContent = ''; }, 400);
+  }
+
+  
+  const debugCheck = () => {
+    console.log('DEBUG FAQ:', {
+      modalExists: !!modal,
+      modalHasShow: modal.classList.contains('show'),
+      computedTransform: window.getComputedStyle(modalContent).transform
+    });
+  };
+ 
+  document.addEventListener('click', () => {
+    
+    
+  });  
+})();
+
+</script>
+

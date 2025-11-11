@@ -1,13 +1,15 @@
 ---
 import "../styles/HeroSection.css";  
-import perfil1 from "../assets/perfil1.jpg";
-import perfil2 from "../assets/perfil2.jpg";
-import perfil3 from "../assets/perfil3.jpg";
-import videoPrincipal from "../assets/Video-principal.mp4";
-import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
-import { icon } from "@fortawesome/fontawesome-svg-core";   
-import mapa from "../assets/Hero-animación-desktop.gif";  
+import perfil1 from "../assets/perfil1.webp";
+import perfil2 from "../assets/perfil2.webp";
+import perfil3 from "../assets/perfil3.webp"; 
+import videoPrincipal from "../assets/Video-principal.mp4"; 
+import mapa from "../assets/Hero-animación-desktop.gif"; 
+/* 
+import mapaMobile from "../assets/Hero-animacion-mobile.gif"; 
+*/   
  import bannerDesktop from "../assets/banner-desktop.gif"; 
+ 
 ---
   
 
@@ -26,8 +28,10 @@ import mapa from "../assets/Hero-animación-desktop.gif";
       </p>
 
        <button class="btn-primary">
-     <span class="icono-telefono" set:html={icon(faPhoneVolume).html[0]}></span> 
-     <!--<img src={iconoTel.src} alt="" /> --> 
+        <!-- 
+     <span class="icono-telefono" set:html={icon(faPhoneVolume).html[0]}></span> -->
+     <span class="iconify" data-icon="material-symbols-light:phone-in-talk" style="font-size:27px;"></span>
+   
         AGENDA UNA LLAMADA GRATIS
       </button> 
  
@@ -52,7 +56,7 @@ import mapa from "../assets/Hero-animación-desktop.gif";
     <div class="hero-image">
    <img src={mapa.src} alt="" />
     </div>                         
-  </div>
+  </div> 
 </section>
 
                                <!--BANNER -->
@@ -89,7 +93,16 @@ import mapa from "../assets/Hero-animación-desktop.gif";
   </div> 
 </div>
  
-<script src="./scripts/video-principal.js" type="module"></script> 
+<script type="module">
+  
+  const video = document.getElementById("video-principal"); 
+const playBtn = document.getElementById("videoPlayBtn");  
+const caption = document.getElementById("videoCaption");
+video.addEventListener("loadedmetadata", () => {
+  video.currentTime = 19; 
+});  
+
+  </script> 
 
 
 <!--video desktop -->
@@ -105,6 +118,19 @@ import mapa from "../assets/Hero-animación-desktop.gif";
     <h2>Descubre cómo contratar talento top<span style="color: #FF65C3; font-weight: bold;"> sin gastar de más.</span></h2>
   </div>
 </div> 
-<script src="./scripts/video-principal-desktop.js" type="module"></script>   
+
+<!-- 
+<script src="./scripts/video-principal-desktop.js" type="module"></script>  --> 
+
+<script  type="module">
+  
+  const video = document.getElementById("video-principal-desktop"); 
+const playBtn = document.getElementById("videoPlayBtn");  
+const caption = document.getElementById("videoCaption");
+video.addEventListener("loadedmetadata", () => {
+  video.currentTime = 19; 
+}); 
+
+  </script> 
  
 

@@ -1,17 +1,20 @@
 ---
 import "../styles/casos_exito.css";   
 import bannerDesktop from "../assets/banner-desktop.gif"; 
+/*
 import iconoUser from "../assets/icono-user.png";
-import testimonio1 from "../assets/testimonio1.png"; 
-import testimonio2 from "../assets/testimonio2.png"; 
-import testimonio3 from "../assets/testimonio3.png"; 
+*/
+import testimonio1 from "../assets/testimonio1.webp"; 
+import testimonio2 from "../assets/testimonio2.webp"; 
+import testimonio3 from "../assets/testimonio3.webp"; 
+/*
 import iconoPlay from "../assets/icono-play.png";
 import iconoTel from "../assets/icono-telefono2.png";  
-
+*/ 
 ---
 
 
-<section class="subrayado-section">
+<section class="subrayado-section"> 
  
 <div class="hero-banner">
   <img src={bannerDesktop.src} alt="Banner animado" />
@@ -22,7 +25,9 @@ import iconoTel from "../assets/icono-telefono2.png";
   <div class="subrayado-card">
     <h3>Impulsa tu negocio con el <span class="highlight"> mejor talento de Sudamérica</span></h3>
     <button class="btn-rosado">
-  <span class="btn-icon"><img src={iconoUser.src} alt="" /></span>
+      <!-- 
+  <span class="btn-icon"><img src={iconoUser.src} alt="" /></span>-->
+      <span class="iconify" data-icon="material-symbols:for-you-outline-rounded" style="font-size:26px;"></span>
 
    <a href="#contacto" style="text-decoration: none; color: white;">
  <span class="btn-text">COMIENZA HOY</span> 
@@ -36,7 +41,7 @@ import iconoTel from "../assets/icono-telefono2.png";
 
                                                 <!--CASOS DE EXITO -->
 
-<section class="cta-section">
+<section id="testimonios" class="cta-section">
   <h2>Casos de <span class="highlight">éxito</span></h2>
   <p class="cta-subtext">
     En Oberstaff, creemos que nuestros resultados <span class="highlight">hablan mucho más</span> que las palabras
@@ -49,7 +54,7 @@ import iconoTel from "../assets/icono-telefono2.png";
 
                                               <!--CARRUSEL --> 
   
-<div id="testimonios" class="testimonial-section">
+<div  class="testimonial-section">
   <div class="testimonial-card">
     <img src={testimonio1.src} alt="" class="testimonial-video" />
 
@@ -69,7 +74,9 @@ import iconoTel from "../assets/icono-telefono2.png";
     </p>
   </br>
      <button class="testimonial-btn">
-  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>
+      <!-- 
+  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span> -->
+     <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
   <span class="btn-text">VER TESTIMONIO</span>
 </button>
   </div>
@@ -93,7 +100,9 @@ import iconoTel from "../assets/icono-telefono2.png";
     </p>
 
      <button class="testimonial-btn">
-  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>
+      <!-- 
+  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>-->
+   <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
   <span class="btn-text">VER TESTIMONIO</span>
 </button>
   </div>
@@ -119,7 +128,9 @@ import iconoTel from "../assets/icono-telefono2.png";
     </p>
 </br></br>
    <button class="testimonial-btn">
-  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>
+    <!-- 
+  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>-->
+      <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
   <span class="btn-text">VER TESTIMONIO</span>
 </button>
   </div>
@@ -130,7 +141,9 @@ import iconoTel from "../assets/icono-telefono2.png";
 
 <div class="highlight-box">
   <div class="highlight-icon">
-    <img src={iconoTel.src} alt="" />
+    <!-- 
+    <img src={iconoTel.src} alt="" />-->
+    <span class="iconify" data-icon="material-symbols-light:phone-in-talk" style="font-size:27px;"></span>
   </div>
   <p class="highlight-text">
     Agenda tu llamada y avancemos juntos en el camino hacia tus metas

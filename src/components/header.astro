@@ -1,8 +1,10 @@
 ---
 import "../styles/header.css";   
 import logo from "../assets/logo.png";
+/*
 import iconoHam from "../assets/icono-hamburguesa.png";
 import iconoConv from "../assets/icono-contacto.png";
+*/ 
 ---
 
 <header class="header">
@@ -24,12 +26,16 @@ import iconoConv from "../assets/icono-contacto.png";
  
       <!-- Botón contacto -->
       <button id="openContactBtn" class="menu-btn contact-btn" aria-label="Abrir contacto">
-        <img src={iconoConv.src} alt="Contacto" />
+        <span class="iconify" data-icon="mdi:comment-outline" style="font-size:25px;"></span>
+        <!--
+        <img src={iconoConv.src} alt="Contacto" /> -->
       </button>
 
       <!-- Botón hamburguesa -->
       <button id="openMenuBtn" class="menu-btn ham-btn" aria-label="Abrir menú">
-        <img src={iconoHam.src} alt="Abrir menú" />
+        <span class="iconify" data-icon="material-symbols:density-medium-rounded" style="font-size:25px;"></span>
+        <!-- 
+        <img src={iconoHam.src} alt="Abrir menú" />-->
       </button>
     </div>
   </div>
@@ -84,7 +90,112 @@ import iconoConv from "../assets/icono-contacto.png";
   </div>
 </div>
 
-<script src="./scripts/menu.js" type="module"></script>
-<script src="./scripts/webhookModal.js" type="module"></script>
+
+
+
+<script type="module">
+
+  // MENÚ MODAL
+const openMenuBtn = document.getElementById("openMenuBtn");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+const menuModal = document.getElementById("menuModal");
+const backdropMenu = document.getElementById("modalBackdropMenu");
+
+// CONTACTO MODAL
+const openContactBtn = document.getElementById("openContactBtn");
+const closeContactBtn = document.getElementById("closeContactBtn");
+const contactModal = document.getElementById("contactModal");
+const backdropContact = document.getElementById("modalBackdropContact");
+
+function openModal(modal) {
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(modal) {
+  modal.classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+// Eventos menú
+openMenuBtn.addEventListener("click", () => openModal(menuModal));
+closeMenuBtn.addEventListener("click", () => closeModal(menuModal));
+backdropMenu.addEventListener("click", () => closeModal(menuModal));
+
+// Eventos contacto
+openContactBtn.addEventListener("click", () => openModal(contactModal));
+closeContactBtn.addEventListener("click", () => closeModal(contactModal));
+backdropContact.addEventListener("click", () => closeModal(contactModal));
+
+// Cerrar con Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal(menuModal);
+    closeModal(contactModal);
+  }
+});
+
+// ---  NUEVO: Cerrar el menú al hacer clic en una opción ---
+const menuLinks = document.querySelectorAll(".modal-links a");
+
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    closeModal(menuModal);
+  });
+});
+
+
+</script>
+
+
+<!--WEBHOOK -->
+
+<script  type="module">
+
+const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';   
+
+// Seleccionar también el formulario del modal
+const formModal = document.getElementById('webhookFormModal');
+
+// Si existe el formulario del modal, le aplicamos el mismo comportamiento
+if (formModal) {
+  formModal.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    statusModalText.textContent = 'Enviando...';
+    statusModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+
+    const telefonoCompleto = formModal.codigoPais.value + formModal.telefono.value;
+
+    const data = {
+      nombres: formModal.nombre.value,
+      apellidos: '', // no lo pide el modal
+      email: formModal.email.value,
+      telefono: telefonoCompleto,
+      mensaje: formModal.mensaje.value
+    };
+
+    try {
+      const response = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        statusModalText.textContent = 'Datos enviados exitosamente';
+        formModal.reset();
+      } else {
+        statusModalText.textContent = 'Error al enviar los datos. Código ' + response.status;
+      }
+    } catch (error) {
+      statusModalText.textContent = 'Error de red o en la URL del Webhook: ' + error.message;
+      console.error('Error:', error);
+    }
+  });
+}
+
+</script>
 
  
