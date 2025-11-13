@@ -50,8 +50,21 @@ import "../styles/contacto.css";
 </section>
 
 
+<script type="module">
+  import { initContacto } from "../../src/scripts/contacto";  
+
+  // Ejecutar cuando el DOM esté listo
+  const runInit = () => initContacto();
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", runInit, { once: true });
+  } else {
+    runInit();
+  }
+</script>
 
 
+
+<!-- 
 <script  type="module">
 
 const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';   
@@ -113,3 +126,4 @@ statusModal.addEventListener('click', (e) => {
 
 
 </script>
+-->

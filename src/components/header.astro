@@ -94,6 +94,21 @@ import iconoConv from "../assets/icono-contacto.png";
 
 
 <script type="module">
+  import { initHeader } from "../../src/scripts/header";  
+
+  // Ejecutar solo cuando el DOM esté listo
+  const runInit = () => initHeader();
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", runInit, { once: true });
+  } else {
+    runInit();
+  }
+</script>
+
+
+<!-- 
+
+<script type="module">
 
   // MENÚ MODAL
 const openMenuBtn = document.getElementById("openMenuBtn");
@@ -148,7 +163,7 @@ menuLinks.forEach(link => {
 </script>
 
 
-<!--WEBHOOK -->
+-------------------------------------------------------
 
 <script  type="module">
 
@@ -199,3 +214,4 @@ if (formModal) {
 </script>
 
  
+-->

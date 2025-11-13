@@ -93,6 +93,25 @@ import mapaMobile from "../assets/Hero-animacion-mobile.gif";
   </div> 
 </div>
  
+
+<script type="module">
+  import { initVideoPrincipal } from "../../src/scripts/video1";
+
+  const section = document.getElementById("video-principal");
+  if (section && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        initVideoPrincipal();
+        obs.disconnect();
+      }
+    });
+    observer.observe(section);
+  } else {
+    initVideoPrincipal();
+  }
+</script>
+
+<!-- 
 <script type="module">
   
   const video = document.getElementById("video-principal"); 
@@ -103,6 +122,7 @@ video.addEventListener("loadedmetadata", () => {
 });  
 
   </script> 
+  -->
 
 
 <!--video desktop -->
@@ -122,6 +142,8 @@ video.addEventListener("loadedmetadata", () => {
 <!-- 
 <script src="./scripts/video-principal-desktop.js" type="module"></script>  --> 
 
+
+<!-- 
 <script  type="module">
   
   const video = document.getElementById("video-principal-desktop"); 
@@ -132,5 +154,22 @@ video.addEventListener("loadedmetadata", () => {
 }); 
 
   </script> 
- 
+ -->
+  <script type="module">
+  import { initVideoPrincipalDesktop } from "../../src/scripts/video2"; 
+
+  const section = document.getElementById("video-principal-desktop");
+  if (section && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        initVideoPrincipalDesktop();
+        obs.disconnect();
+      }
+    });
+    observer.observe(section);
+  } else {
+    initVideoPrincipalDesktop();
+  }
+</script>
+
 
