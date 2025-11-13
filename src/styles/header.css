@@ -297,6 +297,12 @@
     display: none;         
   }
 
+
+   .contact-btn .iconify {
+    display: none;
+  }
+ 
+
   .contact-btn::after {
     content: 'Contacto';  
   }

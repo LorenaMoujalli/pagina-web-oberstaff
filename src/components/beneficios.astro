@@ -1,5 +1,6 @@
 ---
-import "../styles/beneficios.css";    
+import "../styles/beneficios.css";   
+/* 
 import iconoDolarBajo  from "../assets/icono-dolar-bajo.png"; 
 import iconoLupaUser  from "../assets/icono-lupa-user.png"; 
 import iconoPremio from "../assets/icono-premio.png";
@@ -9,7 +10,8 @@ import iconoSubida  from "../assets/icono-subida.png";
 import iconoEscudoFine  from "../assets/icono-escudo-fine.png";  
 import iconoFlechas  from "../assets/icono-flechas.png"; 
 import iconoCalen from "../assets/icono-calendario.png";
-import iconoAudifono  from "../assets/icono-audifono.png";    
+import iconoAudifono  from "../assets/icono-audifono.png";   
+*/ 
 --- 
 
   
@@ -169,11 +171,65 @@ import iconoAudifono  from "../assets/icono-audifono.png";
 </section>
 
   <button class="btn-primary3">  
-  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>
+    <!-- 
+  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>-->
+  <span class="iconify" data-icon="material-symbols:calendar-add-on" style="font-size:23px;"></span>
   <span class="btn-text">PROGRAMA UNA CONSULTA GRATIS</span>
 </button> 
 
-<script src="./scripts/carrusel2.js" type="module"></script>
+<script  type="module">
+
+var container = document.querySelector('.carrusel-container');
+var cards = document.querySelectorAll('.card');
+var leftArrow = document.querySelector('.arrow.left');
+var rightArrow = document.querySelector('.arrow.right');
+var dot = document.querySelector('.indicator-dot');
+var activeIndex = 0;
+
+function updateCarousel() {
+  var i;
+  for (i = 0; i < cards.length; i++) {
+    cards[i].className = 'card';
+  }
+
+  // asignar clases prev/active/next para rotaciones
+  var prevIndex = (activeIndex - 1 + cards.length) % cards.length;
+  var nextIndex = (activeIndex + 1) % cards.length;
+
+  cards[activeIndex].classList.add('active');
+  cards[prevIndex].classList.add('prev');
+  cards[nextIndex].classList.add('next');
+
+  var wrapper = document.querySelector('.carrusel-wrapper');
+  var wrapperWidth = wrapper.offsetWidth;
+  var cardWidth = cards[activeIndex].offsetWidth;
+  var offset = (wrapperWidth / 2) - (cardWidth / 2) - (cards[activeIndex].offsetLeft);
+  container.style.transform = 'translateX(' + offset + 'px)';
+
+  // 🔹 mover el punto indicador
+  var progress = activeIndex / (cards.length - 1);
+  var barWidth = document.querySelector('.indicator-bar').offsetWidth;
+  var dotLeft = progress * (barWidth - 12);
+  dot.style.left = dotLeft + 'px';
+}
+
+leftArrow.onclick = function() {
+  activeIndex--;
+  if (activeIndex < 0) activeIndex = cards.length - 1;
+  updateCarousel();
+};
+
+rightArrow.onclick = function() {
+  activeIndex++;
+  if (activeIndex >= cards.length) activeIndex = 0;
+  updateCarousel();
+};
+
+window.onresize = updateCarousel;
+updateCarousel();
+
+
+</script> 
 
 
 
@@ -243,7 +299,7 @@ import iconoAudifono  from "../assets/icono-audifono.png";
 </section>
 
  <button class="btn-primary3-desktop">  
-  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>
+  <span class="iconify" data-icon="material-symbols:calendar-add-on" style="font-size:23px;"></span>
   <span class="btn-text">PROGRAMA UNA CONSULTA GRATIS</span>
 </button> 
 

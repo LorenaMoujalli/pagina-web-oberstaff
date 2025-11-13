@@ -1,19 +1,37 @@
 ---
-import iconoLi from "../assets/icono-linkdein.png";
-import iconoFb from "../assets/icono-facebook.png";
-import iconoIg from "../assets/icono-instagram.png";
-import iconoTik from "../assets/icono-tiktok.png";
-import logoOnePlanet from "../assets/logo-one-planet.png";
-import logoComercio from "../assets/logo-camara-comercio.png";
-import logoTop from "../assets/worlds-top.png";
-import logo from "../assets/logo.png";
-import styles from "../styles/Footer.module.css";
----
-<footer class={styles.footerSection}>
-  <div class={styles.top}>
-    <img src={logo.src} alt="Oberstaff" class={styles.footerLogo} />
-    <p class={styles.footerCopy}>© Oberstaff 2025</p>
-    <p class={styles.footerHighlight}>Políticas de Privacidad y Uso de Cookies</p>
+import "../styles/footer.css";     
+import bannerDesktop from "../assets/banner-desktop.gif"; 
+import logo from "../assets/logo.png"; 
+import iconoLi from "../assets/icono-linkdein.png";  
+import iconoFb from "../assets/icono-facebook.png"; 
+import iconoIg from "../assets/icono-instagram.png"; 
+import iconoTik from "../assets/icono-tiktok.png"; 
+import logoOnePlanet from "../assets/logo-one-planet.png"; 
+import logoComercio from "../assets/logo-camara-comercio.webp";  
+import logoTop from "../assets/worlds-top.webp";  
+--- 
+
+ 
+<div class="hero-banner">
+  <img src={bannerDesktop.src} alt="Banner animado" />
+</div>
+
+
+                                                        <!--FOOTER MOVIL -->
+<footer class="footer-section">
+        <img src={logo.src} class="footer-logo" alt=""/> 
+     
+  <p class="footer-copy">© Copyright 2025</p> 
+
+
+  <p class="footer-highlight">Políticas de Privacidad y Uso de Cookies</p>
+
+ 
+  <div class="footer-icons">
+    <img src={iconoLi.src} class="footer-icon" alt=""/> 
+   <img src={iconoFb.src} class="footer-icon" alt=""/> 
+   <img src={iconoIg.src} class="footer-icon" alt=""/> 
+   <img src={iconoTik.src} class="footer-icon" alt=""/> 
   </div>
 
   <!-- barra de iconos con fondo extendido -->

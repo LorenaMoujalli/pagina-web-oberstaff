@@ -423,15 +423,15 @@ p {
 .columna:nth-child(5) .img9 { flex: 1.2; } /* más alta */
 
 
-.img1 { background-image: url('../assets/img2.jpg'); }
-.img2 { background-image: url('../assets/img8.jpg'); }
-.img3 { background-image: url('../assets/img5.jpg'); }
-.img4 { background-image: url('../assets/img4.jpg'); }
-.img5 { background-image: url('../assets/img6.jpg'); }
-.img6 { background-image: url('../assets/img10.jpg'); }
-.img7 { background-image: url('../assets/img1.jpg'); }
-.img8 { background-image: url('../assets/img7.jpg'); }
-.img9 { background-image: url('../assets/img9.jpg'); }
+.img1 { background-image: url('../assets/img2.webp'); }
+.img2 { background-image: url('../assets/img8.webp'); }
+.img3 { background-image: url('../assets/img5.webp'); }
+.img4 { background-image: url('../assets/img4.webp'); }
+.img5 { background-image: url('../assets/img6.webp'); }
+.img6 { background-image: url('../assets/img10.webp'); }
+.img7 { background-image: url('../assets/img1.webp'); }
+.img8 { background-image: url('../assets/img7.webp'); }
+.img9 { background-image: url('../assets/img9.webp'); }
 
 .mosaico-card {
   background-size: cover;

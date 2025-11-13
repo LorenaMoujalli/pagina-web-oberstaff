@@ -1,9 +1,17 @@
 ---
 import "../styles/transforma_tu_empresa.css";  
+/*
 import iconoCalen from "../assets/icono-calendario.png";
-import Servicios from "./Servicios.astro";
+*/
+import iconoPapel  from "../assets/icono-papel.png";  
+import iconoIgRosa from "../assets/icono-ig-rosa.png"; 
+import iconoIgNegro from "../assets/icono-instagram.png"; 
+/*import iconoUserRosa  from "../assets/icono-user-rosa.png"; */
+import iconoMegafonoRosa  from "../assets/icono-megafono-rosa.png";  
+import iconoPunta  from "../assets/icono-punta.png"; 
+import iconoBombillo  from "../assets/icono-bombillo.png"; 
 
----
+--- 
  
 <!--transforma tu empresa -->
 
@@ -13,15 +21,251 @@ import Servicios from "./Servicios.astro";
     Nuestros profesionales están listos para ofrecerte estrategias innovadoras y personalizadas que te llevarán a <span class="highlight">alcanzar y superar tus objetivos de negocio.</span>
   </p>
    <button class="btn-primary4">
-  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>
+    <!-- 
+  <span class="btn-icon"><img src={iconoCalen.src} alt="" /></span>-->
+  <span class="iconify" data-icon="material-symbols:calendar-add-on" style="font-size:23px;"></span>
   <span class="btn-text">AGENDA UNA CONSULTA GRATIS</span>
 </button>
   <p class="cta-highlight">
     Ofrecemos una amplia variedad de perfiles para satisfacer tus necesidades.
   </p>
 </section>
-<Servicios/>
 
+
+
+                                                    <!--CARDS -->
+
+<section class="cards-variedad-section">
+
+<div class="cards-variedad">
+  <div class="card1">
+    <div class="icon3">
+      <img src={iconoIgNegro.src} alt=""  style="width:28px;" /> 
+    </div> 
+    <h3 class="card-title">Gestión de Redes</h3>
+    <p class="cards-text">
+      Estrategias de contenido y crecimiento orgánico para redes sociales
+    </p>
+    <ul class="lista">
+    <li>Creación de contenido</li>
+        <li>Calendarización</li>
+          <li>Análisis de métricas</li>
+    </ul>
+  </div>
+
+  <div class="card1">
+     <div class="icon3">
+      <!-- 
+      <img src={iconoPapel.src} alt="" class="icono-trofeo" />  -->
+       <span class="iconify" data-icon="material-symbols-light:ink-pen-outline" style="font-size:35px;"></span> 
+    </div> 
+    <h3 class="card-title">Redacción Profesional</h3>
+    <p class="cards-text">
+  Contenido persuasivo que convierte visitantes en clientes
+    </p>
+  
+    <ul class="lista">
+      <li>Copywriting estratégico</li>
+       <li>Guiones para video</li>
+        <li>Edición profesional</li>
+    </ul>
+  </div>
+
+
+<div class="card1">
+    <div class="icon3">
+      <!--
+      <img src={iconoMegafonoRosa.src} alt="" class="icono-trofeo" />  -->
+             <span class="iconify" data-icon="material-symbols-light:campaign-outline" style="font-size:35px;"></span>
+    </div> 
+    <h3 class="card-title">Marketing Digital</h3>
+    <p class="cards-text">
+  Campañas efectivas con enfoque en ROI
+    </p>
+  
+    <ul class="lista">
+      <li>Publicidad digital</li>
+       <li>SEO avanzado</li>
+        <li>Analítica predictiva</li>
+    </ul>
+  </div>
+
+
+  <div class="card1">
+    <div class="icon3">
+      <!-- 
+      <img src={iconoUserRosa.src} alt="" class="icono-trofeo" /> -->
+      <!-- 
+      <span class="iconify" data-icon="mdi:account-tie-outline" style="font-size:35px;"></span> -->
+      <span class="iconify" data-icon="material-symbols-light:manage-accounts-outline" style="font-size:35px;"></span>
+    </div> 
+    <h3 class="card-title">Soporte Ejecutivo</h3>
+    <p class="cards-text">
+  Asistencia especializada para gestión empresarial
+    </p>
+  
+    <ul class="lista">
+      <li>Gestión de agenda</li>
+       <li>Atención al cliente</li>
+        <li>Organización documental</li>
+    </ul>
+  </div>
+
+   <div class="card1">
+    <div class="icon3">
+      <!-- 
+      <img src={iconoBombillo.src} alt="" class="icono-trofeo" />  -->
+        <span class="iconify" data-icon="material-symbols-light:strategy-outline" style="font-size:35px;"></span>
+    </div> 
+    <h3 class="card-title">Estrategia Comercial</h3>
+    <p class="cards-text">
+  Optimización de procesos comerciales y aumento de ventas
+    </p>
+  
+    <ul class="lista">
+      <li>Generación de leads</li>
+       <li>Automatización CRM</li>
+        <li>Email marketing</li>
+    </ul>
+  </div>
+
+   <div class="card1">
+    <div class="icon3">
+      <!--
+      <img src={iconoPunta.src} alt="" class="icono-trofeo" />  -->
+       <span class="iconify" data-icon="material-symbols-light:stylus-fountain-pen-outline" style="font-size:35px;"></span> 
+    </div> 
+    <h3 class="card-title">Diseño Gráfico</h3>
+    <p class="cards-text">
+ Soluciones visuales profesionales para tu marca
+    </p>
+  
+    <ul class="lista">
+      <li>Identidad visual</li>
+       <li>Edición multimedia</li>
+        <li>Animaciones 2D/3D</li>
+    </ul>
+  </div>
+  
+
+</div>
 </section>
 
-<script src="./scripts/mosaico2.js" type="module"></script>
+
+                                                
+
+   <!--MOSAICO 2 -->
+ <section class="variedad-desktop"> 
+  <div class="variedad-mosaico-container">
+
+    <div class="variedad-card">
+      <div class="variedad-content">
+        <div class="variedad-icon">
+          <img src={iconoIgRosa.src} alt="Gestión de Redes" />
+        </div>
+        <h3>Gestión de Redes</h3>
+      </div>
+      <p>Estrategias de contenido y crecimiento orgánico para redes sociales.</p>
+      <ul>
+        <li>Creación de contenido</li>
+        <li>Calendarización</li>
+        <li>Análisis de métricas</li>
+      </ul>
+    </div>
+
+    <div class="variedad-card">
+      <div class="variedad-content">
+        <div class="variedad-icon">
+          <img src={iconoPapel.src} alt="Redacción Profesional" />
+        </div>
+        <h3>Redacción Profesional</h3>
+      </div>
+      <p>Contenido persuasivo que convierte visitantes en clientes.</p>
+      <ul>
+        <li>Copywriting estratégico</li>
+        <li>Guiones para video</li>
+        <li>Edición profesional</li>
+      </ul>
+    </div>
+
+    <div class="variedad-card">
+      <div class="variedad-content">
+        <div class="variedad-icon">
+          <img src={iconoMegafonoRosa.src} alt="Marketing Digital" />
+        </div>
+        <h3>Marketing Digital</h3>
+      </div>
+      <p>Campañas efectivas con enfoque en ROI.</p>
+      <ul>
+        <li>Publicidad digital</li>
+        <li>SEO avanzado</li>
+        <li>Analítica predictiva</li>
+      </ul>
+    </div>
+
+    <div class="variedad-card">
+      <div class="variedad-content">
+        <div class="variedad-icon">
+          <!-- 
+          <img src={iconoUserRosa.src} alt="Soporte Ejecutivo" /> -->
+        </div>
+        <h3>Soporte Ejecutivo</h3>
+      </div>
+      <p>Asistencia especializada para gestión empresarial.</p>
+      <ul>
+        <li>Gestión de agenda</li>
+        <li>Atención al cliente</li>
+        <li>Organización documental</li>
+      </ul>
+    </div>
+
+    <div class="variedad-card">
+      <div class="variedad-content">
+        <div class="variedad-icon">
+          <img src={iconoBombillo.src} alt="Estrategia Comercial" />
+        </div>
+        <h3>Estrategia Comercial</h3>
+      </div>
+      <p>Optimización de procesos comerciales y aumento de ventas.</p>
+      <ul>
+        <li>Generación de leads</li>
+        <li>Automatización CRM</li>
+        <li>Email marketing</li>
+      </ul>
+    </div>
+
+    <div class="variedad-card">
+      <div class="variedad-content">
+        <div class="variedad-icon">
+          <img src={iconoPunta.src} alt="Diseño Gráfico" />
+        </div>
+        <h3>Diseño Gráfico</h3>
+      </div>
+      <p>Soluciones visuales profesionales para tu marca.</p>
+      <ul>
+        <li>Identidad visual</li>
+        <li>Edición multimedia</li>
+        <li>Animaciones 2D/3D</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<script type="module">
+
+const variedadCards = document.querySelectorAll('.variedad-card');
+
+variedadCards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Cerrar las demás
+    variedadCards.forEach(c => {
+      if (c !== card) c.classList.remove('open');
+    });
+
+    // Alternar solo la clickeada
+    card.classList.toggle('open');
+  });
+});
+
+</script>
