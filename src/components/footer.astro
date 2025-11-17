@@ -1,5 +1,5 @@
 ---
-import "../styles/footer.css";     
+import styles from "../styles/footer.module.css";      
 import bannerDesktop from "../assets/banner-desktop.gif"; 
 import logo from "../assets/logo.png"; 
 import iconoLi from "../assets/icono-linkdein.png";  
@@ -9,80 +9,67 @@ import iconoTik from "../assets/icono-tiktok.png";
 import logoOnePlanet from "../assets/logo-one-planet.png"; 
 import logoComercio from "../assets/logo-camara-comercio.webp";  
 import logoTop from "../assets/worlds-top.webp";  
---- 
 
- 
-<div class="hero-banner">
+--- 
+<div class={styles["hero-banner"]}>
   <img src={bannerDesktop.src} alt="Banner animado" />
 </div>
 
-
-                                                        <!--FOOTER MOVIL -->
-<footer class="footer-section">
-        <img src={logo.src} class="footer-logo" alt=""/> 
+<!-- FOOTER MOVIL -->
+<footer class={styles["footer-section"]}>
+  <img src={logo.src} class={styles["footer-logo"]} alt=""/> 
      
-  <p class="footer-copy">© Copyright 2025</p> 
+  <p class={styles["footer-copy"]}>© Copyright 2025</p> 
 
+  <p class={styles["footer-highlight"]}>Políticas de Privacidad y Uso de Cookies</p>
 
-  <p class="footer-highlight">Políticas de Privacidad y Uso de Cookies</p>
-
- 
-  <div class="footer-icons">
-    <img src={iconoLi.src} class="footer-icon" alt=""/> 
-   <img src={iconoFb.src} class="footer-icon" alt=""/> 
-   <img src={iconoIg.src} class="footer-icon" alt=""/> 
-   <img src={iconoTik.src} class="footer-icon" alt=""/> 
+  <div class={styles["footer-icons"]}>
+    <img src={iconoLi.src} class={styles["footer-icon"]} alt=""/> 
+    <img src={iconoFb.src} class={styles["footer-icon"]} alt=""/> 
+    <img src={iconoIg.src} class={styles["footer-icon"]} alt=""/> 
+    <img src={iconoTik.src} class={styles["footer-icon"]} alt=""/> 
   </div>
 
-  
-  <p class="footer-message">PATROCINADORES OFICIALES</p>
+  <p class={styles["footer-message"]}>PATROCINADORES OFICIALES</p>
 
-
-  <div class="footer-sponsors">
+  <div class={styles["footer-sponsors"]}>
     <img src={logoOnePlanet.src}  alt=""/>  
     <img src={logoTop.src}  alt=""/> 
-     <img src={logoComercio.src}  alt=""/> 
-     
+    <img src={logoComercio.src}  alt=""/> 
   </div>
 
- 
-  <p class="footer-small">Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.</p>
-</footer>
-
-
-
-                                              <!--FOOTER DESKTOP -->
-
-<footer class="footer-desktop">
-  <div class="footer-top-row">
-    <img src={logo.src} class="footer-logo-desktop" alt="Logo Oberstaff">
-    <p class="footer-message-desktop">PATROCINADORES OFICIALES</p>
-    <div class="footer-icons-desktop">
-      <img src={iconoLi.src} class="footer-icon-desktop" alt="LinkedIn">
-      <img src={iconoFb.src} class="footer-icon-desktop" alt="Facebook">
-      <img src={iconoIg.src} class="footer-icon-desktop" alt="Instagram">
-      <img src={iconoTik.src} class="footer-icon-desktop" alt="TikTok">
-    </div>
-  </div>
-
-
-  <div class="footer-sponsors-row">
-    <div class="footer-sponsors-desktop">
-      <img src={logoOnePlanet.src} alt="One Planet">
-      <img src={logoTop.src} alt="Top">
-      <img src={logoComercio.src} alt="Comercio">
-    </div>
-  </div>
-
- 
-  <div class="footer-bottom-row">
-    <p class="footer-highlight-desktop">Políticas de Privacidad y Seguridad</p>
-    <p class="footer-copy-desktop">© Copyright 2025</p>
-  </div>
-
-  
-  <p class="footer-small-desktop">
+  <p class={styles["footer-small"]}>
     Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.
   </p>
+</footer>
 
+<!-- FOOTER DESKTOP -->
+<footer class={styles["footer-desktop"]}>
+  <div class={styles["footer-top-row"]}>
+    <img src={logo.src} class={styles["footer-logo-desktop"]} alt="Logo Oberstaff" />
+    <p class={styles["footer-message-desktop"]}>PATROCINADORES OFICIALES</p>
+    <div class={styles["footer-icons-desktop"]}>
+      <img src={iconoLi.src} class={styles["footer-icon-desktop"]} alt="LinkedIn" />
+      <img src={iconoFb.src} class={styles["footer-icon-desktop"]} alt="Facebook" />
+      <img src={iconoIg.src} class={styles["footer-icon-desktop"]} alt="Instagram" />
+      <img src={iconoTik.src} class={styles["footer-icon-desktop"]} alt="TikTok" />
+    </div>
+  </div>
+
+  <div class={styles["footer-sponsors-row"]}>
+    <div class={styles["footer-sponsors-desktop"]}>
+      <img src={logoOnePlanet.src} alt="One Planet" />
+      <img src={logoTop.src} alt="Top" />
+      <img src={logoComercio.src} alt="Comercio" />
+    </div>
+  </div>
+
+  <div class={styles["footer-bottom-row"]}>
+    <p class={styles["footer-highlight-desktop"]}>Políticas de Privacidad y Seguridad</p>
+    <p class={styles["footer-copy-desktop"]}>© Copyright 2025</p>
+  </div>
+
+  <p class={styles["footer-small-desktop"]}>
+    Oberstaff es una empresa comprometida con la calidad y la excelencia en el servicio. Todos los derechos reservados.
+  </p>
 </footer>
