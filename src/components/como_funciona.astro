@@ -1,35 +1,42 @@
 ---
-import styles from "../styles/como_funciona.module.css";  
+import "../styles/como_funciona.css";  
 import testimonio3 from "../assets/testimonio3.webp";   
 
---- 
+---
                            
-<section id="como-funciona" class={styles["como-funciona-section"]}>
+                           
+                           
+                           <!-- COMO FUNCIONA SECTION -->
+
+<section id="como-funciona" class="como-funciona-section"> 
   <h2>¿Cómo funciona?</h2>
-  <p class={styles["como-funciona-p"]}>
+  <p class="como-funciona-p">
     Un proceso simple y efectivo para incorporar <span class="alto-nivel">talento de alto nivel</span> a tu empresa.
   </p>
 
-  <div class={styles["info-cards-como-hacemos"]}>
-    <div class={styles["info-card1-como-hacemos"]}>
-      <div class={styles["inner-card"]}>
-        <div class={styles["card-number"]}>1</div>
+  <div class="info-cards-como-hacemos">
+   
+    <div class="info-card1-como-hacemos">
+      <div class="inner-card">
+        <div class="card-number">1</div>
         <h3>Nos cuentas tus necesidades</h3>
         <p>Cuéntanos el perfil que buscas, y nosotros nos encargamos de identificar a los mejores candidatos en Sudamérica que se ajusten perfectamente a tus requerimientos.</p>
       </div>
     </div>
 
-    <div class={styles["info-card2-como-hacemos"]}>
-      <div class={styles["inner-card"]}>
-        <div class={styles["card-number2"]}>2</div>
+   
+    <div class="info-card2-como-hacemos">
+      <div class="inner-card">
+        <div class="card-number2">2</div>
         <h3>Nosotros contratamos a la persona</h3>
         <p>Contratamos al candidato seleccionado y le pagamos cada mes. Sin contrato de permanencia y sin complicaciones ni riesgos para ti.</p>
       </div>
     </div>
 
-    <div class={styles["info-card1-como-hacemos"]}>
-      <div class={styles["inner-card"]}>
-        <div class={styles["card-number"]}>3</div>
+    
+    <div class="info-card1-como-hacemos">
+      <div class="inner-card">
+        <div class="card-number">3</div>
         <h3>Trabaja con los mejores</h3>
         <p>Comienza a trabajar con un profesional altamente calificado y paga menos que en tu país de origen, mientras accedes a talento de clase mundial.</p>
       </div>
@@ -37,27 +44,32 @@ import testimonio3 from "../assets/testimonio3.webp";
   </div>
 </section>
 
-<section class={styles["testimonio-section"]}>
-  <p class={styles["testimonio-intro"]}>
-    Con Oberstaff, la confianza se construye con <span class="highlight">cada experiencia</span> 
-  </p> 
 
-  <div class={styles["testimonio-card"]}>
-    <div class={styles["testimonio-header"]}>
-      <img class={styles["foto-profesional"]} src={testimonio3.src} alt="Foto de perfil" />
-      <div class={styles["info-profesional"]}>
-        <h3 class={styles["nombre-profesional"]}>Fernando Calderon</h3>
-        <p class={styles["profesion-profesional"]}>CEO de www.bybeautypro.com</p>
+                                    <!-- perfil-testimonio -->
+
+
+<section class="testimonio-section">
+  <p class="testimonio-intro">
+    Con Oberstaff, la confianza se construye con <span class="highlight">cada experiencia</span> 
+  </p>
+
+  <div class="testimonio-card">
+    <div class="testimonio-header">
+      <img class="testimonial-avatar" src={testimonio3.src} alt="Foto de perfil" />
+      <div class="info-profesional">
+        <h3 class="nombre-profesional">Fernando Calderon</h3>
+        <p class="profesion-profesional">CEO de www.bybeautypro.com</p>
       </div>
     </div>
 
-    <p class={styles["testimonio-texto"]}>
+    <p class="testimonio-texto">
       "Gracias a Oberstaff, hemos podido incorporar talento de primer nivel a nuestro equipo a un costo muy competitivo. El proceso fue rápido y sin complicaciones".
     </p>
 
-    <div class={styles["estrellas"]}>
+    <div class="estrellas">
       ★★★★★
     </div>
   </div>
-</section>
 
+ 
+</section> 

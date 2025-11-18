@@ -1,6 +1,6 @@
 ---
-import "../styles/HeroSection.css";   
-import perfil1 from "../assets/perfil1.webp"; 
+import "../styles/HeroSection.css";  
+import perfil1 from "../assets/perfil1.webp";
 import perfil2 from "../assets/perfil2.webp";
 import perfil3 from "../assets/perfil3.webp"; 
 import videoPrincipal from "../assets/Video-principal.mp4"; 
@@ -9,8 +9,6 @@ import mapa from "../assets/Hero-animación-desktop.gif";
 import mapaMobile from "../assets/Hero-animacion-mobile.gif"; 
 */   
  import bannerDesktop from "../assets/banner-desktop.gif"; 
- import previa from "../assets/previa-img.png"; 
- const youtubeId = 'HPx5IsSYI8Q';
  
 ---
   
@@ -83,41 +81,34 @@ import mapaMobile from "../assets/Hero-animacion-mobile.gif";
 
 </section>
  
-<!-- 
+
 <div class="video-container"> 
   <div class="video-wrapper">
-    <video id="video-principal" playsinline controls poster={previa.src}>  
+    <video id="video-principal" playsinline controls>
       <source src={videoPrincipal} type="video/mp4" />
       
     </video>
- 
+
   </div> 
 </div>
--->
-
-<div class="video-container">
-  <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px;">
-    <iframe
-      class="video-principal"
-      src={`https://www.youtube.com/embed/${youtubeId}?playsinline=1&modestbranding=1&rel=0`} 
-      title="YouTube video"
-      frameborder="0"
-      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-      allowfullscreen
-      style="position: absolute; top: 0; left: 0; width: 98%; height: 90%; border: 0;"
-    ></iframe>
-  </div>
-</div>
-
-
  
+<script type="module">
+  
+  const video = document.getElementById("video-principal"); 
+const playBtn = document.getElementById("videoPlayBtn");  
+const caption = document.getElementById("videoCaption");
+video.addEventListener("loadedmetadata", () => {
+  video.currentTime = 19; 
+});  
+
+  </script> 
+
 
 <!--video desktop -->
 
-<!-- 
 <div class="video-desktop-container">
   <div class="video-desktop-wrapper">
-    <video id="video-principal-desktop" playsinline controls poster={previa.src}>
+    <video id="video-principal-desktop" playsinline controls>
       <source src={videoPrincipal} type="video/mp4" />
     </video>
   </div>
@@ -126,29 +117,19 @@ import mapaMobile from "../assets/Hero-animacion-mobile.gif";
     <h2>Descubre cómo contratar talento top<span style="color: #FF65C3; font-weight: bold;"> sin gastar de más.</span></h2>
   </div>
 </div> 
--->
 
+<!-- 
+<script src="./scripts/video-principal-desktop.js" type="module"></script>  --> 
 
-<div class="video-desktop-container">
-  <div class="video-desktop-wrapper" style="max-width: 960px; margin: auto;">
-    <iframe
-      class="video-principal-desktop"
-      src={`https://www.youtube.com/embed/${youtubeId}`}
-      title="YouTube video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      style="
-        width: 500px;
-        height: 300px; 
-        border-radius: 16px; 
-        overflow: hidden;
-      "
-    ></iframe>
-  </div>
-   <div class="video-desktop-text">
-    <h2>Descubre cómo contratar talento top<span style="color: #FF65C3; font-weight: bold;"> sin gastar de más.</span></h2>
-  </div>
-</div>
+<script  type="module">
+  
+  const video = document.getElementById("video-principal-desktop"); 
+const playBtn = document.getElementById("videoPlayBtn");  
+const caption = document.getElementById("videoCaption");
+video.addEventListener("loadedmetadata", () => {
+  video.currentTime = 19; 
+}); 
 
+  </script> 
  
+
