@@ -1,0 +1,17 @@
+---
+import styles from "../styles/ScrollingBanner.module.css";
+
+const texts = ["Talento global. Ahorro local.", "Conectando empresas y profesionales.", "Oportunidades sin fronteras."]; 
+
+---
+
+<div class={styles.banner}>
+  <div class={styles.track}>
+    {texts.map((text) => (
+      <span class={styles.text}>{text}</span>
+    ))}
+    {texts.map((text) => (
+      <span class={styles.text}>{text}</span>
+    ))}
+  </div>
+</div>
