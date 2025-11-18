@@ -170,7 +170,7 @@
  background: linear-gradient(
     to bottom,
     #ffffff 0%,         
-    #e59fc5 50%,       
+    #e59fc5 50%,        
     #ffffff 100%       
   ); 
   */
@@ -199,10 +199,10 @@
   max-width: 340px;
   margin: 0 auto;
   text-align: left;
-  position: relative;
+  position: relative; 
 }
 
-.testimonio-header {
+.testimonio-header { 
   display: flex;
   align-items: center;
   margin-bottom: 1rem;

@@ -1,117 +1,83 @@
 ---
-import "../styles/que_hacemos.css";  
+import styles from "../styles/que_hacemos.module.css";  
 /*
 import iconoSaludo from "../assets/icono-saludo.png";
 */   
 
 ---                          
                                 
-                                <!--QUE HACEMOS -->
-
-
-<section id="que-hacemos" class="que-hacemos-section">
+<section id="que-hacemos" class={styles["que-hacemos-section"]}>
   <h2>¿Qué hacemos?</h2>
   <p>
-    Conectamos empresas con talento profesional   <span class="alto-nivel">de alto nivel</span> en Sudamérica, ofreciendo soluciones que benefician ambas partes.
+    Conectamos empresas con talento profesional <span class="alto-nivel">de alto nivel</span> en Sudamérica, ofreciendo soluciones que benefician ambas partes.
   </p>
 
-
-<div class="info-cards">
-    <div class="info-card1">
+  <div class={styles["info-cards"]}>
+    <div class={styles["info-card1"]}>
       <h3>Búsqueda y Selección</h3>
       <p>Simplificamos todo el proceso de encontrar el talento ideal para tu empresa, ahorrándote tiempo y recursos.</p>
-    
-       <div class="mini-card">
-    <!-- 
-  <img src={iconoLupa.src} alt="" class="icono-busqueda" /> --> 
-  <span class="iconify" data-icon="material-symbols:person-search-outline-rounded" style="font-size:25px;"></span>
 
-    </div>
-    
+      <div class={styles["mini-card"]}>
+        <!-- 
+        <img src={iconoLupa.src} alt="" class="icono-busqueda" /> --> 
+        <span class="iconify" data-icon="material-symbols:person-search-outline-rounded" style="font-size:25px;"></span>
+      </div>
     </div>
 
-
-                                                 
-
-     <div class="info-card2">
+    <div class={styles["info-card2"]}>
       <h3>Profesionales Comprometidos</h3>
       <p>Contratamos expertos motivados y dedicados a impulsar tu negocio con sus habilidades y conocimientos.</p>
-   
-    <div class="mini-card2">
 
-      <!-- 
-    <img src={iconoGrupoRosa.src} alt="" class="icono-users" /> -->
-    <!-- 
-      <span class="iconify" data-icon="material-symbols:groups" style="font-size:25px;"></span>-->
-      <span class="iconify" data-icon="grommet-icons:group" style="font-size:25px;"></span>
-  </div>
-
+      <div class={styles["mini-card2"]}>
+        <!-- 
+        <img src={iconoGrupoRosa.src} alt="" class="icono-users" /> -->
+        <span class="iconify" data-icon="grommet-icons:group" style="font-size:25px;"></span>
+      </div>
     </div>
 
-     <div class="info-card1">
+    <div class={styles["info-card1"]}>
       <h3>Ahorro Significativo</h3>
       <p>Ahorra hasta un 70% en costos de personal mientras ofreces salarios competitivos a profesionales talentosos.</p>
-    
-      <div class="mini-card3">
- 
-   <!--  <img src={iconoMoney.src} alt="" class="icono-money" />-->
-    <!--
- <span class="iconify" data-icon="material-symbols:finance-chip-outline" style="font-size:25px;"></span>
-  -->
-<span class="iconify" data-icon="system-uicons:coins" style="font-size:25px;"></span>
 
+      <div class={styles["mini-card3"]}>
+        <!-- 
+        <img src={iconoMoney.src} alt="" class="icono-money" />-->
+        <span class="iconify" data-icon="system-uicons:coins" style="font-size:25px;"></span>
+      </div>
     </div>
-    
+  </div>
+
+  <div class={styles["cards"]}>
+    <div class={styles["card1"]}>
+      <div class={styles["icon"]}>
+        <span class="iconify" data-icon="circum:trophy" style="font-size:40px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Talento Profesional</h3>
+      <p class={styles["cards-text"]}>
+        Con Oberstaff, puedes acceder a <span class="cards-talento">talento profesional altamente calificado</span> en América Latina que trabaja 100% de forma remota para ti, a una fracción des coste de tener empleados de plantilla local.
+      </p>
+      <div class={styles["dashed-line"]}></div>
+      <p class={styles["card-text1"]}>
+        Gracias a nuestro servicio de outsourcing simplificamos todo el proceso: desde la búsqueda y selección, hasta la contratación de profesionales comprometidos y motivados.
+      </p>
     </div>
 
-
-  </div>
-  
-                                         <!--CARRUSEL 1-->
- 
-<div class="cards">
-  <div class="card1">
-    <div class="icon">
-      <!-- 
-      <span class="iconify" data-icon="system-uicons:trophy" style="font-size:40px;"></span>-->
-      <span class="iconify" data-icon="circum:trophy" style="font-size:40px;"></span>
-      <!--
-      <img src={iconoTrofeo.src} alt="" class="icono-trofeo" />   --> 
-
-      
-    </div> 
-    <h3 class="card-title">Talento Profesional</h3>
-    <p class="cards-text">
-      Con Oberstaff, puedes acceder a <span class="cards-talento">talento profesional altamente calificado</span> en América Latina que trabaja 100% de forma remota para ti, a una fracción des coste de tener empleados de plantilla local.
-    </p>
-    <div class="dashed-line"></div>
-    <p class="card-text1">
-     Gracias a nuestro servicio de outsourcing simplificamos todo el proceso: desde la búsqueda y selección, hasta la contratación de profesionales comprometidos y motivados.
-    </p>
+    <div class={styles["card1"]}>
+      <div class={styles["icon"]}>
+        <span class="iconify" data-icon="material-symbols-light:handshake-outline" style="font-size:40px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Beneficio Mutuo</h3>
+      <p class={styles["cards-text"]}>
+        Estos expertos no solo están <span class="cards-talento">dedicados a impulsar tu negocio,</span> si no que también tienen la oportunidad de mejorar su calidad de vida, ganando salarios más competitivos que los disponibles en sus países.
+      </p>
+      <div class={styles["dashed-line"]}></div>
+      <p class={styles["card-text1"]}>
+        Todo esto mientras tú ahorras hasta un 70% en costos de personal comparado con la contratación local.
+      </p>
+    </div>
   </div>
 
-  <div class="card1">
-   <div class="icon">
-    <!--
-      <img src={iconoSaludo.src} alt="" class="icono-trofeo" />  -->
-         <span class="iconify" data-icon="material-symbols-light:handshake-outline" style="font-size:40px;"></span>
-    </div>  
-    <h3 class="card-title">Beneficio Mutuo</h3>
-    <p class="cards-text">
-    Estos expertos no solo están <span class="cards-talento">dedicados a impulsar tu negocio,</span> si no que también tienen la oportunidad de mejorar su calidad de vida, ganando salarios más competitivos que los disponibles en sus países.
-    </p>
-    <div class="dashed-line"></div>
-    <p class="card-text1">
-      Todo esto mientras tú ahorras hasta un 70% en costos de personal comparado con la contratación local.
-    </p>
-  </div>
-</div>
-
-
-
- <a href="#contacto" style="text-decoration: none;">
-  <button class="btn-primary2">¿ESTÁS INTERESADO?</button>
-</a> 
-
-</section>   
-
+  <a href="#contacto" style="text-decoration: none;">
+    <button class={styles["btn-primary2"]}>¿ESTÁS INTERESADO?</button>
+  </a>
+</section>

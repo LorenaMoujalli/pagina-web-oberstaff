@@ -10,7 +10,7 @@ import iconoSubida  from "../assets/icono-subida.png";
 import iconoEscudoFine  from "../assets/icono-escudo-fine.png";  
 import iconoFlechas  from "../assets/icono-flechas.png"; 
 import iconoCalen from "../assets/icono-calendario.png";
-import iconoAudifono  from "../assets/icono-audifono.png";   
+import iconoAudifono  from "../assets/icono-audifono.png";    
 */ 
 --- 
 
@@ -177,6 +177,27 @@ import iconoAudifono  from "../assets/icono-audifono.png";
   <span class="btn-text">PROGRAMA UNA CONSULTA GRATIS</span>
 </button> 
 
+
+
+<script type="module">
+  import { initBeneficios } from "../../src/scripts/carrouselBeneficios"; 
+
+  const section = document.querySelector(".carrusel-section");
+  if (section && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (entries[0].isIntersecting) {
+        initBeneficios();
+        obs.disconnect();
+      }
+    });
+    observer.observe(section);
+  } else {
+    initBeneficios();
+  }
+</script>
+
+<!-- 
+
 <script  type="module">
 
 var container = document.querySelector('.carrusel-container');
@@ -230,6 +251,7 @@ updateCarousel();
 
 
 </script> 
+-->
 
 
 

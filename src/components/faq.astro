@@ -2,7 +2,9 @@
 import "../styles/faq.css";  
 /*
 import iconoPregunta  from "../assets/icono-pregunta.png";  
+
 */
+
 --- 
 
                         
@@ -90,7 +92,32 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
 <!-- 
 <script src="./scripts/preguntas_frecuentes.js" type="module"></script> -->
 
+<script type="module">
+  import { initPreguntasFrecuentes } from "../../src/scripts/faq";   
 
+  // debug rápido (temporal — borra si todo funciona)
+  console.log("Wrapper FAQ cargado. document.readyState =", document.readyState);
+
+  // Llama a la inicialización sólo cuando el DOM esté listo
+  const runInit = () => {
+    try {
+      initPreguntasFrecuentes();
+      console.log("initPreguntasFrecuentes ejecutado");
+    } catch (err) {
+      console.error("Error ejecutando initPreguntasFrecuentes:", err);
+    }
+  };
+
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", runInit, { once: true });
+  } else {
+    runInit();
+  }
+</script>
+
+    
+ 
+<!--
 
 <script type="module">
 (function () {
@@ -165,3 +192,4 @@ import iconoPregunta  from "../assets/icono-pregunta.png";
 
 </script>
 
+ -->
