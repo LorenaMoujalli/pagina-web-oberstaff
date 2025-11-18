@@ -10,16 +10,11 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",
-    "@fortawesome/fontawesome-svg-core": "^7.1.0",
-    "@fortawesome/free-brands-svg-icons": "^7.1.0",
-    "@fortawesome/free-regular-svg-icons": "^7.1.0",
-    "@fortawesome/free-solid-svg-icons": "^7.1.0",
-    "@n8n/chat": "^0.62.0",
+    "@n8n/chat": "^0.62.0", 
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "astro": "^5.15.1",
-    "astro-navbar": "^2.4.0",
-    "react": "^19.2.0",
+    "react": "^19.2.0", 
     "react-dom": "^19.2.0"
   }
 }
