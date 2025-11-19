@@ -73,8 +73,8 @@ background: #FEFFFA;
 
 .hero-image img {
 background: linear-gradient(to bottom, #ffffff 0%, #ffffff 0%, #ffffff 0%); 
-  width: 160%; 
-    max-width: none; 
+  width: 100%; 
+    
     height: auto;
     margin-top: -3rem;
     display: block;
@@ -285,7 +285,7 @@ cursor: pointer;
   }
 
     .hero {
-    padding-top: 140px; 
+    padding-top: 100px; 
   }
 
   .hero-grid {
@@ -293,8 +293,8 @@ cursor: pointer;
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    
-    gap: 4rem;
+    margin-bottom: 5px;
+    /*gap: 4rem;*/
   }
 
   .hero-text {
@@ -312,6 +312,7 @@ cursor: pointer;
     margin-right: 120px;
   } 
  
+  /*
   .hero-image {
    display: block;
   }
@@ -321,6 +322,24 @@ cursor: pointer;
    height: 510px;
    max-width: 724px;
    margin-top: -76px;
+  }*/
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden; /* evita que la imagen se desborde */
+  }
+
+  .hero-image img {
+    width: 100%;         /* ocupa todo el contenedor hero-grid */
+    /*max-width: 1200px;    puedes ajustar según diseño, <=1800px */
+    height: auto;        /* mantiene proporción */
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;   /* mantiene proporción sin distorsión */
+    margin: 0;
+    transform: none;
   }
 
  .hero-video {

@@ -6,6 +6,8 @@ import iconoHam from "../assets/icono-hamburguesa.png";
 import iconoConv from "../assets/icono-contacto.png";
 */ 
 ---
+ 
+
 
 <header class="header">
   <div class="container">
@@ -19,21 +21,25 @@ import iconoConv from "../assets/icono-contacto.png";
         <a href="#como-funciona">¿Cómo funciona?</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
-        <a href="#contacto">Contacto</a>
+
         <a href="#">Blog</a>
         <a href="/empleos">¿Buscas trabajo?</a>
       </nav>
  
       <!-- Botón contacto -->
+       <!-- 
       <button id="openContactBtn" class="menu-btn contact-btn" aria-label="Abrir contacto">
         <span class="iconify" data-icon="mdi:comment-outline" style="font-size:25px;"></span>
-        <!--
-        <img src={iconoConv.src} alt="Contacto" /> -->
-      </button>
+      </button> -->
+
+      <a href="#contacto" class="menu-btn contact-btn" aria-label="Ir a contacto">
+  <span class="iconify" data-icon="mdi:comment-outline" style="font-size:25px; color:black;"></span>
+</a>
+
 
       <!-- Botón hamburguesa -->
       <button id="openMenuBtn" class="menu-btn ham-btn" aria-label="Abrir menú">
-        <span class="iconify" data-icon="material-symbols:density-medium-rounded" style="font-size:25px;"></span>
+        <span class="iconify" data-icon="material-symbols:density-medium-rounded" style="font-size:25px; color:black;"></span>
         <!-- 
         <img src={iconoHam.src} alt="Abrir menú" />-->
       </button>
@@ -55,14 +61,30 @@ import iconoConv from "../assets/icono-contacto.png";
       <a href="#como-funciona">¿Cómo funciona?</a>
       <a href="#testimonios">Testimonios</a>
       <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
-      <a href="#contacto">Contacto</a>
+     
       <a href="#">Blog</a>
       <a href="/empleos">¿Buscas trabajo?</a>
     </nav>
   </div>
 </div>
 
+
+
+<script type="module">
+  import { initHeader } from "/src/scripts/header";    
+
+  // Ejecutar solo cuando el DOM esté listo
+  const runInit = () => initHeader();
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", runInit, { once: true });
+  } else {
+    runInit();
+  }
+</script>
+
+
 <!--MODAL CONTACTO -->
+<!-- 
 <div id="contactModal" class="menu-modal">
   <div class="modal-backdrop" id="modalBackdropContact"></div>
   <div class="modal-content contact-content">
@@ -89,21 +111,8 @@ import iconoConv from "../assets/icono-contacto.png";
     </form>
   </div>
 </div>
+-->
 
-
-
-
-<script type="module">
-  import { initHeader } from "../../src/scripts/header";  
-
-  // Ejecutar solo cuando el DOM esté listo
-  const runInit = () => initHeader();
-  if (document.readyState === "loading") {
-    window.addEventListener("DOMContentLoaded", runInit, { once: true });
-  } else {
-    runInit();
-  }
-</script>
 
 
 <!-- 

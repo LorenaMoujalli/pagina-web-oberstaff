@@ -170,7 +170,8 @@
 
  .contact-form {
     max-width: 1000px;  
-    margin: 0 auto;    
+    margin: 0 auto; 
+    padding: 2.5rem;   
   }
 
   .contact-form button {

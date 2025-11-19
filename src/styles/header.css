@@ -58,6 +58,7 @@
   border: none; 
   cursor: pointer;
   flex-shrink: 0; 
+  text-decoration: none;
 } 
 
 .menu-btn img {
@@ -243,6 +244,19 @@
 
 
 
+a.menu-btn.contact-btn,
+a.menu-btn.contact-btn:visited,
+a.menu-btn.contact-btn:hover,
+a.menu-btn.contact-btn:active {
+   color: #fff !important;
+  text-decoration: none;
+}
+
+
+.menu-btn.contact-btn .iconify {
+  color: inherit; 
+}
+
 
                                            /*RESPONSIVE*/ 
 
@@ -285,6 +299,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
     
   } 
 

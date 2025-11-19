@@ -6,13 +6,13 @@ export function initHeader() {
     const menuModal = document.getElementById("menuModal");
     const backdropMenu = document.getElementById("modalBackdropMenu");
 
+    /*
     const openContactBtn = document.getElementById("openContactBtn");
     const closeContactBtn = document.getElementById("closeContactBtn");
     const contactModal = document.getElementById("contactModal");
-    const backdropContact = document.getElementById("modalBackdropContact");
+    const backdropContact = document.getElementById("modalBackdropContact");*/
 
-    if (openMenuBtn && closeMenuBtn && menuModal && backdropMenu &&
-        openContactBtn && closeContactBtn && contactModal && backdropContact) {
+    if (openMenuBtn && closeMenuBtn && menuModal && backdropMenu) {
 
       function openModal(modal) {
         modal.classList.add("show");
@@ -30,9 +30,10 @@ export function initHeader() {
       backdropMenu.addEventListener("click", () => closeModal(menuModal));
 
       // Eventos contacto
+      /*
       openContactBtn.addEventListener("click", () => openModal(contactModal));
       closeContactBtn.addEventListener("click", () => closeModal(contactModal));
-      backdropContact.addEventListener("click", () => closeModal(contactModal));
+      backdropContact.addEventListener("click", () => closeModal(contactModal));*/
 
       // Cerrar con Escape
       document.addEventListener("keydown", (e) => {
@@ -50,6 +51,7 @@ export function initHeader() {
     }
 
     // --- WEBHOOK FORMULARIO MODAL ---
+    /*
     const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';
     const formModal = document.getElementById('webhookFormModal');
     const statusModal = document.getElementById('statusModal');
@@ -91,7 +93,7 @@ export function initHeader() {
           console.error('Error:', error);
         }
       });
-    }
+    }*/
 
   })(); 
 }

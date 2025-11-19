@@ -4,7 +4,7 @@
    
   
   /*CARRUSEL */ 
-
+ 
     .carrusel-desktop { display: none; }
   .btn-primary3-desktop{display: none;}
     .mosaico-desktop{display: none;}
@@ -245,7 +245,7 @@ p {
     
 }
 
-
+/*
 .btn-primary3-desktop{
    display: inline-flex;          
   align-items: center;           
@@ -262,7 +262,28 @@ p {
   cursor: pointer;
   margin-top: 25px;  
   margin-left: 500px;
+}*/
+
+.btn-primary3-desktop {
+  display: inline-flex;          
+  align-items: center;           
+  justify-content: center;      
+  gap: 0.5rem; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: #25262B; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  font-size: 13px;
+  cursor: pointer;
+  
+  /* Eliminamos margin-left fijo */
+  margin: 25px auto 0 auto;  /* top auto bottom auto */
+  display: flex;              /* inline-flex → flex */
 }
+
 
 .btn-primary3-desktop:hover{
   background: #1d1d20; 
