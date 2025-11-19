@@ -423,15 +423,6 @@ p {
 .columna:nth-child(5) .img9 { flex: 1.2; } /* más alta */
 
 
-.img1 { background-image: url('../assets/img2.webp'); }
-.img2 { background-image: url('../assets/img8.webp'); }
-.img3 { background-image: url('../assets/img5.webp'); }
-.img4 { background-image: url('../assets/img4.webp'); }
-.img5 { background-image: url('../assets/img6.webp'); }
-.img6 { background-image: url('../assets/img10.webp'); }
-.img7 { background-image: url('../assets/img1.webp'); }
-.img8 { background-image: url('../assets/img7.webp'); }
-.img9 { background-image: url('../assets/img9.webp'); }
 
 .mosaico-card {
   background-size: cover;
@@ -439,3 +430,34 @@ p {
 }
 
  }
+
+ /*  — make inline <img> act like background: cover — */
+.mosaico-card {
+  /* ya tienes position:relative y overflow:hidden; lo repetimos por seguridad */
+  position: relative;
+  overflow: hidden;
+  /* asegurar que no se muestre ningún background anterior */
+  background-image: none !important;
+}
+
+/* selector para tus imágenes (clase que usaste: .img-replace) */
+.mosaico-card > .img-replace,
+.mosaico-card > img {
+  position: absolute;
+  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* cover behavior */
+  display: block;
+  z-index: 0;              /* queda debajo de ::before, ::after, h3, p */
+  pointer-events: none;    /* evita que la img capture clicks si querés que el card sea clickeable */
+  -webkit-backface-visibility: hidden; /* mejora rendering en algunos casos */
+  backface-visibility: hidden;
+  will-change: transform;  /* ayuda a rendimiento en hover/animaciones */
+}
+
+/* si por alguna razón quieres forzar que los overlays sigan estando por encima */
+.mosaico-card::before { z-index: 1; }
+.mosaico-card::after  { z-index: 2; }
+.mosaico-card h3       { z-index: 3; position: absolute; } /* ya lo tenés */
+.mosaico-card p        { z-index: 4; position: absolute; } /* ya lo tenés */

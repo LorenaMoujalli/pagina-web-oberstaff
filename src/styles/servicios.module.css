@@ -105,3 +105,15 @@
     height: 250px;
   }
 }
+
+@media (max-width: 1023px) {
+  .servicios {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicios {
+    display: flex !important;
+  }
+}

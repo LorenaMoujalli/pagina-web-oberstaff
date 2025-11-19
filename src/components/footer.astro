@@ -1,41 +1,32 @@
 ---
-import styles from "../styles/footer.module.css";      
-import bannerDesktop from "../assets/banner-desktop.gif"; 
-import logo from "../assets/logo.png"; 
-import iconoLi from "../assets/icono-linkdein.png";  
-import iconoFb from "../assets/icono-facebook.png"; 
-import iconoIg from "../assets/icono-instagram.png"; 
-import iconoTik from "../assets/icono-tiktok.png"; 
-import logoOnePlanet from "../assets/logo-one-planet.png"; 
-import logoComercio from "../assets/logo-camara-comercio.webp";  
-import logoTop from "../assets/worlds-top.webp";  
+import styles from "../styles/footer.module.css";
+import ScrollingBanner from "./ScrollingBanner.astro";
+---
 
---- 
-<div class={styles["hero-banner"]}>
-  <img src={bannerDesktop.src} alt="Banner animado" />
-</div>
+<ScrollingBanner/>
 
 <!-- FOOTER MOVIL -->
 <footer class={styles["footer-section"]}>
-  <img src={logo.src} class={styles["footer-logo"]} alt=""/> 
-     
-  <p class={styles["footer-copy"]}>© Copyright 2025</p> 
+
+  <img src="/images/logo.png" class={styles["footer-logo"]} alt="" />
+
+  <p class={styles["footer-copy"]}>© Copyright 2025</p>
 
   <p class={styles["footer-highlight"]}>Políticas de Privacidad y Uso de Cookies</p>
 
   <div class={styles["footer-icons"]}>
-    <img src={iconoLi.src} class={styles["footer-icon"]} alt=""/> 
-    <img src={iconoFb.src} class={styles["footer-icon"]} alt=""/> 
-    <img src={iconoIg.src} class={styles["footer-icon"]} alt=""/> 
-    <img src={iconoTik.src} class={styles["footer-icon"]} alt=""/> 
+    <img src="/images/icono-linkdein.png" class={styles["footer-icon"]} alt="" />
+    <img src="/images/icono-facebook.png" class={styles["footer-icon"]} alt="" />
+    <img src="/images/icono-instagram.png" class={styles["footer-icon"]} alt="" />
+    <img src="/images/icono-tiktok.png" class={styles["footer-icon"]} alt="" />
   </div>
 
   <p class={styles["footer-message"]}>PATROCINADORES OFICIALES</p>
 
   <div class={styles["footer-sponsors"]}>
-    <img src={logoOnePlanet.src}  alt=""/>  
-    <img src={logoTop.src}  alt=""/> 
-    <img src={logoComercio.src}  alt=""/> 
+    <img src="/images/logo-one-planet.png" alt="" />
+    <img src="/images/worlds-top.webp" alt="" />
+    <img src="/images/logo-camara-comercio.webp" alt="" />
   </div>
 
   <p class={styles["footer-small"]}>
@@ -46,21 +37,21 @@ import logoTop from "../assets/worlds-top.webp";
 <!-- FOOTER DESKTOP -->
 <footer class={styles["footer-desktop"]}>
   <div class={styles["footer-top-row"]}>
-    <img src={logo.src} class={styles["footer-logo-desktop"]} alt="Logo Oberstaff" />
+    <img src="/images/logo.png" class={styles["footer-logo-desktop"]} alt="Logo Oberstaff" />
     <p class={styles["footer-message-desktop"]}>PATROCINADORES OFICIALES</p>
     <div class={styles["footer-icons-desktop"]}>
-      <img src={iconoLi.src} class={styles["footer-icon-desktop"]} alt="LinkedIn" />
-      <img src={iconoFb.src} class={styles["footer-icon-desktop"]} alt="Facebook" />
-      <img src={iconoIg.src} class={styles["footer-icon-desktop"]} alt="Instagram" />
-      <img src={iconoTik.src} class={styles["footer-icon-desktop"]} alt="TikTok" />
+      <img src="/images/icono-linkdein.png" class={styles["footer-icon-desktop"]} alt="LinkedIn" />
+      <img src="/images/icono-facebook.png" class={styles["footer-icon-desktop"]} alt="Facebook" />
+      <img src="/images/icono-instagram.png" class={styles["footer-icon-desktop"]} alt="Instagram" />
+      <img src="/images/icono-tiktok.png" class={styles["footer-icon-desktop"]} alt="TikTok" />
     </div>
   </div>
 
   <div class={styles["footer-sponsors-row"]}>
     <div class={styles["footer-sponsors-desktop"]}>
-      <img src={logoOnePlanet.src} alt="One Planet" />
-      <img src={logoTop.src} alt="Top" />
-      <img src={logoComercio.src} alt="Comercio" />
+      <img src="/images/logo-one-planet.png" alt="One Planet" />
+      <img src="/images/worlds-top.webp" alt="Top" />
+      <img src="/images/logo-camara-comercio.webp" alt="Comercio" />
     </div>
   </div>
 

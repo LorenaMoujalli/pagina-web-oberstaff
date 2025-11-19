@@ -2,10 +2,8 @@
 import styles from "../styles/transforma_tu_empresa.module.css";   
 import Servicios from "./Servicios.astro";
 
---- 
+---
  
-<!--transforma tu empresa -->
-
 <section class={styles["cta-section"]}>
   <h2>Transforma tu <span class="highlight">empresa</span></h2>
   <p class={styles["cta-subtext"]}>
@@ -20,4 +18,88 @@ import Servicios from "./Servicios.astro";
   </p>
 </section>
 
-<Servicios/>
+<div class="servicios-wrapper">
+  <Servicios/>
+</div>
+
+<section class={styles["cards-variedad-section"]}>
+  <div class={styles["cards-variedad"]}>
+    <div class={styles["card1"]}>
+      <div class={styles["icon3"]}>
+        <img src="/images/icono-instagram.png" alt="" style="width:28px;" />
+      </div>
+      <h3 class={styles["card-title"]}>Gestión de Redes</h3>
+      <p class={styles["cards-text"]}>Estratégias de contenido y crecimiento orgánico para redes sociales</p>
+      <ul class={styles["lista"]}>
+        <li>Creación de contenido</li>
+        <li>Calendarización</li>
+        <li>Análisis de métricas</li>
+      </ul>
+    </div>
+
+    <div class={styles["card1"]}>
+      <div class={styles["icon3"]}>
+        <span class="iconify" data-icon="material-symbols-light:ink-pen-outline" style="font-size:35px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Redacción Profesional</h3>
+      <p class={styles["cards-text"]}>Contenido persuasivo que convierte visitantes en clientes</p>
+      <ul class={styles["lista"]}>
+        <li>Copywriting estratégico</li>
+        <li>Guiones para video</li>
+        <li>Edición profesional</li>
+      </ul>
+    </div>
+
+    <div class={styles["card1"]}>
+      <div class={styles["icon3"]}>
+        <span class="iconify" data-icon="material-symbols-light:campaign-outline" style="font-size:35px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Marketing Digital</h3>
+      <p class={styles["cards-text"]}>Campañas efectivas con enfoque en ROI</p>
+      <ul class={styles["lista"]}>
+        <li>Publicidad digital</li>
+        <li>SEO avanzado</li>
+        <li>Analítica predictiva</li>
+      </ul>
+    </div>
+
+    <div class={styles["card1"]}>
+      <div class={styles["icon3"]}>
+        <span class="iconify" data-icon="material-symbols-light:manage-accounts-outline" style="font-size:35px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Soporte Ejecutivo</h3>
+      <p class={styles["cards-text"]}>Asistencia especializada para gestión empresarial</p>
+      <ul class={styles["lista"]}>
+        <li>Gestión de agenda</li>
+        <li>Atención al cliente</li>
+        <li>Organización documental</li>
+      </ul>
+    </div>
+
+    <div class={styles["card1"]}>
+      <div class={styles["icon3"]}>
+        <span class="iconify" data-icon="material-symbols-light:strategy-outline" style="font-size:35px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Estrategia Comercial</h3>
+      <p class={styles["cards-text"]}>Optimización de procesos comerciales y aumento de ventas</p>
+      <ul class={styles["lista"]}>
+        <li>Generación de leads</li>
+        <li>Automatización CRM</li>
+        <li>Email marketing</li>
+      </ul>
+    </div>
+
+    <div class={styles["card1"]}>
+      <div class={styles["icon3"]}>
+        <span class="iconify" data-icon="material-symbols-light:stylus-fountain-pen-outline" style="font-size:35px;"></span>
+      </div>
+      <h3 class={styles["card-title"]}>Diseño Gráfico</h3>
+      <p class={styles["cards-text"]}>Soluciones visuales profesionales para tu marca</p>
+      <ul class={styles["lista"]}>
+        <li>Identidad visual</li>
+        <li>Edición multimedia</li>
+        <li>Animaciones 2D/3D</li>
+      </ul>
+    </div>
+  </div>
+</section>

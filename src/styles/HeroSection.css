@@ -21,7 +21,7 @@ section {
 .hero {
 background: #FEFFFA;  
   /*background: linear-gradient(to bottom, #fff 0%, #fff 0%, #fff 0%); */
-  padding-top: 25px;
+   padding-top: 0 
 } 
 
 .hero-grid {
@@ -61,15 +61,28 @@ background: #FEFFFA;
       max-width: 100%;
     }
 
-.hero-image {
-  flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 12px;
-  
-  }
+.hero-image-mapa{
+  margin-top: -3%;
+  margin-right: -10%;
+}
+
+.hero-image-mapa video {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+
+  /* NUEVO → escala proporcional */
+  transform: scale(1.1); /* puedes ajustar el tamaño: 1.1, 1.2, 1.3, etc */
+  transform-origin: top center; 
+
+  margin: 0;
+  margin-top: -13%;
+}
+
+
 
 .hero-image img {
 background: linear-gradient(to bottom, #ffffff 0%, #ffffff 0%, #ffffff 0%); 
@@ -461,3 +474,11 @@ cursor: pointer;
 
     
   }  
+
+
+  @media (min-width: 1024px) {
+  .hero-image video {
+    height: 510px;
+    width: auto;
+  }
+}
