@@ -2,6 +2,14 @@
 # Usamos una imagen de Node para ejecutar 'npm install' y 'npm run build'
 FROM node:20-alpine AS build
 WORKDIR /app
+# >>> AGREGAR ESTAS LÍNEAS NUEVAS: <<<
+ARG INTELLISCREEN_API_KEY
+ARG INTELLISCREEN_BASE_URL
+
+# Para que Astro pueda acceder a ellas durante la compilación (npm run build)
+ENV INTELLISCREEN_API_KEY=$INTELLISCREEN_API_KEY
+ENV INTELLISCREEN_BASE_URL=$INTELLISCREEN_BASE_URL
+# >>> FIN DE LAS LÍNEAS NUEVAS <<<
 
 # Copia los archivos de configuración
 COPY package*.json ./
