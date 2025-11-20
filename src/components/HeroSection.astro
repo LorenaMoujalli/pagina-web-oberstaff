@@ -52,8 +52,10 @@ const youtubeId = "HPx5IsSYI8Q";
 </section>
 
 <!--BANNER -->
+<div class="banner">
 
-<ScrollingBanner/>
+  <ScrollingBanner/>
+</div>
 
 <section class="profiles-section">
   <div class="profiles-container">
@@ -65,50 +67,41 @@ const youtubeId = "HPx5IsSYI8Q";
       <div class="stars">★★★★★</div>
     </div>
   </div>
-
-  <div class="video-container">
-    <div class="video-wrapper">
-      <video
-        id="video-principal"
-        playsinline
-        controls
-        muted
-        poster="/images/previa-img.png"
-        style="width:100%; height:auto; border-radius:16px;"
-      >
-        <source src="/images/Video-principal.mp4" type="video/mp4" />
-      </video>
+  
+    <!-- VIDEO MÓVIL -->
+    <div class="video-container">
+      <div class="video-wrapper">
+        <video
+          id="video-principal"
+          playsinline
+          controls
+          muted
+          poster="/images/previa-img.png"
+          style="width:100%; height:auto; border-radius:16px;"
+        >
+          <source src="/images/Video-principal.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
-  </div>
+</section>
 
-  <!--desktop -->
-
+  <!-- VIDEO DESKTOP -->
   <div class="video-desktop-container">
-    <div
-      class="video-desktop-wrapper"
-      style="position: relative; max-width: 500px; margin: auto; border-radius: 16px; overflow: hidden;"
-    >
+    <div class="video-desktop-wrapper" style="border-radius: 16px; overflow: hidden;">
       <video
         id="video-principal-desktop"
         playsinline
         controls
         poster="/images/previa-img.png"
-        style="width: 100%; height: auto; display: block; border-radius: 16px;"
       >
         <source src="/images/Video-principal.mp4" type="video/mp4" />
       </video>
     </div>
 
-    <div
-      class="video-desktop-text"
-      style="margin-top: 1rem; text-align: center;"
-    >
+    <div class="video-desktop-text" style="text-align: left;">
       <h2>
         Descubre cómo contratar talento top
-        <span style="color: #FF65C3; font-weight: bold;">
-          sin gastar de más.</span
-        >
+        <span style="color: #FF65C3; font-weight: bold;">sin gastar de más.</span>
       </h2>
     </div>
   </div>
-</section>

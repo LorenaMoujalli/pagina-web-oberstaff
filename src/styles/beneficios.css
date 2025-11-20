@@ -182,24 +182,35 @@ p {
   transition: left 0.4s ease;
 }
 
+.btn-wrapper {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  width: 100%;
+}
+
 .btn-primary3 {
-    display: inline-flex;          
-  align-items: center;           
-  justify-content: center;      
-  gap: 0.5rem; 
-    font-family: 'Poppins', sans-serif;
-    font-weight:500;
-  background: #25262B; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+
+  background: #25262B;
   color: white;
   border: none;
   border-radius: 20px;
   padding: 0.6rem 1.2rem;
   font-size: 13px;
   cursor: pointer;
-  margin-top: 25px; 
-  margin-left: 38px;
 
+  margin: 25px auto 0; /* CENTRADO AUTOMÁTICO */
 }
+
+
+
+
 
 
 .icono-trofeo{
