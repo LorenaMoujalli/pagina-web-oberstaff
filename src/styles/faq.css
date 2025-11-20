@@ -67,12 +67,12 @@
 
 /* Preguntas impares → icono rosa */
 .faq-item:nth-child(odd) .faq-question::after {
-  background-image: url('../assets/icono-flecha-baja-rosa.png');
+  background-image: url('/images/icono-flecha-baja-rosa.png');
 }
 
 /* Preguntas pares → icono negro */
 .faq-item:nth-child(even) .faq-question::after {
-  background-image: url('../assets/icono-flecha-baja.png');
+  background-image: url('/images/icono-flecha-baja.png');
 }
 
 
@@ -222,12 +222,12 @@
 
 
 .faq-item:nth-child(odd) .faq-question::after {
-  background-image: url('../assets/icono-flecha-baja-rosa.png');
+  background-image: url('/images/icono-flecha-baja-rosa.png');
 }
 
 
 .faq-item:nth-child(even) .faq-question::after {
-  background-image: url('../assets/icono-flecha-baja.png');
+  background-image: url('/images/icono-flecha-baja.png');
 }
 
 

@@ -1,39 +1,33 @@
 ---
-import "../styles/casos_exito.css";   
-import bannerDesktop from "../assets/banner-desktop.gif"; 
-/*
-import iconoUser from "../assets/icono-user.png";
-*/
-import testimonio1 from "../assets/testimonio1.webp"; 
-import testimonio2 from "../assets/testimonio2.webp"; 
-import testimonio3 from "../assets/testimonio3.webp"; 
-/*
-import iconoPlay from "../assets/icono-play.png";
-import iconoTel from "../assets/icono-telefono2.png";  
-*/ 
+import styles from "../styles/casos_exito.module.css";      
+import ScrollingBanner from "./ScrollingBanner.astro";
 ---
 
+<section class={styles["subrayado-section"]}> 
+  <ScrollingBanner/>
 
-<section class="subrayado-section"> 
- 
-<div class="hero-banner">
-  <img src={bannerDesktop.src} alt="Banner animado" />
-</div>
+  <h2 class={styles["subrayado-titulo"]}>
+    Sé parte de la globalización digital y 
+    <span class="highlight">ahorra en costes de personal</span>
+  </h2>
 
-  <h2 class="subrayado-titulo">Sé parte de la globalización digital y <span class="highlight">ahorra en costes de personal</span></h2>
+  <div class={styles["subrayado-card"]}>
+    <h3>
+      Impulsa tu negocio con el 
+      <span class="highlight"> mejor talento de Sudamérica</span>
+    </h3>
 
-  <div class="subrayado-card">
-    <h3>Impulsa tu negocio con el <span class="highlight"> mejor talento de Sudamérica</span></h3>
-    <button class="btn-rosado">
-      <!-- 
-  <span class="btn-icon"><img src={iconoUser.src} alt="" /></span>-->
-      <span class="iconify" data-icon="material-symbols:for-you-outline-rounded" style="font-size:26px;"></span>
+    <button class={styles["btn-rosado"]}>
+      <span 
+        class="iconify" 
+        data-icon="material-symbols:for-you-outline-rounded" 
+        style="font-size:26px;"
+      ></span>
 
-   <a href="#contacto" style="text-decoration: none; color: white;">
- <span class="btn-text">COMIENZA HOY</span> 
-</a>
-  
-</button>
+      <a href="#contacto" style="text-decoration: none; color: white;">
+        <span class="btn-text">COMIENZA HOY</span>
+      </a>
+    </button>
   </div>
 </section>
     
@@ -41,108 +35,97 @@ import iconoTel from "../assets/icono-telefono2.png";
 
                                                 <!--CASOS DE EXITO -->
 
-<section id="testimonios" class="cta-section">
+<section id="testimonios" class={styles["cta-section"]}>
   <h2>Casos de <span class="highlight">éxito</span></h2>
   <p class="cta-subtext">
-    En Oberstaff, creemos que nuestros resultados <span class="highlight">hablan mucho más</span> que las palabras
+    En Oberstaff, creemos que nuestros resultados 
+    <span class="highlight">hablan mucho más</span> que las palabras
   </p>
- 
+
   <p class="cta-highlight3">
-    Unete a quienes confían en nosotros
+    Únete a quienes confían en nosotros
   </p>
 </section>
 
-                                              <!--CARRUSEL --> 
-  
-<div  class="testimonial-section">
-  <div class="testimonial-card">
-    <img src={testimonio1.src} alt="" class="testimonial-video" />
+<div class={styles["testimonial-section"]}>
+  <!-- CARD 1 -->
+  <div class={styles["testimonial-card"]}>
+    <img src="/images/testimonio1.webp" alt="" class={styles["testimonial-video"]} />
 
-    <div class="testimonial-profile">
-      <img class="testimonial-avatar" src={testimonio1.src} alt="Foto de perfil" />
-      <div class="testimonial-info">
-        <h4 class="testimonial-name">Shadai Iborra</h4>
-        <p class="testimonial-role">CEO de @amediastory</p>
-        <div class="testimonial-stars">
-          <span>★★★★★</span>
-        </div>
-      </div>
-    </div> 
-
-    <p class="testimonial-text">
-      Con Oberstaff pude dar trabajo a dos personas a tiempo completo, ahorrando costes de contratación, espacios de oficina y salario que tendría al hacerlo en España. Lo mejor de todo es que todo está incluido en una misma factura. Con Oberstaff, encontré la solución perfecta para mis necesidades de contratación remota y optimización de costes.
-    </p>
-  </br>
-     <button class="testimonial-btn">
-      <!-- 
-  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span> -->
-     <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
-  <span class="btn-text">VER TESTIMONIO</span>
-</button>
-  </div>
-
-  <div class="testimonial-card">
-     <img src={testimonio3.src} alt="" class="testimonial-video" />  
-
-    <div class="testimonial-profile">
-      <img class="testimonial-avatar" src={testimonio3.src} alt="Foto de perfil" />
-      <div class="testimonial-info">
-        <h4 class="testimonial-name">Fernando Calderon</h4>
-        <p class="testimonial-role">CEO de www.bybeautypro.com</p>
-        <div class="testimonial-stars">
+    <div class={styles["testimonial-profile"]}>
+      <img class={styles["testimonial-avatar2"]} src="/images/testimonio1.webp" alt="Foto de perfil" />
+      <div class={styles["testimonial-info"]}>
+        <h4 class={styles["testimonial-name"]}>Shadai Iborra</h4>
+        <p class={styles["testimonial-role"]}>CEO de @amediastory</p>
+        <div class={styles["testimonial-stars"]}>
           <span>★★★★★</span>
         </div>
       </div>
     </div>
 
-    <p class="testimonial-text">
-      Estaba en busca de un editor de video para mi empresa y despúes de varias búsquedas sin éxito, encontré a Oberstaff en Instagram. Desde nuestra primera llamada, su profesionalismo y calidad de trabajo me dejaron impresionado. Ahora, gracias a su excelente servicio, he expandido mi contrato con ellos para incluir más personal.
+    <p class={styles["testimonial-text"]}>
+      Con Oberstaff pude dar trabajo a dos personas a tiempo completo, ahorrando costes...
     </p>
 
-     <button class="testimonial-btn">
-      <!-- 
-  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>-->
-   <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
-  <span class="btn-text">VER TESTIMONIO</span>
-</button>
-  </div>
-
-
-
-  <div class="testimonial-card">
-    <img src={testimonio2.src} alt="" class="testimonial-video" /> 
-
-    <div class="testimonial-profile">
-      <img class="testimonial-avatar" src={testimonio2.src} alt="Foto de perfil" />
-      <div class="testimonial-info">
-        <h4 class="testimonial-name">Kate McCaferty</h4>
-        <p class="testimonial-role">KM Real Estate</p>
-        <div class="testimonial-stars">
-        <span>★★★★★</span>
-        </div>
-      </div>
-    </div>
-
-    <p class="testimonial-text">
-      "I've been working with Oberstaff now for about 2 years. Me and my company has a great experience", from teh moment you sign up you immediately have the best team looking up for you into 20000 profiles. It is actually unbelievable the money you can save.
-    </p>
-</br></br>
-   <button class="testimonial-btn">
-    <!-- 
-  <span class="btn-icon"><img src={iconoPlay.src} alt="" /></span>-->
+    <button class={styles["testimonial-btn"]}>
       <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
-  <span class="btn-text">VER TESTIMONIO</span>
-</button>
+      <span class="btn-text">VER TESTIMONIO</span>
+    </button>
   </div>
 
+  <!-- CARD 2 -->
+  <div class={styles["testimonial-card"]}>
+    <img src="/images/testimonio3.webp" alt="" class={styles["testimonial-video"]} />
 
+    <div class={styles["testimonial-profile"]}>
+      <img class={styles["testimonial-avatar2"]} src="/images/testimonio3.webp" alt="Foto de perfil" />
+      <div class={styles["testimonial-info"]}>
+        <h4 class={styles["testimonial-name"]}>Fernando Calderon</h4>
+        <p class={styles["testimonial-role"]}>CEO de www.bybeautypro.com</p>
+        <div class={styles["testimonial-stars"]}>
+          <span>★★★★★</span>
+        </div>
+      </div>
+    </div>
+
+    <p class={styles["testimonial-text"]}>
+      Estaba en busca de un editor de video para mi empresa...
+    </p>
+
+    <button class={styles["testimonial-btn"]}>
+      <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
+      <span class="btn-text">VER TESTIMONIO</span>
+    </button>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class={styles["testimonial-card"]}>
+    <img src="/images/testimonio2.webp" alt="" class={styles["testimonial-video"]} />
+
+    <div class={styles["testimonial-profile"]}>
+      <img class={styles["testimonial-avatar2"]} src="/images/testimonio2.webp" alt="Foto de perfil" />
+      <div class={styles["testimonial-info"]}>
+        <h4 class={styles["testimonial-name"]}>Kate McCaferty</h4>
+        <p class={styles["testimonial-role"]}>KM Real Estate</p>
+        <div class={styles["testimonial-stars"]}>
+          <span>★★★★★</span>
+        </div>
+      </div>
+    </div>
+
+    <p class={styles["testimonial-text"]}>
+      "I've been working with Oberstaff now for about 2 years..."
+    </p>
+
+    <button class={styles["testimonial-btn"]}>
+      <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
+      <span class="btn-text">VER TESTIMONIO</span>
+    </button>
+  </div>
 </div>
 
-
-<div class="highlight-box">
-  <div class="highlight-icon">
-    <!-- 
-    <img src={iconoTel.src} alt="" />-->
+<div class={styles["highlight-box"]}>
+  <div class={styles["highlight-icon"]}>
     <span class="iconify" data-icon="material-symbols-light:phone-in-talk" style="font-size:27px;"></span>
   </div>
   <p class="highlight-text">

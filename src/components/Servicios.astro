@@ -44,7 +44,7 @@ const servicios = [
 <section class={styles.servicios}>
   {servicios.map((servicio) => (
     <div class={styles.card}>
-      <img src={servicio.img} alt={servicio.titulo} />
+      <img loading="lazy" src={servicio.img} alt={servicio.titulo} />
       <div class={styles.overlay}>
         <h3>{servicio.titulo}</h3>
         <p>{servicio.descripcion}</p>

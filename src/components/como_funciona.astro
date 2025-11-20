@@ -1,14 +1,8 @@
 ---
-import "../styles/como_funciona.css";  
-import testimonio3 from "../assets/testimonio3.webp";   
-
+import styles from "../styles/como_funciona.module.css";
 ---
-                           
-                           
-                           
-                           <!-- COMO FUNCIONA SECTION -->
 
-<section id="como-funciona" class="como-funciona-section"> 
+<section id="como-funciona" class={styles["como-funciona-section"]}>
   <h2>¿Cómo funciona?</h2>
   <p class="como-funciona-p">
     Un proceso simple y efectivo para incorporar <span class="alto-nivel">talento de alto nivel</span> a tu empresa.
@@ -44,21 +38,17 @@ import testimonio3 from "../assets/testimonio3.webp";
   </div>
 </section>
 
-
-                                    <!-- perfil-testimonio -->
-
-
-<section class="testimonio-section">
-  <p class="testimonio-intro">
-    Con Oberstaff, la confianza se construye con <span class="highlight">cada experiencia</span> 
+<section class={styles["testimonio-section"]}>
+  <p class={styles["testimonio-intro"]}>
+    Con Oberstaff, la confianza se construye con <span class="highlight">cada experiencia</span>
   </p>
 
-  <div class="testimonio-card">
-    <div class="testimonio-header">
-      <img class="testimonial-avatar" src={testimonio3.src} alt="Foto de perfil" />
-      <div class="info-profesional">
-        <h3 class="nombre-profesional">Fernando Calderon</h3>
-        <p class="profesion-profesional">CEO de www.bybeautypro.com</p>
+  <div class={styles["testimonio-card"]}>
+    <div class={styles["testimonio-header"]}>
+      <img class={styles["foto-profesional"]} src="/images/testimonio3.webp" alt="Foto de perfil" />
+      <div class={styles["info-profesional"]}>
+        <h3 class={styles["nombre-profesional"]}>Fernando Calderon</h3>
+        <p class={styles["profesion-profesional"]}>CEO de www.bybeautypro.com</p>
       </div>
     </div>
 
@@ -70,6 +60,4 @@ import testimonio3 from "../assets/testimonio3.webp";
       ★★★★★
     </div>
   </div>
-
- 
-</section> 
+</section>

@@ -1,17 +1,13 @@
 ---
 import "../styles/header.css";   
-import logo from "../assets/logo.png";
-/*
-import iconoHam from "../assets/icono-hamburguesa.png";
-import iconoConv from "../assets/icono-contacto.png";
-*/ 
+
 ---
 
 <header class="header">
   <div class="container">
     <div class="header-content">
-      <a href="#" class="logo">
-        <img src={logo.src} alt="Logo" /> 
+      <a href="/" class="logo">
+        <img src="/images/logo.png" alt="Logo" /> 
       </a> 
 
       <nav class="nav-links">
@@ -20,33 +16,26 @@ import iconoConv from "../assets/icono-contacto.png";
         <a href="/#testimonios">Testimonios</a>
         <a href="/#preguntas-frecuentes">Preguntas frecuentes</a>
         <a href="/#contacto">Contacto</a>
-        <a href="/blog">Blog</a>
+        <a href="https://oberstaff.com/blog">Blog</a>
         <a href="/empleos">¿Buscas trabajo?</a>
       </nav>
-
-      <!-- Botón contacto -->
+ 
       <button id="openContactBtn" class="menu-btn contact-btn" aria-label="Abrir contacto">
         <span class="iconify" data-icon="mdi:comment-outline" style="font-size:25px;"></span>
-        <!--
-        <img src={iconoConv.src} alt="Contacto" /> -->
       </button>
 
-      <!-- Botón hamburguesa -->
       <button id="openMenuBtn" class="menu-btn ham-btn" aria-label="Abrir menú">
         <span class="iconify" data-icon="material-symbols:density-medium-rounded" style="font-size:25px;"></span>
-        <!-- 
-        <img src={iconoHam.src} alt="Abrir menú" />-->
       </button>
     </div>
   </div>
 </header>
 
-<!--  MODAL MENÚ -->
 <div id="menuModal" class="menu-modal">
   <div class="modal-backdrop" id="modalBackdropMenu"></div>
   <div class="modal-content">
     <div class="modal-header">
-      <img src={logo.src} alt="Logo" class="modal-logo" />
+      <img src="/images/logo.png" alt="Logo" class="modal-logo" />
       <button id="closeMenuBtn" class="close-btn" aria-label="Cerrar">×</button>
     </div>
 
@@ -56,13 +45,12 @@ import iconoConv from "../assets/icono-contacto.png";
       <a href="#testimonios">Testimonios</a>
       <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
-      <a href="#">Blog</a>
-      <a href="#">¿Buscas trabajo?</a>
+      <a href="https://oberstaff.com/blog">Blog</a>
+      <a href="/empleos">¿Buscas trabajo?</a>
     </nav>
   </div>
 </div>
 
-<!--MODAL CONTACTO -->
 <div id="contactModal" class="menu-modal">
   <div class="modal-backdrop" id="modalBackdropContact"></div>
   <div class="modal-content contact-content">
@@ -96,9 +84,6 @@ import iconoConv from "../assets/icono-contacto.png";
     </form>
   </div>
 </div>
-
-
-
 
 <script type="module">
 
@@ -202,7 +187,4 @@ if (formModal) {
     }
   });
 }
-
-</script>
-
 

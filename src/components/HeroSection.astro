@@ -1,136 +1,114 @@
 ---
-import "../styles/HeroSection.css";  
-import perfil1 from "../assets/perfil1.webp";
-import perfil2 from "../assets/perfil2.webp";
-import perfil3 from "../assets/perfil3.webp"; 
-import videoPrincipal from "../assets/Video-principal.mp4"; 
-import mapa from "../assets/Hero-animación-desktop.gif"; 
+import "../styles/HeroSection.css";
 import ScrollingBanner from "./ScrollingBanner.astro";
-/* 
-import mapaMobile from "../assets/Hero-animacion-mobile.gif"; 
-*/   
- import bannerDesktop from "../assets/banner-desktop.gif"; 
- 
+const youtubeId = "HPx5IsSYI8Q";
 ---
-  
 
- 
-<section class="hero"> 
+<section class="hero">
   <div class="container hero-grid">
     <div class="hero-text">
       <h2>
         Contrata diferente.<br />
         <span class="highlight">Crece sin límites.</span>
       </h2>
+
       <p>
-        Accede a profesionales que trabajen en remoto para tu empresa, y 
-        <span class="highlight">ahorra hasta un 70%</span> en comparación con la contratación tradicional.
+        Accede a profesionales que trabajen en remoto para tu empresa, y
+        <span class="highlight">ahorra hasta un 70%</span> en comparación con la
+        contratación tradicional.
       </p>
 
-       <button class="btn-primary">
-        <!-- 
-     <span class="icono-telefono" set:html={icon(faPhoneVolume).html[0]}></span> -->
-     <span class="iconify" data-icon="material-symbols-light:phone-in-talk" style="font-size:27px;"></span>
-   
+      <button class="btn-primary">
+        <span class="iconify"
+          data-icon="material-symbols-light:phone-in-talk"
+          style="font-size:27px;"></span>
         AGENDA UNA LLAMADA GRATIS
-      </button> 
- 
+      </button>
 
-<!--perfiles debajo del boton desktop -->
-
-     <section class="profiles-desktop-section">
-  <div class="profiles-desktop-card">
-    <div class="profiles-desktop-images">
-      <img src={perfil3.src} alt="" class="profile-desktop-img" />
-      <img src={perfil2.src} alt="" class="profile-desktop-img" />
-      <img src={perfil1.src} alt="" class="profile-desktop-img" />
+      <section class="profiles-desktop-section">
+        <div class="profiles-desktop-card">
+          <div class="profiles-desktop-images">
+            <img src="/images/perfil3.webp" class="profile-desktop-img" />
+            <img src="/images/perfil2.webp" class="profile-desktop-img" />
+            <img src="/images/perfil1.webp" class="profile-desktop-img" />
+          </div>
+          <p>+5000 empresas confían en nosotros</p>
+          <div class="desktop-stars">★★★★★</div>
+        </div>
+      </section>
     </div>
-    <p>+5000 empresas confían en nosotros</p>
-    <div class="desktop-stars">★★★★★</div>
+
+    <!-- VIDEO CORRECTO -->
+    <div class="hero-image-mapa">
+      <video 
+        src="/images/Hero-Oberstaff-Animación-desktop_video.mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+      ></video>
+    </div>
   </div>
 </section>
-      </div>
 
-                          <!--IMAGEN MAPA -->
+<!--BANNER -->
 
-    <div class="hero-image">
-   <img src={mapa.src} alt="" />
-    </div>                         
-  </div> 
-</section>
-
-                               <!--BANNER -->
-
-
- <div class="hero-banner">
-  <ScrollingBanner/>
-</div>
-
-
-                               <!--VIDEO PRINCIPAL --> 
+<ScrollingBanner/>
 
 <section class="profiles-section">
   <div class="profiles-container">
     <div class="profile-card">
-      <img src={perfil3.src} alt="" class="profile-img" />
-      <img src={perfil2.src} alt="" class="profile-img" />
-      <img src={perfil1.src} alt="" class="profile-img" />
+      <img src="/images/perfil3.webp" alt="" class="profile-img" />
+      <img src="/images/perfil2.webp" alt="" class="profile-img" />
+      <img src="/images/perfil1.webp" alt="" class="profile-img" />
       <p>+5000 empresas confían en nosotros</p>
       <div class="stars">★★★★★</div>
     </div>
+  </div>
 
+  <div class="video-container">
+    <div class="video-wrapper">
+      <video
+        id="video-principal"
+        playsinline
+        controls
+        muted
+        poster="/images/previa-img.png"
+        style="width:100%; height:auto; border-radius:16px;"
+      >
+        <source src="/images/Video-principal.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
 
+  <!--desktop -->
+
+  <div class="video-desktop-container">
+    <div
+      class="video-desktop-wrapper"
+      style="position: relative; max-width: 500px; margin: auto; border-radius: 16px; overflow: hidden;"
+    >
+      <video
+        id="video-principal-desktop"
+        playsinline
+        controls
+        poster="/images/previa-img.png"
+        style="width: 100%; height: auto; display: block; border-radius: 16px;"
+      >
+        <source src="/images/Video-principal.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div
+      class="video-desktop-text"
+      style="margin-top: 1rem; text-align: center;"
+    >
+      <h2>
+        Descubre cómo contratar talento top
+        <span style="color: #FF65C3; font-weight: bold;">
+          sin gastar de más.</span
+        >
+      </h2>
+    </div>
+  </div>
 </section>
- 
-
-<div class="video-container"> 
-  <div class="video-wrapper">
-    <video id="video-principal" playsinline controls>
-      <source src={videoPrincipal} type="video/mp4" />
-      
-    </video>
-
-  </div> 
-</div>
- 
-<script type="module">
-  
-  const video = document.getElementById("video-principal"); 
-const playBtn = document.getElementById("videoPlayBtn");  
-const caption = document.getElementById("videoCaption");
-video.addEventListener("loadedmetadata", () => {
-  video.currentTime = 19; 
-});  
-
-  </script> 
-
-
-<!--video desktop -->
-
-<div class="video-desktop-container">
-  <div class="video-desktop-wrapper">
-    <video id="video-principal-desktop" playsinline controls>
-      <source src={videoPrincipal} type="video/mp4" />
-    </video>
-  </div>
-
-  <div class="video-desktop-text">
-    <h2>Descubre cómo contratar talento top<span style="color: #FF65C3; font-weight: bold;"> sin gastar de más.</span></h2>
-  </div>
-</div> 
-
-<!-- 
-<script src="./scripts/video-principal-desktop.js" type="module"></script>  --> 
-
-<script  type="module">
-  
-  const video = document.getElementById("video-principal-desktop"); 
-const playBtn = document.getElementById("videoPlayBtn");  
-const caption = document.getElementById("videoCaption");
-video.addEventListener("loadedmetadata", () => {
-  video.currentTime = 19; 
-}); 
-
-  </script> 
- 
-
