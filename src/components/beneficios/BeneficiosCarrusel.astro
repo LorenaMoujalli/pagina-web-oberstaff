@@ -1,0 +1,76 @@
+---
+import BeneficiosCarruselCard from "./BeneficiosCarruselCard.astro"
+import BeneficiosCarruselScript from "./BeneficiosCarruselScript.astro";
+---
+
+<section class="carrusel-section">
+  <div class="carrusel-wrapper">
+    <div class="carrusel-container">
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:mintmark-rounded"
+        title="Ahorro del 70% en costos"
+        text="Al contratar talento remoto con Oberstaff, puedes <span class='highlight'>reducir hasta un 70% en costos de personal,</span> evitando gastos adicionales como seguridad social u otros beneficios laborales."
+      />
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:group-search-outline"
+        title="Selección simplificada"
+        text="Nos encargamos de <span class='highlight'>todo el proceso de búsqueda,</span> selección y contratación, ahorrándote tiempo y esfuerzo para que te enfoques en lo que realmente importa: tu negocio"
+      />
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:workspace-premium-outline"
+        title="Talento altamente calificado"
+        text="Todos los candidatos son rigurosamente evaluados a través de pruebas psicométricas y seleccionados cuidadosamente <span class='highlight'> para cumplir con tus requerimientos específicos.</span>"
+      />
+
+      <BeneficiosCarruselCard 
+        icon="mdi-light:view-dashboard"
+        title="Integración total"
+        text="Los profesionales que contratas trabajarán en tu misma zona horaria y se <span class='highlight'>integrarán perfectamente a tu equipo,</span> interactuando como un compañero más."
+      />
+
+      <BeneficiosCarruselCard 
+        icon="solar:clock-circle-linear"
+        title="Flexibilidad total"
+        text="No exigimos compromisos de permanencia. Puedes ajustar o solicitar la cancelación del servicio cuando lo necesites, <span class='highlight'>sin penalizaciones ni complicaciones.</span>"
+      />
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:azm-outline-rounded"
+        title="Escalabilidad inmediata"
+        text="Amplía o reduce tu equipo fácilmente <span class='highlight'>según las necesidades de tu negocio</span> y la evolución de tus proyectos, sin trámites complicados ni largos procesos."
+      />
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:shield-outline"
+        title="Protección total"
+        text="Al no ser tú quien contrata directamente al profesional, quedas protegido de cualquier reclamación laboral o contractual, <span class='highlight'>ofreciéndote tranquilidad y seguridad.</span>"
+      />
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:headset-mic-outline"
+        title="Soporte continuo"
+        text="Nuestro equipo está disponible para ofrecerte asistencia y garantizar una integración fluida y exitosa de tu talento remoto en <span class='highlight'>cualquier momento que lo necesites.</span>"
+      />
+
+      <BeneficiosCarruselCard 
+        icon="material-symbols-light:finance-mode-outline-rounded"
+        title="Mejora de la competitividad"
+        text="Al reducir costos operativos y aumentar la eficiencia de tu equipo, <span class='highlight'>tu empresa se vuelve más competitiva</span>  en el mercado global actual."
+      />
+
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="arrow left">&#x279C;</button>
+    <div class="indicator-bar">
+      <div class="indicator-dot"></div>
+    </div>
+    <button class="arrow right">&#x279C;</button>
+  </div>
+
+  <BeneficiosCarruselScript />
+</section>

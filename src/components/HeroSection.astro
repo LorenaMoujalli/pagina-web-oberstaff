@@ -1,107 +1,42 @@
 ---
 import "../styles/HeroSection.css";
-import ScrollingBanner from "./ScrollingBanner.astro";
-const youtubeId = "HPx5IsSYI8Q";
+import ScrollingBanner from "../components/ScrollingBanner.astro";
+
+import HeroText from "./hero/HeroText.astro";
+import HeroDesktopVideo from "./hero/HeroDesktopVideo.astro";
+import HeroMobileVideo from "./hero/HeroMobileVideo.astro";
 ---
 
 <section class="hero">
   <div class="container hero-grid">
-    <div class="hero-text">
-      <h2>
-        Contrata diferente.<br />
-        <span class="highlight">Crece sin límites.</span>
-      </h2>
-
-      <p>
-        Accede a profesionales que trabajen en remoto para tu empresa, y
-        <span class="highlight">ahorra hasta un 70%</span> en comparación con la
-        contratación tradicional.
-      </p>
-
-      <button class="btn-primary">
-        <span class="iconify"
-          data-icon="material-symbols-light:phone-in-talk"
-          style="font-size:27px;"></span>
-        AGENDA UNA LLAMADA GRATIS
-      </button>
-
-      <section class="profiles-desktop-section">
-        <div class="profiles-desktop-card">
-          <div class="profiles-desktop-images">
-            <img src="/images/perfil3.webp" class="profile-desktop-img" />
-            <img src="/images/perfil2.webp" class="profile-desktop-img" />
-            <img src="/images/perfil1.webp" class="profile-desktop-img" />
-          </div>
-          <p>+5000 empresas confían en nosotros</p>
-          <div class="desktop-stars">★★★★★</div>
-        </div>
-      </section>
-    </div>
-
-    <!-- VIDEO CORRECTO -->
-    <div class="hero-image-mapa">
-      <video 
-        src="/images/Hero-Oberstaff-Animación-desktop_video.mp4" 
-        autoplay 
-        muted 
-        loop 
-        playsinline
-      ></video>
-    </div>
+    <HeroText />
+    <HeroDesktopVideo />
   </div>
 </section>
 
-<!--BANNER -->
 <div class="banner">
-
-  <ScrollingBanner/>
+  <ScrollingBanner />
 </div>
 
-<section class="profiles-section">
-  <div class="profiles-container">
-    <div class="profile-card">
-      <img src="/images/perfil3.webp" alt="" class="profile-img" />
-      <img src="/images/perfil2.webp" alt="" class="profile-img" />
-      <img src="/images/perfil1.webp" alt="" class="profile-img" />
-      <p>+5000 empresas confían en nosotros</p>
-      <div class="stars">★★★★★</div>
-    </div>
-  </div>
-  
-    <!-- VIDEO MÓVIL -->
-    <div class="video-container">
-      <div class="video-wrapper">
-        <video
-          id="video-principal"
-          playsinline
-          controls
-          muted
-          poster="/images/previa-img.png"
-          style="width:100%; height:auto; border-radius:16px;"
-        >
-          <source src="/images/Video-principal.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-</section>
+<HeroMobileVideo />
 
-  <!-- VIDEO DESKTOP -->
-  <div class="video-desktop-container">
-    <div class="video-desktop-wrapper" style="border-radius: 16px; overflow: hidden;">
-      <video
-        id="video-principal-desktop"
-        playsinline
-        controls
-        poster="/images/previa-img.png"
-      >
-        <source src="/images/Video-principal.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <div class="video-desktop-text" style="text-align: left;">
-      <h2>
-        Descubre cómo contratar talento top
-        <span style="color: #FF65C3; font-weight: bold;">sin gastar de más.</span>
-      </h2>
-    </div>
+<!-- VIDEO DESKTOP -->
+<div class="video-desktop-container">
+  <div class="video-desktop-wrapper" style="border-radius: 16px; overflow: hidden;">
+    <video
+      id="video-principal-desktop"
+      playsinline
+      controls
+      poster="/images/previa-img.png"
+    >
+      <source src="/images/Video-principal.mp4" type="video/mp4" />
+    </video>
   </div>
+
+  <div class="video-desktop-text" style="text-align: left;">
+    <h2>
+      Descubre cómo contratar talento top
+      <span style="color: #FF65C3; font-weight: bold;">sin gastar de más.</span>
+    </h2>
+  </div>
+</div>

@@ -6,37 +6,43 @@ const servicios = [
     titulo: 'Diseño Gráfico',
     descripcion: 'Soluciones visuales profesionales para tu marca',
     items: ['Identidad visual', 'Edición multimedia', 'Animaciones 2D/3D'],
-    img: '/images/servicios/diseno.jpg',
+    img: '/images/servicios/diseno.webp',
+    webp: '/images/servicios/diseno.webp'
   },
   {
     titulo: 'Gestión de Redes',
     descripcion: 'Estrategias de contenido y crecimiento orgánico para redes sociales',
     items: ['Creación de contenido', 'Calendarización', 'Análisis de métricas'],
-    img: '/images/servicios/redes.jpg',
+    img: '/images/servicios/redes.webp',
+    webp: '/images/servicios/redes.webp'
   },
   {
     titulo: 'Estrategia Comercial',
     descripcion: 'Soluciones visuales profesionales para tu marca',
     items: ['Generación de leads', 'Automatización CRM', 'Email marketing'],
-    img: '/images/servicios/estrategia.jpg',
+    img: '/images/servicios/estrategia.webp',
+    webp: '/images/servicios/estrategia.webp'
   },
   {
     titulo: 'Soporte Ejecutivo',
     descripcion: 'Asistencia especializada para gestión empresarial',
     items: ['Gestión de agenda', 'Atención al cliente', 'Organización documental'],
-    img: '/images/servicios/soporte.jpg',
+    img: '/images/servicios/soporte.webp',
+    webp: '/images/servicios/soporte.webp'
   },
   {
     titulo: 'Marketing Digital',
     descripcion: 'Campañas efectivas con enfoque en ROI',
     items: ['Publicidad digital', 'SEO avanzado', 'Analítica predictiva'],
-    img: '/images/servicios/marketing.jpg',
+    img: '/images/servicios/marketing.webp',
+    webp: '/images/servicios/marketing.webp'
   },
   {
     titulo: 'Redacción Profesional',
     descripcion: 'Contenido persuasivo que convierte visitantes en clientes',
     items: ['Copywriting estratégico', 'Guiones para video', 'Edición profesional'],
-    img: '/images/servicios/redaccion.jpg',
+    img: '/images/servicios/redaccion.webp',
+    webp: '/images/servicios/redaccion.webp'
   },
 ];
 ---
@@ -44,15 +50,22 @@ const servicios = [
 <section class={styles.servicios}>
   {servicios.map((servicio) => (
     <div class={styles.card}>
-      <img loading="lazy" src={servicio.img} alt={servicio.titulo} />
+      <picture>
+        <source srcset={servicio.webp} type="image/webp" />
+        <img 
+          loading="lazy" 
+          decoding="async"
+          src={servicio.img} 
+          alt={servicio.titulo}
+          width="500"
+          height="400"
+        />
+      </picture>
+
       <div class={styles.overlay}>
         <h3>{servicio.titulo}</h3>
         <p>{servicio.descripcion}</p>
-        <ul>
-          {servicio.items.map((item) => (
-            <li>• {item}</li>
-          ))}
-        </ul>
+        
       </div>
     </div>
   ))}

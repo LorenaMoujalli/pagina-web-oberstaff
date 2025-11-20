@@ -1,0 +1,12 @@
+---
+const { number, title, text, className = "", variant = "1" } = Astro.props;
+---
+
+<div class={className}>
+  <div class="inner-card">
+    <div class={variant === "2" ? "card-number2" : "card-number"}>{number}</div>
+
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+</div>

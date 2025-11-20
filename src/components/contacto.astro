@@ -1,115 +1,16 @@
 ---
-import "../styles/contacto.css";    
----                        
-                              
-                               
-                              
-                              
-                              <!--CONTACTO -->
- 
+import "../styles/contacto.css";
+import ContactForm from "../components/contacto/ContactForm.astro";
+import ContactModal from "../components/contacto/ContactModal.astro";
+---
+
 <section id="contacto" class="contact-section">
   <h2>Contáctanos</h2>
-  <p>Déjanos saber tus requerimientos y nos pondremos en contacto contigo <span class="highlight">lo más pronto posible.</span></p>
+  <p>
+    Déjanos saber tus requerimientos y nos pondremos en contacto contigo
+    <span class="highlight">lo más pronto posible.</span>
+  </p>
 
-  <form id="webhookForm" class="contact-form">
-    <input type="text" name="nombre" placeholder="Nombres" required>
-    <input type="text" name="apellidos" placeholder="Apellidos" required>
-    <input type="email" name="email" placeholder="Email" required>
-
-    <div class="phone-group">
-      <input type="text" name="codigoPais" class="country-code" placeholder="+1" required>
-      <input type="tel" name="telefono" class="phone-number" placeholder="Teléfono" required>
-    </div>
-
-    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-
-    <div class="checkbox-group">
-      <input type="checkbox" id="terms" required>
-      <label for="terms">
-        Al facilitar su número de télefono, aceptas recibir mensajes SMS relacionados con atención al cliente. La frecuencia de los mensajes puede variar. Pueden aplicarse tarifas estándar de mensajes y datos. Responde STOP para cancelar la suscripción. Responde Help para obtener ayuda.
-      </label>
-    </div>
-<!-- 
-    <input type="text" name="codigoVerificacion" class="verification" placeholder="Código de verificación" required>
--->
-
-
-    <button type="submit">ENVIAR MENSAJE</button>
-  </form>
-
- <!--  <p id="status" style="margin-top:10px; font-weight:bold;"></p>
--->
-
-<div id="statusModal" class="status-modal">
-  <div class="status-modal-content">
-    <button id="closeStatusModal" class="close-status-modal">×</button>
-    <p id="statusModalText"></p>
-  </div>
-</div>
-
+  <ContactForm />
+  <ContactModal />
 </section>
-
-
-
-
-<script  type="module">
-
-const WEBHOOK_URL = 'https://n8n.obertrack.com/webhook-test/contacto';   
-
-const form = document.getElementById('webhookForm');
-const statusModal = document.getElementById('statusModal');
-const statusModalText = document.getElementById('statusModalText');
-const closeStatusModal = document.getElementById('closeStatusModal');
-
-form.addEventListener('submit', async function(event) {
-  event.preventDefault();
-
-  statusModalText.textContent = 'Enviando...';
-  statusModal.classList.add('show');
-  document.body.style.overflow = 'hidden';
-
-  const telefonoCompleto = form.codigoPais.value + form.telefono.value;
-
-  const data = {
-    nombres: form.nombre.value,
-    apellidos: form.apellidos.value,
-    email: form.email.value,
-    telefono: telefonoCompleto,
-    mensaje: form.mensaje.value
-  };
- 
-  try {
-    const response = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-
-    if (response.ok) {
-      statusModalText.textContent = 'Datos enviados exitosamente';
-      form.reset();
-    } else {
-      statusModalText.textContent = 'Error al enviar los datos. Código ' + response.status;
-    }
-  } catch (error) {
-    statusModalText.textContent = 'Error de red o en la URL del Webhook: ' + error.message;
-    console.error('Error:', error);
-  }
-});
-
-// Cerrar modal
-closeStatusModal.addEventListener('click', () => {
-  statusModal.classList.remove('show');
-  document.body.style.overflow = '';
-});
-
-// Cerrar al hacer clic fuera del contenido
-statusModal.addEventListener('click', (e) => {
-  if (e.target === statusModal) {
-    statusModal.classList.remove('show');
-    document.body.style.overflow = '';
-  }
-});
-
-
-</script>

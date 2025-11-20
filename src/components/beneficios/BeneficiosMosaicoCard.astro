@@ -1,0 +1,17 @@
+---
+// Props
+const { img, title, text, class: cardClass } = Astro.props;
+---
+
+<div class={cardClass}>
+  <img 
+    src={img} 
+    alt={title} 
+    class="img-replace" 
+    loading="lazy" 
+    width="600" 
+    height="400"
+  />
+  <h3>{title}</h3>
+  <p>{text}</p>
+</div>

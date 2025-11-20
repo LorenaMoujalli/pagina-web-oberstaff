@@ -1,66 +1,24 @@
 ---
-import  "../styles/que_hacemos.css";  
----                          
+import "../styles/que_hacemos.css";
 
+import MiniCards from "./quehacemos/MiniCards.astro";
+import CarouselCards from "./quehacemos/CarouselCards.astro";
+---
 
 <section id="que-hacemos" class="que-hacemos-section">
   <h2>¿Qué hacemos?</h2>
+
   <p>
-    Conectamos empresas con talento profesional <span class="alto-nivel">de alto nivel</span> en Sudamérica, ofreciendo soluciones que benefician ambas partes.
+    Conectamos empresas con talento profesional 
+    <span class="alto-nivel">de alto nivel</span> en Sudamérica, ofreciendo soluciones que benefician ambas partes.
   </p>
 
-  <!-- MINI CARDS -->
-  <div class="info-cards">
-    <div class="info-card1">
-      <h3>Búsqueda y Selección</h3>
-      <p>Simplificamos todo el proceso de encontrar el talento ideal para tu empresa, ahorrándote tiempo y recursos.</p>
-      <div class="mini-card">
-        <span class="iconify" data-icon="material-symbols:person-search-outline-rounded" style="font-size:25px;"></span>
-      </div>
-    </div>
-
-    <div class="info-card2">
-      <h3>Profesionales Comprometidos</h3>
-      <p>Contratamos expertos motivados y dedicados a impulsar tu negocio con sus habilidades y conocimientos.</p>
-      <div class="mini-card2">
-        <span class="iconify" data-icon="grommet-icons:group" style="font-size:25px;"></span>
-      </div>
-    </div>
-
-    <div class="info-card1">
-      <h3>Ahorro Significativo</h3>
-      <p>Ahorra hasta un 70% en costos de personal mientras ofreces salarios competitivos a profesionales talentosos.</p>
-      <div class="mini-card3">
-        <span class="iconify" data-icon="system-uicons:coins" style="font-size:25px;"></span>
-      </div>
-    </div>
-  </div>
-
+  <MiniCards />
 </section>
 
 <section>
-  
-  <!-- CARRUSEL DE CARDS GRANDES -->
- <div class="cards">
+  <CarouselCards />
 
-  <div class="card-fixed" style="background-image: url('/images/woman.jpg');">
-    <div class="icon">
-      <span class="iconify" data-icon="circum:trophy" style="font-size:40px; color:white;"></span>
-    </div>
-    <h1 class="card-title">Talento Profesional</h1>
-  </div>
-
-  <div class="card-fixed" style="background-image: url('/images/hands.jpg');">
-    <div class="icon">
-      <span class="iconify" data-icon="material-symbols-light:handshake-outline" style="font-size:40px; color:white;"></span>
-    </div>
-    <h1 class="card-title">Beneficio Mutuo</h1>
-  </div>
-
-</div>
-
-
-  <!-- BOTÓN -->
   <div style="text-align: center; margin-top: 2rem;">
     <a href="#contacto" style="text-decoration: none;">
       <button class="btn-primary2">¿ESTÁS INTERESADO?</button>

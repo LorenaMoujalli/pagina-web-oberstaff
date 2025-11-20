@@ -1,0 +1,121 @@
+.mosaico-desktop {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mosaico-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 1.75fr 0.8fr 0.8fr;
+  gap: 0.6rem;
+  height: 70vh;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ---- CARD BASE ---- */
+.mosaico-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: transform .3s ease, box-shadow .3s ease;
+  will-change: transform, opacity;
+}
+
+.mosaico-card h3, .mosaico-card p {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  z-index: 3;
+  transition: opacity .25s ease, transform .25s ease;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.mosaico-card h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.95);
+}
+
+.mosaico-card p {
+  inset: 0;
+  padding: 1rem;
+  font-size: .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  z-index: 4;
+}
+
+/* ---- OVERLAY ---- */
+.mosaico-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.2));
+  z-index: 1;
+  pointer-events: none;
+  will-change: background;
+}
+
+/* ---- IMG COMO BACKGROUND ---- */
+.img-bg, .img-replace {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+/* ---- HOVER ---- */
+.mosaico-card:hover {
+  transform: scale(1.025);
+  box-shadow: 0 8px 22px rgba(0,0,0,.20);
+}
+
+.mosaico-card:hover h3 { opacity: 0; }
+.mosaico-card:hover p { opacity: 1; }
+
+/* ---- GRID AVANZADO ---- */
+.columna-central {
+  display: grid;
+  grid-template-areas:
+    "img4 img4"
+    "img5 img6";
+  grid-template-columns: 1.1fr 1.35fr;
+  grid-template-rows: 0.6fr 1fr;
+  gap: 0.6rem;
+}
+
+.img4 { grid-area: img4; }
+.img5 { grid-area: img5; }
+.img6 { grid-area: img6; }
+
+/* alturas personalizadas */
+.columna:nth-child(1) .img1 { flex: 1.3; }
+.columna:nth-child(1) .img2 { flex: 0.7; }
+.columna:nth-child(5) .img8 { flex: 0.8; }
+.columna:nth-child(5) .img9 { flex: 1.2; }
+
+/* ocultar en mobile */
+@media (max-width: 1023px) {
+  .mosaico-desktop { display: none; }
+}

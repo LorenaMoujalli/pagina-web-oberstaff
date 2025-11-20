@@ -1,0 +1,25 @@
+---
+const { img, avatar, name, role, text } = Astro.props;
+---
+
+<div class="testimonial-card">
+  <img src={img} alt={name} class="testimonial-video" />
+
+  <div class="testimonial-profile">
+    <img class="testimonial-avatar" src={avatar} alt="Foto de perfil" />
+    <div class="testimonial-info">
+      <h4 class="testimonial-name">{name}</h4>
+      <p class="testimonial-role">{role}</p>
+      <div class="testimonial-stars"><span>★★★★★</span></div>
+    </div>
+  </div>
+
+  <p class="testimonial-text">
+    {text}
+  </p>
+
+  <button class="testimonial-btn">
+    <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
+    <span class="btn-text">VER TESTIMONIO</span>
+  </button>
+</div>
