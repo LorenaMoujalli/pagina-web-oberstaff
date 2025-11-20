@@ -1,28 +1,24 @@
 ---
-import styles from "../styles/casos_exito.module.css";      
+import "../styles/casos_exito.css";
 import ScrollingBanner from "./ScrollingBanner.astro";
 ---
 
-<section class={styles["subrayado-section"]}> 
+<section class="subrayado-section"> 
   <ScrollingBanner/>
 
-  <h2 class={styles["subrayado-titulo"]}>
+  <h2 class="subrayado-titulo">
     Sé parte de la globalización digital y 
     <span class="highlight">ahorra en costes de personal</span>
   </h2>
 
-  <div class={styles["subrayado-card"]}>
+  <div class="subrayado-card">
     <h3>
       Impulsa tu negocio con el 
       <span class="highlight"> mejor talento de Sudamérica</span>
     </h3>
 
-    <button class={styles["btn-rosado"]}>
-      <span 
-        class="iconify" 
-        data-icon="material-symbols:for-you-outline-rounded" 
-        style="font-size:26px;"
-      ></span>
+    <button class="btn-rosado">
+      <span class="iconify" data-icon="material-symbols:for-you-outline-rounded" style="font-size:26px;"></span>
 
       <a href="#contacto" style="text-decoration: none; color: white;">
         <span class="btn-text">COMIENZA HOY</span>
@@ -30,13 +26,13 @@ import ScrollingBanner from "./ScrollingBanner.astro";
     </button>
   </div>
 </section>
-    
 
 
-                                                <!--CASOS DE EXITO -->
 
-<section id="testimonios" class={styles["cta-section"]}>
+<!-- CASOS DE ÉXITO -->
+<section id="testimonios" class="cta-section">
   <h2>Casos de <span class="highlight">éxito</span></h2>
+
   <p class="cta-subtext">
     En Oberstaff, creemos que nuestros resultados 
     <span class="highlight">hablan mucho más</span> que las palabras
@@ -47,85 +43,91 @@ import ScrollingBanner from "./ScrollingBanner.astro";
   </p>
 </section>
 
-<div class={styles["testimonial-section"]}>
-  <!-- CARD 1 -->
-  <div class={styles["testimonial-card"]}>
-    <img src="/images/testimonio1.webp" alt="" class={styles["testimonial-video"]} />
 
-    <div class={styles["testimonial-profile"]}>
-      <img class={styles["testimonial-avatar2"]} src="/images/testimonio1.webp" alt="Foto de perfil" />
-      <div class={styles["testimonial-info"]}>
-        <h4 class={styles["testimonial-name"]}>Shadai Iborra</h4>
-        <p class={styles["testimonial-role"]}>CEO de @amediastory</p>
-        <div class={styles["testimonial-stars"]}>
-          <span>★★★★★</span>
-        </div>
+
+<!-- TESTIMONIOS - 3 CARDS -->
+<div class="testimonial-section">
+
+  <!-- CARD 1 -->
+  <div class="testimonial-card">
+    <img src="/images/testimonio1.webp" alt="Testimonio 1" class="testimonial-video" />
+
+    <div class="testimonial-profile">
+      <img class="testimonial-avatar" src="/images/testimonio1.webp" alt="Foto de perfil" />
+      <div class="testimonial-info">
+        <h4 class="testimonial-name">Shadai Iborra</h4>
+        <p class="testimonial-role">CEO de @amediastory</p>
+        <div class="testimonial-stars"><span>★★★★★</span></div>
       </div>
     </div>
 
-    <p class={styles["testimonial-text"]}>
+    <p class="testimonial-text">
       Con Oberstaff pude dar trabajo a dos personas a tiempo completo, ahorrando costes...
     </p>
 
-    <button class={styles["testimonial-btn"]}>
+    <button class="testimonial-btn">
       <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
       <span class="btn-text">VER TESTIMONIO</span>
     </button>
   </div>
 
-  <!-- CARD 2 -->
-  <div class={styles["testimonial-card"]}>
-    <img src="/images/testimonio3.webp" alt="" class={styles["testimonial-video"]} />
 
-    <div class={styles["testimonial-profile"]}>
-      <img class={styles["testimonial-avatar2"]} src="/images/testimonio3.webp" alt="Foto de perfil" />
-      <div class={styles["testimonial-info"]}>
-        <h4 class={styles["testimonial-name"]}>Fernando Calderon</h4>
-        <p class={styles["testimonial-role"]}>CEO de www.bybeautypro.com</p>
-        <div class={styles["testimonial-stars"]}>
-          <span>★★★★★</span>
-        </div>
+
+  <!-- CARD 2 -->
+  <div class="testimonial-card">
+    <img src="/images/testimonio3.webp" alt="Testimonio 3" class="testimonial-video" />
+
+    <div class="testimonial-profile">
+      <img class="testimonial-avatar" src="/images/testimonio3.webp" alt="Foto de perfil" />
+      <div class="testimonial-info">
+        <h4 class="testimonial-name">Fernando Calderon</h4>
+        <p class="testimonial-role">CEO de www.bybeautypro.com</p>
+        <div class="testimonial-stars"><span>★★★★★</span></div>
       </div>
     </div>
 
-    <p class={styles["testimonial-text"]}>
+    <p class="testimonial-text">
       Estaba en busca de un editor de video para mi empresa...
     </p>
 
-    <button class={styles["testimonial-btn"]}>
+    <button class="testimonial-btn">
       <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
       <span class="btn-text">VER TESTIMONIO</span>
     </button>
   </div>
 
-  <!-- CARD 3 -->
-  <div class={styles["testimonial-card"]}>
-    <img src="/images/testimonio2.webp" alt="" class={styles["testimonial-video"]} />
 
-    <div class={styles["testimonial-profile"]}>
-      <img class={styles["testimonial-avatar2"]} src="/images/testimonio2.webp" alt="Foto de perfil" />
-      <div class={styles["testimonial-info"]}>
-        <h4 class={styles["testimonial-name"]}>Kate McCaferty</h4>
-        <p class={styles["testimonial-role"]}>KM Real Estate</p>
-        <div class={styles["testimonial-stars"]}>
-          <span>★★★★★</span>
-        </div>
+
+  <!-- CARD 3 -->
+  <div class="testimonial-card">
+    <img src="/images/testimonio2.webp" alt="Testimonio 2" class="testimonial-video" />
+
+    <div class="testimonial-profile">
+      <img class="testimonial-avatar" src="/images/testimonio2.webp" alt="Foto de perfil" />
+      <div class="testimonial-info">
+        <h4 class="testimonial-name">Kate McCafferty</h4>
+        <p class="testimonial-role">KM Real Estate</p>
+        <div class="testimonial-stars"><span>★★★★★</span></div>
       </div>
     </div>
 
-    <p class={styles["testimonial-text"]}>
+    <p class="testimonial-text">
       "I've been working with Oberstaff now for about 2 years..."
     </p>
 
-    <button class={styles["testimonial-btn"]}>
+    <button class="testimonial-btn">
       <span class="iconify" data-icon="material-symbols:play-circle-outline-rounded" style="font-size:26px;"></span>
       <span class="btn-text">VER TESTIMONIO</span>
     </button>
   </div>
+
 </div>
 
-<div class={styles["highlight-box"]}>
-  <div class={styles["highlight-icon"]}>
+
+
+<!-- CTA FINAL -->
+<div class="highlight-box">
+  <div class="highlight-icon">
     <span class="iconify" data-icon="material-symbols-light:phone-in-talk" style="font-size:27px;"></span>
   </div>
   <p class="highlight-text">
