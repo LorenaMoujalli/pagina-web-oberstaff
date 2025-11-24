@@ -1,3 +1,4 @@
+
 export function initPreguntasFrecuentes() {
   (function () {
     // CACHES y comprobaciones
@@ -5,16 +6,16 @@ export function initPreguntasFrecuentes() {
     const modalContent = document.querySelector('.faq-modal-content');
     const modalText = document.getElementById('faq-modal-text');
     const closeBtn = document.querySelector('.close-modal');
-    const faqButtons = document.querySelectorAll('.faq-question');
+    const faqButtons = document.querySelectorAll('.faq-item');
 
     if (!modal || !modalContent || !modalText || !closeBtn) {
       console.error('FAQ modal: falta algún elemento requerido (faq-modal, faq-modal-content, faq-modal-text o close-modal).');
       return;
     }
 
-    faqButtons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const answerDiv = btn.nextElementSibling;
+   faqButtons.forEach(item => {
+  item.addEventListener('click', (e) => {
+    const answerDiv = item.querySelector('.faq-answer'); 
         if (!answerDiv) {
           console.warn('FAQ: no se encontró .faq-answer junto al botón', btn);
           return;
