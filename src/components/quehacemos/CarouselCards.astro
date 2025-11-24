@@ -1,17 +1,23 @@
 ---
 import "../../styles/que_hacemos.css";
+import { Image } from 'astro:assets';
+
+import womanImg from '../../assets/woman.jpg';
+import handsImg from '../../assets/hands.jpg';
 ---
 
 <div class="cards">
 
-  <div class="card-fixed" style="background-image: url('/images/woman.jpg');">
+  <div class="card-fixed">
+    <Image src={womanImg} alt="Mujer profesional" class="bg-img" />
     <div class="icon">
       <span class="iconify" data-icon="circum:trophy" style="font-size:40px; color:white;"></span>
     </div>
     <h1 class="card-title">Talento Profesional</h1>
   </div>
 
-  <div class="card-fixed" style="background-image: url('/images/hands.jpg');">
+  <div class="card-fixed">
+    <Image src={handsImg} alt="Manos unidas" class="bg-img" />
     <div class="icon">
       <span class="iconify" data-icon="material-symbols-light:handshake-outline" style="font-size:40px; color:white;"></span>
     </div>
