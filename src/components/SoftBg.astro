@@ -1,0 +1,112 @@
+---
+---
+
+<div id="light"></div>
+<div id="dark"></div>
+
+<script type="module" client:load>
+  import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm";
+  import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm";
+
+  (async () => {
+    await loadAll(tsParticles);
+
+    await tsParticles.addPreset("lightdark", {
+      fullScreen: { enable: false },
+      particles: {
+        links: { enable: true },
+        move: { enable: true },
+        number: { value: 50 },
+        opacity: { value: { min: 0.3, max: 1 } },
+        shape: {
+          type: ["circle", "square", "triangle", "polygon"],
+          options: {
+            polygon: [
+              { sides: 5 },
+              { sides: 6 },
+              { sides: 8 }
+            ]
+          }
+        },
+        size: { value: { min: 1, max: 3 } }
+      }
+    });
+
+    await tsParticles.load({
+      id: "light",
+      options: {
+        preset: "lightdark",
+        particles: {
+          color: { value: "#808080" }, // Gris medio para las partículas
+          links: { color: "#808080" } // Gris medio para los enlaces
+        }
+      }
+    });
+
+    await tsParticles.load({
+      id: "dark",
+      options: {
+        preset: "lightdark",
+        particles: {
+          color: { value: "#C0C0C0" }, // Gris claro para las partículas
+          links: { color: "#C0C0C0" } // Gris claro para los enlaces
+        }
+      }
+    });
+  })();
+</script>
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  #light, #dark {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+
+  #light { left: 0; }
+  #light canvas { background-color: #F0F0F0; } /* Fondo Gris muy claro (casi blanco) */
+
+  #dark { right: 0; }
+  #dark canvas { background-color: #383838; } /* Fondo Gris oscuro */
+</style><!-- coloca esto justo dentro del body, antes de tus componentes -->
+<div id="light"></div>
+<div id="dark"></div>
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    position: relative;
+  }
+
+  #light, #dark {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    pointer-events: none; /* para que no bloqueen clics */
+  }
+
+  #light { 
+    left: 0; 
+    z-index: -1; /* detrás de todo */
+  }
+  #light canvas { 
+    background-color: #F0F0F0; 
+  }
+
+  #dark { 
+    right: 0; 
+    z-index: -1; /* detrás de todo */
+  }
+  #dark canvas { 
+    background-color: #383838; 
+  }
+</style>

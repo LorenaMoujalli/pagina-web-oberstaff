@@ -1,6 +1,7 @@
 ---
 import Header from "../components/header.astro";
-import Footer from "../components/footer.astro"
+import Footer from "../components/footer.astro";
+import SoftBg from "../components/SoftBg.astro";
 ---
 
 <!doctype html>
@@ -9,10 +10,12 @@ import Footer from "../components/footer.astro"
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oberstaff | Crece sin límites</title>
+
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
     <style>
+      
       :root {
         --chat--color--primary: #FF65C3;
         --chat--color--secondary: #FF65C3;
@@ -21,60 +24,62 @@ import Footer from "../components/footer.astro"
         --chat--window--height: 600px;
         --chat--border-radius: 0.75rem;
         --chat--header--background: #f399d0;
+        --chat--toggle--hover--background: var(--chat--toggle--background) !important;
+        --chat--toggle--active--background: var(--chat--toggle--background) !important;
       }
 
-      :root {
-  --chat--toggle--hover--background: var(--chat--toggle--background) !important;
-  --chat--toggle--active--background: var(--chat--toggle--background) !important;
-}
+      #n8n-chat, #n8n-chat * { 
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+      }
 
+      .site-content {
+        position: relative;
+        z-index: 1;
+      }
 
-#n8n-chat, #n8n-chat *{ 
-  
-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial !important;
+      #n8n-chat {
+        position: fixed;
+        z-index: 1000;
+      }
 
-} 
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
 
-
-    </style>  
-
-
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
 
   <body>
-    <Header/>
-     
-    <slot />
-    
+    <SoftBg client:load />
+
+    <div class="site-content">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
 
     <div id="n8n-chat"></div>
 
     <script type="module">
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-    createChat({
-      webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
-      target: '#n8n-chat',
-      mode: 'window',
-     
-      showWelcomeScreen: false,
-      initialMessages: ['Hola, soy tu Asistente IA.'],
-      enableStreaming: false,
-
-
-    i18n: {  
-      en: {
-        title: 'Asistente IA',           // título del header
-        subtitle: 'Listo para ayudarte en lo que necesites.', // texto debajo del título
-      }
-    }
-
-    });
-
-
-    
-  </script>
-
-    <Footer/>
+      createChat({
+        webhookUrl: 'https://n8n.obertrack.com/webhook/d669cf0e-aadb-434d-a7b8-fb7d91e81064/chat',
+        target: '#n8n-chat',
+        mode: 'window',
+        showWelcomeScreen: false,
+        initialMessages: ['Hola, soy tu Asistente IA.'],
+        enableStreaming: false,
+        i18n: {  
+          en: {
+            title: 'Asistente IA',
+            subtitle: 'Listo para ayudarte en lo que necesites.',
+          }
+        }
+      });
+    </script>
   </body>
 </html>

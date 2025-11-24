@@ -1,29 +1,77 @@
-/* CLEANED CSS — duplicados eliminados */
-
+/* ===================== IMPORTS ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-.carrusel-desktop { display: none; }
-.btn-primary3-desktop { display: none; }
-.video-desktop-container { display: none; }
-
+/* ===================== GLOBAL ===================== */
 html { scroll-behavior: smooth; }
 section { scroll-margin-top: 80px; }
 
-/* ===================== SECCION PRINCIPAL ===================== */
+.carrusel-desktop,
+.btn-primary3-desktop,
+.video-desktop-container {
+  display: none;
+}
+
+/* ===================== HERO ===================== */
 .hero {
-  background: #FEFFFA;
-  padding-top: 0;
-}
-
-.hero-grid {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  background: #FEFFFA;
 }
 
-.hero-text { margin-bottom: 2rem; }
+/* Fondo futurista */
+.futuristic-hero { position: relative; overflow: hidden; }
+
+.network-lines {
+  position: absolute;
+  inset: 0;
+  background: url("/svg/network-lines.svg") center/cover no-repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Globo detrás del texto */
+.globe-background {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 900px;
+  opacity: 0.35;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenedor general del hero */
+.hero-grid {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero-grid > *:first-child { flex: 1; }
+
+/* Globo animación (cuando se usa directo en el grid) */
+.globe-animation {
+  width: 420px;
+  height: 420px;
+  filter: drop-shadow(0 0 20px #7c3aed55);
+  z-index: 2;
+}
+
+/* ===================== HERO TEXT ===================== */
+.hero-text {
+  margin-bottom: 2rem; 
+  margin-left: -20%;
+  margin-top: -14%
+}
 
 .hero-text h2 {
   font-family: 'Poppins', sans-serif;
@@ -41,32 +89,6 @@ section { scroll-margin-top: 80px; }
   margin-bottom: 20px;
   color: #000;
   line-height: 1.1;
-}
-
-.hero-content { max-width: 100%; }
-
-.hero-image-mapa { margin-top: -3%; margin-right: -7%; }
-
-.hero-image-mapa video {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.1);
-  transform-origin: top center;
-  margin-top: -13%;
-}
-
-.hero-image img {
-  background: linear-gradient(to bottom, #fff 0%, #fff 0%, #fff 0%);
-  width: 160%;
-  max-width: none;
-  height: auto;
-  margin-top: -3rem;
-  display: block;
-  transform: translateX(-15%);
 }
 
 .highlight { color: #FF65C3; font-weight: bold; }
@@ -88,25 +110,25 @@ section { scroll-margin-top: 80px; }
 
 .btn-primary:hover { background: #f85ac3; }
 
-.hero-banner { width: 100%; overflow: hidden; }
+/* ===================== BANNER ===================== */
+.banner { margin-top: 4%; }
+
 .hero-banner img {
-  width: 100%; height: 45px;
+  width: 100%;
+  height: 45px;
   object-fit: cover;
   display: block;
 }
 
-/* ===================== VIDEO MOVIL ===================== */
-
+/* ===================== PROFILES (testimonios mini) ===================== */
 .profiles-section {
   padding: 1.5rem 1rem;
   text-align: center;
-  margin: 0;
 }
 
 .profiles-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .profile-img {
@@ -124,11 +146,12 @@ section { scroll-margin-top: 80px; }
   font-weight: 500;
   font-size: 14px;
   color: #000;
-  margin-top: 0.3rem;
+
 }
 
 .stars { margin-top: 0.2rem; color: #FABF27; font-size: 1.1rem; }
 
+/* ===================== VIDEO MOBILE ===================== */
 .video-container { margin-top: 0.8rem; display: flex; justify-content: center; }
 
 .video-wrapper {
@@ -167,6 +190,7 @@ section { scroll-margin-top: 80px; }
   font-size: 14px;
   width: 160px;
 }
+
 
 /* ===================== MOVIL ===================== */
 
@@ -317,5 +341,141 @@ section { scroll-margin-top: 80px; }
 @media (max-width: 1023px) {
   .hero-image-mapa {
     display: none !important;
+  }
+}
+
+
+/* ===================== DESKTOP ===================== */
+@media (min-width: 1024px) {
+  .profiles-section { display: none; }
+
+  .hero {
+    padding-top: 140px;
+  }
+
+  .hero-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 4rem;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .hero-text h2 { font-size: 45px; }
+  .hero-text p { font-size: 18px; margin-right: 120px; }
+
+  .profiles-desktop-section {
+    display: block;
+    margin-top: 0.9rem;
+  }
+
+  .profiles-desktop-card {
+    width: 240px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 0.6rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .profiles-desktop-images {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-desktop-img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+
+  .profile-desktop-img:first-child { margin-left: 0; }
+
+  .profiles-desktop-card p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+  }
+
+  .desktop-stars {
+    color: #FABF27;
+    font-size: 14px;
+  }
+}
+
+
+/* ====== Más espacio para el texto en desktop ====== */
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 0.9fr; /* da más ancho al texto */
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 80%;        /* antes 50% */
+    padding-right: 3rem;   /* más espacio respecto al globo */
+  }
+
+  .hero-text h2 {
+    font-size: 52px;       /* más grande, más presencia */
+    line-height: 1.1;
+  }
+
+  .hero-text p {
+    max-width: 520px;      /* más ancho para respirar */
+    font-size: 20px;       /* más legible */
+    line-height: 1.35;
+  }
+
+  .btn-primary {
+    margin-top: 20px;
+  }
+
+  .profiles-desktop-section {
+    margin-top: 1.5rem;
+  }
+}
+
+
+
+/* Ocultar imagen/video desktop si hay versión mobile */
+@media (max-width: 1023px) {
+  .hero-image-mapa {
+    display: none !important;
+  }
+}
+
+/* ==== MOBILE: ocultar globo completamente ==== */
+@media (max-width: 768px) {
+  .globe-background {
+    display: none !important;
+  }
+}
+
+
+/* ==== FIX MOBILE: centrar texto y eliminar desplazamiento ==== */
+@media (max-width: 768px) {
+  .hero-text {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    text-align: center;
+    padding: 0 1.2rem; /* un poco de aire a los lados */
+  }
+
+  .hero-text h2,
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

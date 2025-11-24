@@ -1,42 +1,28 @@
 ---
 import "../styles/HeroSection.css";
 import ScrollingBanner from "../components/ScrollingBanner.astro";
-
 import HeroText from "./hero/HeroText.astro";
-import HeroDesktopVideo from "./hero/HeroDesktopVideo.astro";
-import HeroMobileVideo from "./hero/HeroMobileVideo.astro";
+import GlobeLottie from "../components/GlobeLottie";
 ---
 
-<section class="hero">
+<section class="hero futuristic-hero">
+
+  <!-- Fondo futurista -->
+  <div class="network-lines"></div>
+
+  <!-- Globo gigante detrás -->
+  <div id="globe-container" class="globe-background"></div>
+<GlobeLottie client:load />
+
+
+  <!-- Texto en su lugar original -->
   <div class="container hero-grid">
     <HeroText />
-    <HeroDesktopVideo />
   </div>
+
 </section>
 
 <div class="banner">
   <ScrollingBanner />
 </div>
 
-<HeroMobileVideo />
-
-<!-- VIDEO DESKTOP -->
-<div class="video-desktop-container">
-  <div class="video-desktop-wrapper" style="border-radius: 16px; overflow: hidden;">
-    <video
-      id="video-principal-desktop"
-      playsinline
-      controls
-      poster="/images/previa-img.png"
-    >
-      <source src="/images/Video-principal.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div class="video-desktop-text" style="text-align: left;">
-    <h2>
-      Descubre cómo contratar talento top
-      <span style="color: #FF65C3; font-weight: bold;">sin gastar de más.</span>
-    </h2>
-  </div>
-</div>
