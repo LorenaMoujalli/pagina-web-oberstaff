@@ -483,3 +483,15 @@ section { scroll-margin-top: 80px; }
 
 
 
+
+
+/* ==== MOBILE: fondo suave detrás del hero text ==== */
+@media (max-width: 768px) {
+  .hero-text {
+    background: rgba(255, 255, 255, 0.733); 
+    backdrop-filter: blur(4px);            /* efecto glass suave */
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    margin-top: 1rem;
+  }
+}
