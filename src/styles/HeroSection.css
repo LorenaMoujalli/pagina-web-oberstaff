@@ -123,12 +123,11 @@ section { scroll-margin-top: 80px; }
 /* ===================== PROFILES (testimonios mini) ===================== */
 .profiles-section {
   padding: 1.5rem 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .profiles-container {
   display: flex;
-
 }
 
 .profile-img {
@@ -147,7 +146,6 @@ section { scroll-margin-top: 80px; }
   font-weight: 500;
   font-size: 14px;
   color: #000;
-
 }
 
 .stars { margin-top: 0.2rem; color: #FABF27; font-size: 1.1rem; }
@@ -292,6 +290,11 @@ section { scroll-margin-top: 80px; }
   .profiles-desktop-section {
     display: block;           /* aparece en desktop */
     margin-top: 0.9rem;       /* separación desde el botón */
+    
+  }
+
+  .profiles-desktop-section p{
+    text-align: center;
   }
 
   .profiles-desktop-card {
