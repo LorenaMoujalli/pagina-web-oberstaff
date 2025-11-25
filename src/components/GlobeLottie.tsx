@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import lottie from "lottie-web";
+import "../styles/globo.css"
 
 export default function GlobeLottie() {
   useEffect(() => {
@@ -15,11 +16,12 @@ export default function GlobeLottie() {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      path: "/animations/Globe.json",
+      path: "/animations/GlobeWorld.json",
     });
 
     return () => anim.destroy();
   }, []);
 
-  return null;
+  return <div id="globe-container" className="globe"></div>;
 }
+

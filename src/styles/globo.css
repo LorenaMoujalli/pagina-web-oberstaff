@@ -1,0 +1,9 @@
+#globe-container {
+  position: absolute;
+  top: 50%;
+  right: 5%;        
+  transform: translateY(-50%);
+  width: 550px;     
+  height: 550px;    
+  z-index: 3;
+}

@@ -3,19 +3,16 @@ import "../styles/HeroSection.css";
 import ScrollingBanner from "../components/ScrollingBanner.astro";
 import HeroText from "./hero/HeroText.astro";
 import GlobeLottie from "../components/GlobeLottie";
+import HeroVideoDesktop from "../components/hero/HeroDesktopVideo.astro"
 ---
 
 <section class="hero futuristic-hero">
 
-  <!-- Fondo futurista -->
   <div class="network-lines"></div>
 
-  <!-- Globo gigante detrás -->
-  <div id="globe-container" class="globe-background"></div>
 <GlobeLottie client:load />
 
 
-  <!-- Texto en su lugar original -->
   <div class="container hero-grid">
     <HeroText />
   </div>
@@ -26,3 +23,5 @@ import GlobeLottie from "../components/GlobeLottie";
   <ScrollingBanner />
 </div>
 
+
+<HeroVideoDesktop />
