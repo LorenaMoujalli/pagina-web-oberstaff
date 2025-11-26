@@ -58,6 +58,7 @@
   border: none; 
   cursor: pointer;
   flex-shrink: 0; 
+  text-decoration: none;
 } 
 
 .menu-btn img {

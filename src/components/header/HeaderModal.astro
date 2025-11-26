@@ -11,13 +11,13 @@
       <a href="#como-funciona">¿Cómo funciona?</a>
       <a href="#testimonios">Testimonios</a>
       <a href="#preguntas-frecuentes">Preguntas frecuentes</a>
-      <a href="#contacto">Contacto</a>
       <a href="https://oberstaff.com/blog">Blog</a>
       <a href="/empleos">¿Buscas trabajo?</a>
     </nav>
   </div>
 </div>
 
+<!-- 
 <div id="contactModal" class="menu-modal">
   <div class="modal-backdrop" id="modalBackdropContact"></div>
   <div class="modal-content contact-content">
@@ -44,18 +44,19 @@
     </form>
   </div>
 </div>
+-->
 
 <script type="module">
   const openMenuBtn = document.getElementById("openMenuBtn");
   const closeMenuBtn = document.getElementById("closeMenuBtn");
   const menuModal = document.getElementById("menuModal");
   const backdropMenu = document.getElementById("modalBackdropMenu");
-
+/*
   const openContactBtn = document.getElementById("openContactBtn");
   const closeContactBtn = document.getElementById("closeContactBtn");
   const contactModal = document.getElementById("contactModal");
   const backdropContact = document.getElementById("modalBackdropContact");
-
+*/
   function openModal(modal) {
     modal.classList.add("show");
     document.body.style.overflow = "hidden";
@@ -69,10 +70,11 @@
   openMenuBtn.addEventListener("click", () => openModal(menuModal));
   closeMenuBtn.addEventListener("click", () => closeModal(menuModal));
   backdropMenu.addEventListener("click", () => closeModal(menuModal));
-
+/*
   openContactBtn.addEventListener("click", () => openModal(contactModal));
   closeContactBtn.addEventListener("click", () => closeModal(contactModal));
   backdropContact.addEventListener("click", () => closeModal(contactModal));
+  */
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {

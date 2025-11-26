@@ -391,4 +391,11 @@
     display: none !important;
   }
 
+  
+.cta-section .cta-subtext {
+
+  font-size: 19px;
+
+}
+
 }
