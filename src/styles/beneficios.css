@@ -14,7 +14,7 @@
    font-weight: bold;
    font-size: 36px;
   color: #25262B;
-  padding: 1rem 1rem; 
+ 
      text-align:center; 
 }
 
@@ -258,12 +258,12 @@ p {
 
 
 .btn-primary3-desktop{
-   display: inline-flex;          
+  display: flex;               
   align-items: center;           
   justify-content: center;      
   gap: 0.5rem; 
-    font-family: 'Poppins', sans-serif;
-    font-weight:500;
+  font-family: 'Poppins', sans-serif;
+  font-weight:500;
   background: #25262B; 
   color: white;
   border: none;
@@ -271,8 +271,7 @@ p {
   padding: 0.6rem 1.2rem;
   font-size: 13px;
   cursor: pointer;
-  margin-top: 25px;  
-  margin-left: 500px;
+  margin: 25px auto 0 auto;
 }
 
 .btn-primary3-desktop:hover{

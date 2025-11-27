@@ -6,7 +6,7 @@
   padding: 2rem 1.5rem;
   text-align: center;
   border-radius: 40px;
-  margin-top: 2rem;
+  
 }
 
 .contact-section h2 {
@@ -28,7 +28,7 @@
 .contact-form {
   background-color: rgb(255, 232, 246); 
   border-radius: 20px; 
-  padding: 1.5rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -61,7 +61,7 @@
 .phone-group {
   display: flex;
   gap: 0.5rem;
-  width: 90%;
+  width: 92.5%;
 }
 
 .phone-group .country-code {
@@ -163,6 +163,15 @@
   line-height: 1;
 }
 
+
+@media (max-width: 760px){
+
+  .phone-group {
+  
+    width: 100%;
+}
+
+}
 
 @media (min-width: 1024px){
 
