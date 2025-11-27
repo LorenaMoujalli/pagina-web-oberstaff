@@ -9,6 +9,86 @@ import TestimonialCard from "./TestimonialCard.astro";
     avatar="/images/testimonio1.webp"
     name="Shadai Iborra"
     role="CEO de @amediastory"
+    text="Con Oberstaff pude dar trabajo a dos personas..."
+    videoId="_CxlPfluS7M"
+  />
+
+  <TestimonialCard
+    img="/images/testimonio3.webp"
+    avatar="/images/testimonio3.webp"
+    name="Fernando Calderon"
+    role="CEO de www.bybeautypro.com"
+    text="Estaba en busca de un editor..."
+    videoId="24KxCAFGrDs"
+  />
+
+  <TestimonialCard
+    img="/images/testimonio2.webp"
+    avatar="/images/testimonio2.webp"
+    name="Kate McCafferty"
+    role="KM Real Estate"
+    text="I've been working with Oberstaff..."
+    videoId="9RLgpEF-GVA"
+  />
+
+</div>
+
+<!-- MODAL -->
+<div id="videoModal" class="video-modal">
+  <div class="video-modal-content">
+    <button id="closeModal" aria-label="Cerrar modal">✖</button>
+    <iframe id="modalVideo" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
+<script is:inline>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("modalVideo");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Abrir modal al hacer clic en botón
+  document.querySelectorAll(".testimonial-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const videoId = btn.dataset.video;
+      if (!videoId) return;
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      modal.classList.add("show");
+    });
+  });
+
+  // Cerrar modal con la "X"
+  closeBtn.addEventListener("click", () => {
+    iframe.src = "";
+    modal.classList.remove("show");
+  });
+
+  // Cerrar modal al hacer clic fuera del contenido
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      iframe.src = "";
+      modal.classList.remove("show");
+    }
+  });
+});
+</script>
+
+ 
+
+<!-- 
+---
+import TestimonialCard from "./TestimonialCard.astro";
+---
+ 
+<div class="testimonial-section">
+
+  <TestimonialCard
+    img="/images/testimonio1.webp"
+    avatar="/images/testimonio1.webp"
+    name="Shadai Iborra"
+    role="CEO de @amediastory"
     text="Con Oberstaff pude dar trabajo a dos personas a tiempo completo, ahorrando costes..."
   />
 
@@ -29,3 +109,4 @@ import TestimonialCard from "./TestimonialCard.astro";
   />
 
 </div>
+-->
