@@ -369,8 +369,8 @@ section { scroll-margin-top: 80px; }
     max-width: 50%;
   }
 
-  .hero-text h2 { font-size: 45px; }
-  .hero-text p { font-size: 18px; margin-right: 120px; }
+  .hero-text h2 { font-size: 40px; }
+  .hero-text p { font-size: 10px; margin-right: 100px; }
 
   .profiles-desktop-section {
     display: block;
