@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",
-    "@n8n/chat": "^0.62.0", 
+    "@lottiefiles/lottie-player": "^2.0.12",
+    "@n8n/chat": "^0.62.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "astro": "^5.15.1",
-    "react": "^19.2.0", 
-    "react-dom": "^19.2.0"
+    "lottie-react": "^2.4.1",
+    "lottie-web": "^5.13.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "styled-components": "^6.1.19"
   },
   "engines": {
     "node": ">=18.20.8"

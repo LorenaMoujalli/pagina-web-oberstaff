@@ -1,0 +1,86 @@
+<div id="light"></div>
+<div id="dark"></div>
+
+<script type="module" client:load>
+  import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.3/+esm";
+  import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.3/+esm";
+
+  (async () => {
+    await loadAll(tsParticles);
+
+    await tsParticles.addPreset("lightdark", {
+      fullScreen: { enable: false },
+      particles: {
+        links: { enable: true, distance: 120, opacity: 0.2 },
+        move: { enable: true, speed: 0.5, outModes: "bounce" }, // más lento
+        number: { value: 50 },
+        opacity: { value: { min: 0.1, max: 0.3 } }, // menos opaco
+        shape: {
+          type: ["circle", "square", "triangle", "polygon"],
+          options: {
+            polygon: [
+              { sides: 5 },
+              { sides: 6 },
+              { sides: 8 }
+            ]
+          }
+        },
+        size: { value: { min: 2, max: 5 } } // un poco más grandes
+      }
+    });
+
+    await tsParticles.load({
+      id: "light",
+      options: {
+        preset: "lightdark",
+        particles: {
+          color: { value: "#808080" },
+          links: { color: "#808080" }
+        }
+      }
+    });
+
+    await tsParticles.load({
+      id: "dark",
+      options: {
+        preset: "lightdark",
+        particles: {
+          color: { value: "#C0C0C0" },
+          links: { color: "#C0C0C0" }
+        }
+      }
+    });
+  })();
+</script>
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    position: relative;
+  }
+
+  #light, #dark {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    pointer-events: none;
+  }
+
+  #light { 
+    left: 0; 
+    z-index: -1;
+  }
+  #light canvas { 
+    background-color: #F0F0F0; 
+  }
+
+  #dark { 
+    right: 0; 
+    z-index: -1;
+  }
+  #dark canvas { 
+    background-color: #383838; 
+  }
+</style>

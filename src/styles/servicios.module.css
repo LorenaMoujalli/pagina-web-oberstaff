@@ -1,29 +1,24 @@
 .servicios {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  align-items: stretch;
-  padding: 2rem 0;
-  width: 100%;
-  max-width: 1500px;
-  margin-inline: auto;
+  padding: 2rem;
+  max-width: 1400px;   
+  margin: 0 auto;
+  box-sizing: border-box;
   color: aliceblue;
 }
 
 .card {
   position: relative;
-  flex: 1;
-  min-width: 220px;
-  height: 400px;
+  flex: 1 1 180px;      
+  max-width: 220px;     
+  height: 320px;        
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.35s ease;
-}
-
-.card:hover {
-  transform: scale(1.1);
-  z-index: 10;
 }
 
 .card img {
@@ -32,6 +27,11 @@
   object-fit: cover;
   filter: brightness(0.75);
   transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  z-index: 10;
 }
 
 .card:hover img {
@@ -46,17 +46,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: white;              
+  color: white;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.overlay h3,
-.overlay p,
-.overlay ul,
-.overlay li {
-  color: white !important;
+.overlay h3{
+  color: aliceblue;
+}
+
+.overlay p{
+  color: aliceblue;
 }
 
 .card:hover .overlay {
@@ -64,27 +65,23 @@
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
-  .servicios {
-    flex-wrap: wrap;
-  }
-
   .card {
-    height: 320px;
+    height: 280px;
     flex: 0 0 calc(50% - 1rem);
+    max-width: none;
   }
 }
 
 @media (max-width: 768px) {
   .card {
-    height: 260px;
+    height: 240px;
     flex: 1 1 100%;
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    height: 220px;
+    height: 200px;
   }
 }

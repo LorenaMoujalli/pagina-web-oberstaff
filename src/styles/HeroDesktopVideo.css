@@ -1,0 +1,48 @@
+.hero-video-desktop {
+  width: 100%;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hvd-container {
+  width: 90%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.hvd-video-wrapper {
+  width: 55%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+}
+
+.hvd-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hvd-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #222;
+}
+
+.hvd-text h2 span {
+  color: #FF65C3;
+}
+
+@media (max-width: 1023px) {
+  .hero-video-desktop {
+    display: none;
+  }
+}
+
+

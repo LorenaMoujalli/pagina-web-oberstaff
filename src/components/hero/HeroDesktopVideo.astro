@@ -1,6 +1,79 @@
-<div class="hero-image-mapa">
-  <video 
-    src="/images/Hero-Oberstaff-Animación-desktop_video.mp4" 
-    autoplay muted loop playsinline
-  ></video>
-</div>
+---
+/* VideoIntro.astro */
+---
+
+<section class="video-hero">
+  <div class="video-container">
+    <video
+      id="video-hero"
+      class="video"
+      controls
+      muted
+      playsinline
+      poster="/images/video-preview.jpeg"   
+      <source src="/images/Video-principal.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="video-text">
+    <h2>Descubre cómo contratar talento top <br /><span>sin gastar de más.</span></h2>
+  </div>
+</section>
+
+<style>
+  .video-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .video-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video {
+    width: 100%;
+    max-width: 680px;
+    border-radius: 16px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    background: #000; 
+  }
+
+  .video-text {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  .video-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 46px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1f1f1f;
+  }
+
+  .video-text span {
+    color: #FF65C3;
+  }
+
+  @media (max-width: 900px) {
+    .video-hero {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .video-text h2 {
+      font-size: 32px;
+    }
+  }
+</style>
+
+

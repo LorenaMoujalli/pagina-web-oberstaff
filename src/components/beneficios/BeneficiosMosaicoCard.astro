@@ -1,16 +1,16 @@
 ---
-// Props
+import { Image } from 'astro:assets';
 const { img, title, text, class: cardClass } = Astro.props;
 ---
 
 <div class={cardClass}>
-  <img 
-    src={img} 
-    alt={title} 
-    class="img-replace" 
-    loading="lazy" 
-    width="600" 
-    height="400"
+  <Image
+    src={img}
+    alt={title}
+    width={400}  
+    height={300}
+    format="webp"
+    class="img-replace"
   />
   <h3>{title}</h3>
   <p>{text}</p>
